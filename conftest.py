@@ -1,10 +1,10 @@
 import os
 import pytest
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from selenium import webdriver
-from config import bot, chat_id, daily
+# from config import bot, chat_id, daily
 
-load_dotenv()
+# load_dotenv()
 
 
 @pytest.fixture
