@@ -1,2 +1,5 @@
+allure-pytest==2.13.2
+allure-python-commons==2.13.2
 telebot~=0.0.5
 pytest~=8.2.2
+selenium~=4.22.0
