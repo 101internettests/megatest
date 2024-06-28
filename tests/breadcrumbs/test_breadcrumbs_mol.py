@@ -13,3 +13,8 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_mol.open()
         breadcrumbs_page_mol.check_linking()
         breadcrumbs_page_mol.check_breadcrumbs_linking_mol()
+
+    def test_linking_tags(self, driver):
+        breadcrumbs_page_tags_mol = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/rates")
+        breadcrumbs_page_tags_mol.open()
+        breadcrumbs_page_tags_mol.check_breadcrumbs_tags_mol()

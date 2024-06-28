@@ -40,7 +40,6 @@ class BreadcrumbsTags:
     BREADCRUMBS_RATES_FOR_INTERNET = (By.XPATH, "//span[contains(text(), 'Тарифы на интернет')]")
     TEXT_BREADCRUMBS_RATES_FOR_INTERNET = (By.XPATH, "//h1[contains(text(), 'Интернет тарифы в Челябинске')]")
     RATES = (By.XPATH, "(//a[contains(text(), 'Тарифы')])[1]")
-    SCROLL = (By.XPATH, "//h1[contains(text(), 'Тарифы на домашний интернет в Челябинске')]")
-    SCROLL_TO_ALL = (By.XPATH, "//div[contains(text(), 'показать тарифы')]")
+    SCROLL_TO_SHOW_THE_RATES = (By.XPATH, "//div[contains(text(), 'показать тарифы')]")
 
 
