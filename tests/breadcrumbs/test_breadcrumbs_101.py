@@ -14,5 +14,14 @@ class TestBreadCrumbs:
         breadcrumbs_page.check_linking()
         breadcrumbs_page.check_breadcrumbs_linking()
 
+    def test_linking_tags(self, driver):
+        breadcrumbs_page_tags = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/rates")
+        breadcrumbs_page_tags.open()
+        breadcrumbs_page_tags.check_breadcrumbs_tags()
+
+
+
+
+
 
 

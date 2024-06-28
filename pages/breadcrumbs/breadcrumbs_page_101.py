@@ -1,6 +1,6 @@
 import allure
 import time
-from locators.breadcrumbs.breadcrumbs_locators_101 import Linking
+from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags
 from pages.base_page import BasePage
 from time import sleep
 
@@ -9,18 +9,25 @@ class CheckBreadCrumbs(BasePage):
     @allure.step("Проверка перелинковки")
     # @qase.title("Проверка перелинковки")
     def check_linking(self):
-        #self.element_is_visible(Linking.CLOSE_THE_POPAP).click()
+        # self.element_is_visible(Linking.CLOSE_THE_POPAP).click()
         scroll_element = self.element_is_visible(Linking.SCROLL)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
         self.element_is_visible(Linking.STREET_LINKING).click()
         self.element_is_visible(Linking.CLOSE_THE_POPAP).click()
+
+    def scroll_to_header(self):
+        scroll_element = self.element_is_visible(Linking.SCROLL_2)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
+
+    def scroll_tags(self):
+        scroll_element = self.element_is_visible(BreadcrumbsTags.SCROLL_TO_ALL)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
 
     def check_breadcrumbs_linking(self):
         sleep(5)
         check_the_adress = self.element_is_visible(Linking.CHECK_THE_ADRESS)
         assert check_the_adress.text == 'Интернет и ТВ по адресу ул. Барбюса, 6, Челябинск (Ленинский)'
         self.scroll_to_header()
-        self.element_is_visible(Linking.BREADCRUMBS_STREET).click()
         sleep(5)
         check_the_street = self.element_is_visible(Linking.CHECK_THE_STREET)
         assert check_the_street.text == 'Интернет-провайдеры на ул. Барбюса, Челябинск'
@@ -40,21 +47,75 @@ class CheckBreadCrumbs(BasePage):
         check_the_main_page = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
         assert check_the_main_page.text == 'Подключить интернет в Челябинске'
 
-    def scroll_to_header(self):
-        scroll_element = self.element_is_visible(Linking.SCROLL_2)
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
+    def check_breadcrumbs(self):
+        self.element_is_visible(BreadcrumbsTags.BREADCRUMBS_RATES_FOR_INTERNET).click()
+        sleep(3)
+        check_the_text_internet_and_mobile = self.element_is_visible(BreadcrumbsTags.TEXT_BREADCRUMBS_RATES_FOR_INTERNET)
+        assert check_the_text_internet_and_mobile.text == 'Интернет тарифы в Челябинске'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        check_the_text_internet_and_mobile = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
+        assert check_the_text_internet_and_mobile.text == 'Подключить интернет в Челябинске'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTags.RATES).click()
 
-
-
-
-
-
-
-
-
-
-
-
+    def check_breadcrumbs_tags(self):
+        self.scroll_tags()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_AND_MOBILE).click()
+        check_text_internet_and_mobile = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_INTERNET_AND_MOBILE)
+        assert check_text_internet_and_mobile.text == 'Тарифы на интернет и мобильную связь в Челябинске'
+        sleep(5)
+        self.check_breadcrumbs()
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV_MOBILE).click()
+        check_text_internet_tv_and_mobile = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_INTERNET_TV_MOBILE)
+        assert check_text_internet_tv_and_mobile.text == 'Тарифы домашнего интернета, цифрового ТВ и мобильной связи в Челябинске'
+        sleep(5)
+        self.check_breadcrumbs()
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTags.TAG_HOME_INTERNET).click()
+        check_text_home_internet = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_HOME_INTERNET)
+        assert check_text_home_internet.text == 'Домашний интернет в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV).click()
+        check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_INTERNET_TV)
+        assert check_text_internet_and_tv.text == 'Тарифы на интернет и телевидение в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_CHEAP_INTERNET).click()
+        check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_CHEAP_INTERNET)
+        assert check_text_internet_and_tv.text == 'Дешевый домашний интернет в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_100_MB).click()
+        check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_100_MB)
+        assert check_text_internet_and_tv.text == 'Тарифы с интернетом 100 мб в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_300_MB).click()
+        check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_300_MB)
+        assert check_text_internet_and_tv.text == 'Домашний интернет 300 Мб/с в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_500_MB).click()
+        check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_500_MB)
+        assert check_text_internet_and_tv.text == 'Домашний интернет 500 Мб/с в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
+        self.element_is_visible(BreadcrumbsTags.TAG_ONLINE_CINEMA).click()
+        check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_ONLINE_CINEMA)
+        assert check_text_internet_and_tv.text == 'Тарифы интернета с подпиской на онлайн-кинотеатр в Челябинске'
+        sleep(3)
+        self.check_breadcrumbs()
+        sleep(5)
 
 
 
