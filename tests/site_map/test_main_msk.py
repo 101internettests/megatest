@@ -14,7 +14,13 @@ class TestSiteMap:
         map_page.click_on_url_and_back_msk_101()
 
     @allure.title("Проверка карты покрытия 101, Казань")
-    def test_101_moskva(self, driver):
+    def test_101_kazan(self, driver):
         map_page = CheckTheMap(driver, "https://101internet.ru/kazan/site-map")
         map_page.open()
         map_page.click_on_url_and_back_kaz_101()
+
+    @allure.title("Проверка карты покрытия 101, Рязань")
+    def test_101_ryazan(self, driver):
+        map_page = CheckTheMap(driver, "https://101internet.ru/ryazan/site-map")
+        map_page.open()
+        map_page.click_on_url_and_back_ryaz_101()
