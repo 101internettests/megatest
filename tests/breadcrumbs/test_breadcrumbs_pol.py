@@ -13,3 +13,8 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_pol.open()
         breadcrumbs_page_pol.check_linking()
         breadcrumbs_page_pol.check_breadcrumbs_linking_pol()
+
+    def test_linking_tags(self, driver):
+        breadcrumbs_page_tags_mol = CheckBreadCrumbsPol(driver, "https://piter-online.net/rates")
+        breadcrumbs_page_tags_mol.open()
+        breadcrumbs_page_tags_mol.check_breadcrumbs_tags_pol()
