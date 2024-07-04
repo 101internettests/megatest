@@ -67,11 +67,11 @@ class CheckBreadCrumbsPol(BasePage):
         sleep(3)
         self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
         check_the_text_internet_and_mobile = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
-        assert check_the_text_internet_and_mobile.text == 'Подключить лучший домашний интернет в Санкт-Петербурге'
+        assert check_the_text_internet_and_mobile.text == 'Подключить домашний интернет в Санкт-Петербурге'
         sleep(3)
         self.element_is_visible(BreadcrumbsTags.RATES).click()
 
-    def check_breadcrumbs_tags_pol(self):
+    def check_breadcrumbs_tags_pol_internet_and_mobile(self):
         self.scroll_tags()
         sleep(3)
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_AND_MOBILE).click()
@@ -80,48 +80,64 @@ class CheckBreadCrumbsPol(BasePage):
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_internet_tv_and_mobile(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV_MOBILE).click()
         check_text_internet_tv_and_mobile = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_INTERNET_TV_MOBILE)
         assert check_text_internet_tv_and_mobile.text == 'Тарифы интернет, ТВ и мобильная связь в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_home_internet(self):
         self.element_is_visible(BreadcrumbsTags.TAG_HOME_INTERNET).click()
         check_text_home_internet = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_HOME_INTERNET)
         assert check_text_home_internet.text == 'Домашний интернет в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_internet_and_tv(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV).click()
         check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_INTERNET_TV)
         assert check_text_internet_and_tv.text == 'Домашнее телевидение и интернет в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_cheap_internet(self):
         self.element_is_visible(BreadcrumbsTags.TAG_CHEAP_INTERNET).click()
         check_text_cheap_internet = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_CHEAP_INTERNET)
         assert check_text_cheap_internet.text == 'Дешевый домашний интернет в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_100(self):
         self.element_is_visible(BreadcrumbsTags.TAG_100_MB).click()
         check_text_100 = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_100_MB)
         assert check_text_100.text == 'Тарифы с домашним интернетом 100 Мб/с в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_300(self):
         self.element_is_visible(BreadcrumbsTags.TAG_300_MB).click()
         check_text_300 = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_300_MB)
         assert check_text_300.text == 'Домашний интернет 300 Мб/с в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_500(self):
         self.element_is_visible(BreadcrumbsTags.TAG_500_MB).click()
         check_text_500 = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_500_MB)
         assert check_text_500.text == 'Домашний интернет 500 Мб/с в Санкт-Петербурге'
         sleep(3)
         self.check_breadcrumbs_pol()
         sleep(3)
+
+    def check_breadcrumbs_tags_pol_online_cinema(self):
         self.element_is_visible(BreadcrumbsTags.TAG_ONLINE_CINEMA).click()
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифы интернета с подпиской на онлайн-кинотеатр в Санкт-Петербурге'

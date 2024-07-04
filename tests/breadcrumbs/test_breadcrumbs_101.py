@@ -17,7 +17,15 @@ class TestBreadCrumbs:
     def test_linking_tags(self, driver):
         breadcrumbs_page_tags = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/rates")
         breadcrumbs_page_tags.open()
-        breadcrumbs_page_tags.check_breadcrumbs_tags()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_internet_and_mobile()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_internet_tv_and_mobile()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_home_internet()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_internet_and_tv()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_cheap_internet()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_100()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_300()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_500()
+        breadcrumbs_page_tags.check_breadcrumbs_tags_online_cinema()
 
 
 

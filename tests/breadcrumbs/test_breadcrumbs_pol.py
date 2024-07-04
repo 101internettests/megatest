@@ -15,6 +15,14 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_pol.check_breadcrumbs_linking_pol()
 
     def test_linking_tags(self, driver):
-        breadcrumbs_page_tags_mol = CheckBreadCrumbsPol(driver, "https://piter-online.net/rates")
-        breadcrumbs_page_tags_mol.open()
-        breadcrumbs_page_tags_mol.check_breadcrumbs_tags_pol()
+        breadcrumbs_page_tags_pol = CheckBreadCrumbsPol(driver, "https://piter-online.net/rates")
+        breadcrumbs_page_tags_pol.open()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_internet_and_mobile()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_internet_tv_and_mobile()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_home_internet()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_internet_and_tv()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_cheap_internet()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_100()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_300()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_500()
+        breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_online_cinema()
