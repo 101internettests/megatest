@@ -6,8 +6,7 @@ class Linking:
     SCROLL_2 = (By.XPATH, "//span[contains(text(), 'Челябинск')]")
     STREET_LINKING = (By.XPATH, "//a[contains(text(), 'Барбюса ул д. 6  ')]")
     CLOSE_THE_POPAP = (By.XPATH, "//div[@datatest='close_popup1_from_quiz_input_tel']")
-    CHECK_THE_ADRESS = (
-    By.XPATH, "//h1[contains(text(), 'Интернет и ТВ по адресу ул. Барбюса 6, Челябинск (Ленинский)')]")
+    CHECK_THE_ADRESS = (By.XPATH, "//h1[contains(text(), 'Интернет и ТВ по адресу ул. Барбюса 6, Челябинск (Ленинский)')]")
     BREADCRUMBS_STREET = (By.XPATH, "//span[contains(text(), 'Барбюса')]")
     CHECK_THE_STREET = (By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры на ул. Барбюса, Челябинск')]")
     BREADCRUMBS_DISTRICT = (By.XPATH, "//span[contains(text(), 'Интернет провайдеры в Ленинский')]")
@@ -42,4 +41,17 @@ class BreadcrumbsTags:
     RATES = (By.XPATH, "(//a[contains(text(), 'Тарифы')])[1]")
     SCROLL_TO_SHOW_THE_RATES = (By.XPATH, "//div[contains(text(), 'показать тарифы')]")
 
+
+class BreadcrumbsTagsMts:
+    TEXT_TAG_INTERNET_AND_MOBILE = (By.XPATH, "//h1[contains(text(), 'Тарифы МТС на домашний интернет и мобильную связь в Челябинске')]")
+    TEXT_TAG_INTERNET_TV_MOBILE = (By.XPATH, "//h1[contains(text(), 'Тарифы МТС на интернет, ТВ и мобильную связь в Челябинске')]")
+    TEXT_TAG_HOME_INTERNET = (By.XPATH, "//h1[contains(text(), 'Домашний интернет от провайдера МТС в Челябинске')]")
+    TEXT_TAG_CHEAP_INTERNET = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифы МТС на интернет в Челябинске')]")
+    TEXT_TAG_ONLINE_CINEMA = (By.XPATH, "//h1[contains(text(), 'Тарифы домашнего интернета МТС с подпиской на онлайн-кинотеатр в Челябинске')]")
+    BREADCRUMBS_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы')]")
+    BREADCRUMBS_RATES_TEXT = (By.XPATH, "//h1[contains(text(), 'Тарифные планы интернет-провайдера МТС в Челябинске')]")
+    BREADCRUMBS_MTS = (By.XPATH, "//span[contains(text(), 'МТС')]")
+    TEXT_BREADCRUMBS_MTS = (By.XPATH, "//h1[contains(text(), 'Домашний интернет от провайдера МТС в Челябинске')]")
+    BREADCRUMBS_PROVIDERS_OF_CH = (By.XPATH, "//span[contains(text(), 'Провайдеры Челябинска')]")
+    TEXT_PROVIDERS_OF_CH = (By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры в Челябинске')]")
 

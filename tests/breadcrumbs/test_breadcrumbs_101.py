@@ -27,6 +27,17 @@ class TestBreadCrumbs:
         breadcrumbs_page_tags.check_breadcrumbs_tags_500()
         breadcrumbs_page_tags.check_breadcrumbs_tags_online_cinema()
 
+    def test_linking_tags_mts(self, driver):
+        breadcrumbs_page_tags_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/mts/rates")
+        breadcrumbs_page_tags_mts.open()
+        breadcrumbs_page_tags_mts.check_breadcrumbs_tags_internet_and_mobile_mts()
+        breadcrumbs_page_tags_mts.check_breadcrumbs_tags_internet_tv_and_mobile_mts()
+        breadcrumbs_page_tags_mts.check_breadcrumbs_tags_home_internet_mts()
+        breadcrumbs_page_tags_mts.check_breadcrumbs_tags_cheap_internet_mts()
+        breadcrumbs_page_tags_mts.check_breadcrumbs_tags_online_cinema_mts()
+
+
+
 
 
 
