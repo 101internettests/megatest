@@ -54,4 +54,7 @@ class BreadcrumbsTagsMts:
     TEXT_BREADCRUMBS_MTS = (By.XPATH, "//h1[contains(text(), 'Домашний интернет от провайдера МТС в Челябинске')]")
     BREADCRUMBS_PROVIDERS_OF_CH = (By.XPATH, "//span[contains(text(), 'Провайдеры Челябинска')]")
     TEXT_PROVIDERS_OF_CH = (By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры в Челябинске')]")
+    SCROLL_TO_BUTTON_RATES = (By.XPATH, "//a[contains(text(), 'Тарифы')]")
+    RATES_MTS = (By.XPATH, "//a[contains(text(), 'МТС')]")
+    CLICK_RATES = (By.XPATH, "(//a[contains(text(), 'Тарифы')])[3]")
 
