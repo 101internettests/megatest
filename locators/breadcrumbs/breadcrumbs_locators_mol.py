@@ -26,4 +26,23 @@ class BreadcrumbsTagsMol:
     TEXT_TAG_500_MB = (By.XPATH, "//h1[contains(text(), 'Домашний интернет 500 Мб/с в Москве')]")
     TEXT_TAG_ONLINE_CINEMA = (By.XPATH, "//h1[contains(text(), 'Тарифы интернета с подпиской на онлайн-кинотеатр в Москве')]")
     TEXT_BREADCRUMBS_RATES_FOR_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы на интернет в Москве')]")
+    TAG_INTERNET_TV = (By.XPATH, "(//div[contains(text(), 'интернет+тв')])[2]")
 
+
+class BreadcrumbsTagsRostel:
+    TEXT_TAG_INTERNET_AND_MOBILE = (By.XPATH, "//h1[contains(text(), 'Ростелеком - домашний интернет и мобильная связь. Тарифы в Москве')]")
+    TEXT_TAG_INTERNET_TV_MOBILE = (By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на ТВ, интернет и мобильную связь в Москве')]")
+    TEXT_TAG_HOME_INTERNET = (By.XPATH, "//h1[contains(text(), 'Ростелеком домашний интернет в Москве')]")
+    TEXT_TAG_INTERNET_TV = (By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на интернет и телевидение в Москве')]")
+    TEXT_TAG_CHEAP_INTERNET = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифы Ростелеком на интернет в Москве')]")
+    TEXT_TAG_ONLINE_CINEMA = (By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на домашний интернет с подпиской на онлайн-кинотеатр в Москве')]")
+    BREADCRUMBS_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы')]")
+    BREADCRUMBS_RATES_TEXT = (By.XPATH, "//h1[contains(text(), 'Тарифные планы от Ростелеком в Москве')]")
+    BREADCRUMBS_ROSTEL = (By.XPATH, "//span[contains(text(), 'Ростелеком')]")
+    TEXT_BREADCRUMBS_ROSTEL = (By.XPATH, "//h1[contains(text(), 'Провайдер  Ростелеком в Москве')]")
+    BREADCRUMBS_PROVIDERS_OF_MOSCOW = (By.XPATH, "//span[contains(text(), 'Провайдеры Москвы')]")
+    TEXT_PROVIDERS_OF_MOSCOW = (By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры Москвы')]")
+    SCROLL_TO_BUTTON_RATES = (By.XPATH, "//a[contains(text(), 'Тарифы')]")
+    RATES_ROSTEL = (By.XPATH, "//a[contains(text(), 'Ростелеком')]")
+    CLICK_RATES = (By.XPATH, "(//a[contains(text(), 'Тарифы')])[3]")
+    CHECK_THE_MAIN_PAGE = (By.XPATH, "//h1[contains(text(), 'Подключить домашний интернет в Москве')]")

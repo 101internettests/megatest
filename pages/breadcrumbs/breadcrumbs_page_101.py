@@ -74,15 +74,11 @@ class CheckBreadCrumbs(BasePage):
         check_text_internet_and_mobile = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_INTERNET_AND_MOBILE)
         assert check_text_internet_and_mobile.text == 'Тарифы на интернет и мобильную связь в Челябинске'
         sleep(3)
-        self.check_breadcrumbs()
-        sleep(3)
 
     def check_breadcrumbs_tags_internet_tv_and_mobile(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV_MOBILE).click()
         check_text_internet_tv_and_mobile = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_INTERNET_TV_MOBILE)
         assert check_text_internet_tv_and_mobile.text == 'Тарифы домашнего интернета, цифрового ТВ и мобильной связи в Челябинске'
-        sleep(3)
-        self.check_breadcrumbs()
         sleep(3)
 
     def check_breadcrumbs_tags_home_internet(self):
@@ -90,15 +86,11 @@ class CheckBreadCrumbs(BasePage):
         check_text_home_internet = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_HOME_INTERNET)
         assert check_text_home_internet.text == 'Домашний интернет в Челябинске'
         sleep(3)
-        self.check_breadcrumbs()
-        sleep(3)
 
     def check_breadcrumbs_tags_internet_and_tv(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV).click()
         check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_INTERNET_TV)
         assert check_text_internet_and_tv.text == 'Тарифы на интернет и телевидение в Челябинске'
-        sleep(3)
-        self.check_breadcrumbs()
         sleep(3)
 
     def check_breadcrumbs_tags_cheap_internet(self):
@@ -106,15 +98,11 @@ class CheckBreadCrumbs(BasePage):
         check_text_cheap_internet = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_CHEAP_INTERNET)
         assert check_text_cheap_internet.text == 'Дешевый домашний интернет в Челябинске'
         sleep(3)
-        self.check_breadcrumbs()
-        sleep(3)
 
     def check_breadcrumbs_tags_100(self):
         self.element_is_visible(BreadcrumbsTags.TAG_100_MB).click()
         check_text_100 = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_100_MB)
         assert check_text_100.text == 'Тарифы с интернетом 100 мб в Челябинске'
-        sleep(3)
-        self.check_breadcrumbs()
         sleep(3)
 
     def check_breadcrumbs_tags_300(self):
@@ -122,23 +110,17 @@ class CheckBreadCrumbs(BasePage):
         check_text_300 = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_300_MB)
         assert check_text_300.text == 'Домашний интернет 300 Мб/с в Челябинске'
         sleep(3)
-        self.check_breadcrumbs()
-        sleep(3)
 
     def check_breadcrumbs_tags_500(self):
         self.element_is_visible(BreadcrumbsTags.TAG_500_MB).click()
         check_text_500 = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_500_MB)
         assert check_text_500.text == 'Домашний интернет 500 Мб/с в Челябинске'
         sleep(3)
-        self.check_breadcrumbs()
-        sleep(3)
 
     def check_breadcrumbs_tags_online_cinema(self):
         self.element_is_visible(BreadcrumbsTags.TAG_ONLINE_CINEMA).click()
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTags.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифы интернета с подпиской на онлайн-кинотеатр в Челябинске'
-        sleep(3)
-        self.check_breadcrumbs()
         sleep(3)
 
     def check_breadcrumbs_mts(self):
@@ -165,7 +147,6 @@ class CheckBreadCrumbs(BasePage):
         sleep(3)
         self.element_is_visible(BreadcrumbsTagsMts.CLICK_RATES).click()
 
-
     def scroll_tags_mts(self):
         scroll_element = self.element_is_visible(BreadcrumbsTagsMts.SCROLL_TO_BUTTON_RATES)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
@@ -178,16 +159,12 @@ class CheckBreadCrumbs(BasePage):
         check_text_internet_and_mobile = self.element_is_visible(BreadcrumbsTagsMts.TEXT_TAG_INTERNET_AND_MOBILE)
         assert check_text_internet_and_mobile.text == 'Тарифы МТС на домашний интернет и мобильную связь в Челябинске'
         sleep(3)
-        self.check_breadcrumbs_mts()
-        sleep(3)
 
     def check_breadcrumbs_tags_internet_tv_and_mobile_mts(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV_MOBILE).click()
         self.scroll_tags_mts()
         check_text_internet_tv_and_mobile = self.element_is_visible(BreadcrumbsTagsMts.TEXT_TAG_INTERNET_TV_MOBILE)
         assert check_text_internet_tv_and_mobile.text == 'Тарифы МТС на интернет, ТВ и мобильную связь в Челябинске'
-        sleep(3)
-        self.check_breadcrumbs_mts()
         sleep(3)
 
     def check_breadcrumbs_tags_home_internet_mts(self):
@@ -196,16 +173,12 @@ class CheckBreadCrumbs(BasePage):
         check_text_home_internet = self.element_is_visible(BreadcrumbsTagsMts.TEXT_TAG_HOME_INTERNET)
         assert check_text_home_internet.text == 'Домашний интернет от провайдера МТС в Челябинске'
         sleep(3)
-        self.check_breadcrumbs_mts()
-        sleep(3)
 
     def check_breadcrumbs_tags_cheap_internet_mts(self):
         self.element_is_visible(BreadcrumbsTags.TAG_CHEAP_INTERNET).click()
         self.scroll_tags_mts()
         check_text_cheap_internet = self.element_is_visible(BreadcrumbsTagsMts.TEXT_TAG_CHEAP_INTERNET)
         assert check_text_cheap_internet.text == 'Выгодные тарифы МТС на интернет в Челябинске'
-        sleep(3)
-        self.check_breadcrumbs_mts()
         sleep(3)
 
     def check_breadcrumbs_tags_online_cinema_mts(self):
@@ -214,6 +187,3 @@ class CheckBreadCrumbs(BasePage):
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsMts.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифы домашнего интернета МТС с подпиской на онлайн-кинотеатр в Челябинске'
         sleep(3)
-        self.check_breadcrumbs_mts()
-        sleep(3)
-
