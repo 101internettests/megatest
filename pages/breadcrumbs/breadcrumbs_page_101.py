@@ -1,6 +1,6 @@
 import allure
 import time
-from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts, ProviderMts
 from pages.base_page import BasePage
 from time import sleep
 
@@ -187,3 +187,35 @@ class CheckBreadCrumbs(BasePage):
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsMts.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифы домашнего интернета МТС с подпиской на онлайн-кинотеатр в Челябинске'
         sleep(3)
+        self.element_is_visible(BreadcrumbsTags.TAG_ONLINE_CINEMA).click()
+
+    def check_breadcrumbs_providers_and_main(self):
+        self.element_is_visible(BreadcrumbsTagsMts.BREADCRUMBS_MTS).click()
+        check_text_about_provider_mts = self.element_is_visible(ProviderMts.TEXT_ABOUT_PROVIDER)
+        assert check_text_about_provider_mts.text == 'Домашний интернет от провайдера МТС в Челябинске'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsMts.BREADCRUMBS_PROVIDERS_OF_CH).click()
+        sleep(3)
+        check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsMts.TEXT_PROVIDERS_OF_CH)
+        assert check_text_online_cinema.text == 'Интернет-провайдеры в Челябинске'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(1)
+        check_text_connect_the_internet = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить интернет в Челябинске'
+
+    def check_breadcrumbs_action_mts(self):
+        self.scroll_tags_mts()
+        sleep(1)
+        check_text_action_mts = self.element_is_visible(ProviderMts.TEXT_ACTION_MTS)
+        assert check_text_action_mts.text == 'Акции интернет-провайдера МТС в Челябинске'
+
+    def check_breadcrumbs_rating_mts(self):
+        self.scroll_tags_mts()
+        sleep(1)
+        check_text_rating_mts = self.element_is_visible(ProviderMts.TEXT_RATING_MTS)
+        assert check_text_rating_mts.text == 'Отзывы о домашнем интернете МТС в Челябинске'
+
+
+
+

@@ -1,6 +1,6 @@
 import allure
 import time
-from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu
+from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu, ProviderDomRu
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags
 from pages.base_page import BasePage
 from time import sleep
@@ -198,3 +198,30 @@ class CheckBreadCrumbsPol(BasePage):
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифы домашнего интернета Дом.ру с подпиской на онлайн-кинотеатр в Санкт-Петербурге'
         sleep(3)
+
+    def check_breadcrumbs_providers_and_main_pol(self):
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_DOM_RU).click()
+        check_text_about_provider_mts = self.element_is_visible(ProviderDomRu.TEXT_ABOUT_PROVIDER)
+        assert check_text_about_provider_mts.text == 'Тарифные планы интернет-провайдера Дом.ру в Санкт-Петербурге'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_PROVIDERS_OF_SPB).click()
+        sleep(3)
+        check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_PROVIDERS_OF_SPB)
+        assert check_text_online_cinema.text == 'Интернет-провайдеры в Санкт-Петербурге'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(1)
+        check_text_connect_the_internet = self.element_is_visible(BreadcrumbsTagsDomRu.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+
+    def check_breadcrumbs_action_dom_ru(self):
+        self.scroll_tags_dom_ru()
+        sleep(1)
+        check_text_action_mts = self.element_is_visible(ProviderDomRu.TEXT_ACTION_DOM_RU)
+        assert check_text_action_mts.text == 'Акции интернет-провайдера Дом.ру в Санкт-Петербурге'
+
+    def check_breadcrumbs_rating_dom_ru(self):
+        self.scroll_tags_dom_ru()
+        sleep(1)
+        check_text_rating_mts = self.element_is_visible(ProviderDomRu.TEXT_RATING_DOM_RU)
+        assert check_text_rating_mts.text == 'Отзывы о провайдере Дом.ру в Санкт-Петербурге'

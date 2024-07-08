@@ -14,7 +14,7 @@ class TestBreadCrumbs:
         breadcrumbs_page.check_linking()
         breadcrumbs_page.check_breadcrumbs_linking()
 
-    def test_linking_tags(self, driver):
+    def test_tags_101(self, driver):
         breadcrumbs_page_tags = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/rates")
         breadcrumbs_page_tags.open()
         breadcrumbs_page_tags.check_breadcrumbs_tags_internet_and_mobile()
@@ -36,7 +36,7 @@ class TestBreadCrumbs:
         breadcrumbs_page_tags.check_breadcrumbs_tags_online_cinema()
         breadcrumbs_page_tags.check_breadcrumbs()
 
-    def test_linking_tags_mts(self, driver):
+    def test_tags_mts(self, driver):
         breadcrumbs_page_tags_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/mts/rates")
         breadcrumbs_page_tags_mts.open()
         breadcrumbs_page_tags_mts.check_breadcrumbs_tags_internet_and_mobile_mts()
@@ -49,6 +49,23 @@ class TestBreadCrumbs:
         breadcrumbs_page_tags_mts.check_breadcrumbs_mts()
         breadcrumbs_page_tags_mts.check_breadcrumbs_tags_online_cinema_mts()
         breadcrumbs_page_tags_mts.check_breadcrumbs_mts()
+
+    def test_about_provider_mts(self, driver):
+        breadcrumbs_page_about_provider_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/mts")
+        breadcrumbs_page_about_provider_mts.open()
+        breadcrumbs_page_about_provider_mts.check_breadcrumbs_providers_and_main()
+
+    def test_actions_mts(self, driver):
+        breadcrumbs_page_test_actions_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/actions/mts")
+        breadcrumbs_page_test_actions_mts.open()
+        breadcrumbs_page_test_actions_mts.check_breadcrumbs_action_mts()
+        breadcrumbs_page_test_actions_mts.check_breadcrumbs_providers_and_main()
+
+    def test_rating_mts(self, driver):
+        breadcrumbs_page_test_rating_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/rating/mts")
+        breadcrumbs_page_test_rating_mts.open()
+        breadcrumbs_page_test_rating_mts.check_breadcrumbs_rating_mts()
+        breadcrumbs_page_test_rating_mts.check_breadcrumbs_providers_and_main()
 
 
 

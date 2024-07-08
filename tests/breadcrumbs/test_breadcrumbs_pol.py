@@ -8,13 +8,13 @@ import time
 class TestBreadCrumbsPol:
     @allure.title("Проверка прелинковки и хлебных крошек в ней")
     #@qase.title("Проверка прелинковки и хлебных крошек в ней")
-    def test_linking_mol(self, driver):
+    def test_linking_pol(self, driver):
         breadcrumbs_page_pol = CheckBreadCrumbsPol(driver, "https://piter-online.net/dom/ul-dimitrova-d-2-id168269")
         breadcrumbs_page_pol.open()
         breadcrumbs_page_pol.check_linking()
         breadcrumbs_page_pol.check_breadcrumbs_linking_pol()
 
-    def test_linking_tags(self, driver):
+    def test_tags_mol(self, driver):
         breadcrumbs_page_tags_pol = CheckBreadCrumbsPol(driver, "https://piter-online.net/rates")
         breadcrumbs_page_tags_pol.open()
         breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_internet_and_mobile()
@@ -36,7 +36,7 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_tags_pol.check_breadcrumbs_tags_pol_online_cinema()
         breadcrumbs_page_tags_pol.check_breadcrumbs_pol()
 
-    def test_linking_tags_dom_ru(self, driver):
+    def test_tags_dom_ru(self, driver):
         breadcrumbs_page_tags_dom_ru = CheckBreadCrumbsPol(driver, "https://piter-online.net/providers/dom-ru/rates")
         breadcrumbs_page_tags_dom_ru.open()
         # breadcrumbs_page_tags_dom_ru.check_breadcrumbs_tags_internet_and_mobile_rostel()
@@ -51,3 +51,20 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_tags_dom_ru.check_breadcrumbs_dom_ru()
         breadcrumbs_page_tags_dom_ru.check_breadcrumbs_tags_online_cinema_dom_ru()
         breadcrumbs_page_tags_dom_ru.check_breadcrumbs_dom_ru()
+
+    def test_about_provider_dom_ru(self, driver):
+        breadcrumbs_page_about_provider_dom_ru = CheckBreadCrumbsPol(driver, "https://piter-online.net/providers/dom-ru")
+        breadcrumbs_page_about_provider_dom_ru.open()
+        breadcrumbs_page_about_provider_dom_ru.check_breadcrumbs_providers_and_main_pol()
+
+    def test_actions_dom_ru(self, driver):
+        breadcrumbs_page_test_actions_dom_ru = CheckBreadCrumbsPol(driver, "https://piter-online.net/providers/actions/dom-ru")
+        breadcrumbs_page_test_actions_dom_ru.open()
+        breadcrumbs_page_test_actions_dom_ru.check_breadcrumbs_action_dom_ru()
+        breadcrumbs_page_test_actions_dom_ru.check_breadcrumbs_providers_and_main_pol()
+
+    def test_rating_dom_ru(self, driver):
+        breadcrumbs_page_test_rating_dom_ru = CheckBreadCrumbsPol(driver, "https://piter-online.net/rating/dom-ru")
+        breadcrumbs_page_test_rating_dom_ru.open()
+        breadcrumbs_page_test_rating_dom_ru.check_breadcrumbs_rating_dom_ru()
+        breadcrumbs_page_test_rating_dom_ru.check_breadcrumbs_providers_and_main_pol()

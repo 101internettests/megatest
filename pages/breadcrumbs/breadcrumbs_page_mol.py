@@ -1,6 +1,6 @@
 import allure
 import time
-from locators.breadcrumbs.breadcrumbs_locators_mol import LinkingMol, BreadcrumbsTagsRostel, BreadcrumbsTagsMol
+from locators.breadcrumbs.breadcrumbs_locators_mol import LinkingMol, BreadcrumbsTagsRostel, BreadcrumbsTagsMol, ProviderRostel
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags
 from pages.base_page import BasePage
 from time import sleep
@@ -195,4 +195,31 @@ class CheckBreadCrumbsMol(BasePage):
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsRostel.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифные планы Ростелеком на домашний интернет с подпиской на онлайн-кинотеатр в Москве'
         sleep(3)
+
+    def check_breadcrumbs_providers_and_main_mol(self):
+        self.element_is_visible(BreadcrumbsTagsRostel.BREADCRUMBS_ROSTEL).click()
+        check_text_about_provider_mts = self.element_is_visible(ProviderRostel.TEXT_ABOUT_PROVIDER)
+        assert check_text_about_provider_mts.text == 'Провайдер Ростелеком в Москве'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsRostel.BREADCRUMBS_PROVIDERS_OF_MOSCOW).click()
+        sleep(3)
+        check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsRostel.TEXT_PROVIDERS_OF_MOSCOW)
+        assert check_text_online_cinema.text == 'Интернет-провайдеры Москвы'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(1)
+        check_text_connect_the_internet = self.element_is_visible(BreadcrumbsTagsRostel.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Москве'
+
+    def check_breadcrumbs_action_rostel(self):
+        self.scroll_tags_rostel()
+        sleep(1)
+        check_text_action_mts = self.element_is_visible(ProviderRostel.TEXT_ACTION_ROSTEL)
+        assert check_text_action_mts.text == 'Акции Ростелеком в Москве'
+
+    def check_breadcrumbs_rating_rostel(self):
+        self.scroll_tags_rostel()
+        sleep(1)
+        check_text_rating_mts = self.element_is_visible(ProviderRostel.TEXT_RATING_ROATEL)
+        assert check_text_rating_mts.text == 'Отзывы о провайдере Ростелеком в Москве'
 
