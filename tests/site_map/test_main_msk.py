@@ -24,3 +24,15 @@ class TestSiteMap:
         map_page = CheckTheMap(driver, "https://101internet.ru/ryazan/site-map")
         map_page.open()
         map_page.click_on_url_and_back_ryaz_101()
+
+    @allure.title("Проверка карты покрытия Пол, Спб")
+    def test_pol(self, driver):
+        map_page = CheckTheMap(driver, "https://piter-online.net/site-map")
+        map_page.open()
+        map_page.click_on_url_and_back_pol_spb()
+
+    @allure.title("Проверка карты покрытия Мол, Москва")
+    def test_pol(self, driver):
+        map_page = CheckTheMap(driver, "https://www.moskvaonline.ru/site-map")
+        map_page.open()
+        map_page.click_on_url_and_back_mol()
