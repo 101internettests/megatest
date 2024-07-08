@@ -60,4 +60,8 @@ class BasePage:
     def switch_back_handles_window(self):
         self.driver.switch_to.window(self.driver.window_handles[0])
 
-
+    def assertIsNotNone(self, value, msg=None):
+        if value is not None:
+            return
+        else:
+            raise AssertionError(msg if msg is not None else 'Значение оказалось None')
