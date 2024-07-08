@@ -1,6 +1,6 @@
 import allure
 import time
-from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol
+from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu, ProviderDomRu
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags
 from pages.base_page import BasePage
 from time import sleep
@@ -67,64 +67,161 @@ class CheckBreadCrumbsPol(BasePage):
         sleep(3)
         self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
         check_the_text_internet_and_mobile = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
-        assert check_the_text_internet_and_mobile.text == 'Подключить лучший домашний интернет в Санкт-Петербурге'
+        assert check_the_text_internet_and_mobile.text == 'Подключить домашний интернет в Санкт-Петербурге'
         sleep(3)
         self.element_is_visible(BreadcrumbsTags.RATES).click()
 
-    def check_breadcrumbs_tags_pol(self):
+    def check_breadcrumbs_tags_pol_internet_and_mobile(self):
         self.scroll_tags()
         sleep(3)
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_AND_MOBILE).click()
         check_text_internet_and_mobile = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_INTERNET_AND_MOBILE)
         assert check_text_internet_and_mobile.text == 'Тарифы на интернет и мобильную связь в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_internet_tv_and_mobile(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV_MOBILE).click()
         check_text_internet_tv_and_mobile = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_INTERNET_TV_MOBILE)
         assert check_text_internet_tv_and_mobile.text == 'Тарифы интернет, ТВ и мобильная связь в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_home_internet(self):
         self.element_is_visible(BreadcrumbsTags.TAG_HOME_INTERNET).click()
         check_text_home_internet = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_HOME_INTERNET)
         assert check_text_home_internet.text == 'Домашний интернет в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_internet_and_tv(self):
         self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV).click()
         check_text_internet_and_tv = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_INTERNET_TV)
         assert check_text_internet_and_tv.text == 'Домашнее телевидение и интернет в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_cheap_internet(self):
         self.element_is_visible(BreadcrumbsTags.TAG_CHEAP_INTERNET).click()
         check_text_cheap_internet = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_CHEAP_INTERNET)
         assert check_text_cheap_internet.text == 'Дешевый домашний интернет в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_100(self):
         self.element_is_visible(BreadcrumbsTags.TAG_100_MB).click()
         check_text_100 = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_100_MB)
         assert check_text_100.text == 'Тарифы с домашним интернетом 100 Мб/с в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_300(self):
         self.element_is_visible(BreadcrumbsTags.TAG_300_MB).click()
         check_text_300 = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_300_MB)
         assert check_text_300.text == 'Домашний интернет 300 Мб/с в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_500(self):
         self.element_is_visible(BreadcrumbsTags.TAG_500_MB).click()
         check_text_500 = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_500_MB)
         assert check_text_500.text == 'Домашний интернет 500 Мб/с в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
-        sleep(3)
+
+    def check_breadcrumbs_tags_pol_online_cinema(self):
         self.element_is_visible(BreadcrumbsTags.TAG_ONLINE_CINEMA).click()
         check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsPol.TEXT_TAG_ONLINE_CINEMA)
         assert check_text_online_cinema.text == 'Тарифы интернета с подпиской на онлайн-кинотеатр в Санкт-Петербурге'
         sleep(3)
-        self.check_breadcrumbs_pol()
+
+    def check_breadcrumbs_dom_ru(self):
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_RATES).click()
         sleep(3)
+        check_the_text_rates_mts = self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_RATES_TEXT)
+        assert check_the_text_rates_mts.text == 'Дом.ру: тарифы на домашний интернет и ТВ в Санкт-Петербурге'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_DOM_RU).click()
+        check_the_text_mts = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_BREADCRUMBS_DOM_RU)
+        assert check_the_text_mts.text == 'Тарифные планы интернет-провайдера Дом.ру в Санкт-Петербурге'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_PROVIDERS_OF_SPB).click()
+        check_the_text_providers_of_ch = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_PROVIDERS_OF_SPB)
+        assert check_the_text_providers_of_ch.text == 'Интернет-провайдеры в Санкт-Петербурге'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        check_the_text_connect_the_internet = self.element_is_visible(BreadcrumbsTagsDomRu.CHECK_THE_MAIN_PAGE)
+        assert check_the_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTags.RATES).click()
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsDomRu.RATES_DOM_RU).click()
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsDomRu.CLICK_RATES).click()
+
+    def scroll_tags_dom_ru(self):
+        scroll_element = self.element_is_visible(BreadcrumbsTagsDomRu.SCROLL_TO_BUTTON_RATES)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
+
+    # def check_breadcrumbs_tags_internet_and_mobile_dom_ru(self):
+    #     self.scroll_tags()
+    #     sleep(3)
+    #     self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_AND_MOBILE).click()
+    #     self.scroll_tags_mts()
+    #     check_text_internet_and_mobile = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_INTERNET_AND_MOBILE)
+    #     assert check_text_internet_and_mobile.text == 'Ростелеком - домашний интернет и мобильная связь. Тарифы в Москве'
+    #     sleep(3)
+    #
+    # def check_breadcrumbs_tags_internet_tv_and_mobile_dom_ru(self):
+    #     self.element_is_visible(BreadcrumbsTags.TAG_INTERNET_TV_MOBILE).click()
+    #     self.scroll_tags_mts()
+    #     check_text_internet_tv_and_mobile = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_INTERNET_TV_MOBILE)
+    #     assert check_text_internet_tv_and_mobile.text == 'Тарифные планы Ростелеком на ТВ, интернет и мобильную связь в Москве'
+    #     sleep(3)
+
+    def check_breadcrumbs_tags_home_internet_dom_ru(self):
+        self.element_is_visible(BreadcrumbsTags.TAG_HOME_INTERNET).click()
+        self.scroll_tags_dom_ru()
+        check_text_home_internet = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_HOME_INTERNET)
+        assert check_text_home_internet.text == 'Тарифы Дом.ру на домашний интернет в Санкт-Петербурге'
+        sleep(3)
+
+    def check_breadcrumbs_tags_internet_tv_dom_ru(self):
+        self.element_is_visible(BreadcrumbsTagsPol.TAG_INTERNET_TV).click()
+        self.scroll_tags_dom_ru()
+        check_text_internet_tv = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_INTERNET_TV)
+        assert check_text_internet_tv.text == 'Тарифы Дом.ру на интернет и ТВ в Санкт-Петербурге'
+        sleep(3)
+
+    def check_breadcrumbs_tags_cheap_internet_dom_ru(self):
+        self.element_is_visible(BreadcrumbsTags.TAG_CHEAP_INTERNET).click()
+        self.scroll_tags_dom_ru()
+        check_text_cheap_internet = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_CHEAP_INTERNET)
+        assert check_text_cheap_internet.text == 'Выгодные тарифы Дом.ру на интернет в Санкт-Петербурге'
+        sleep(3)
+
+    def check_breadcrumbs_tags_online_cinema_dom_ru(self):
+        self.element_is_visible(BreadcrumbsTags.TAG_ONLINE_CINEMA).click()
+        self.scroll_tags_dom_ru()
+        check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_TAG_ONLINE_CINEMA)
+        assert check_text_online_cinema.text == 'Тарифы домашнего интернета Дом.ру с подпиской на онлайн-кинотеатр в Санкт-Петербурге'
+        sleep(3)
+
+    def check_breadcrumbs_providers_and_main_pol(self):
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_DOM_RU).click()
+        check_text_about_provider_mts = self.element_is_visible(ProviderDomRu.TEXT_ABOUT_PROVIDER)
+        assert check_text_about_provider_mts.text == 'Тарифные планы интернет-провайдера Дом.ру в Санкт-Петербурге'
+        sleep(3)
+        self.element_is_visible(BreadcrumbsTagsDomRu.BREADCRUMBS_PROVIDERS_OF_SPB).click()
+        sleep(3)
+        check_text_online_cinema = self.element_is_visible(BreadcrumbsTagsDomRu.TEXT_PROVIDERS_OF_SPB)
+        assert check_text_online_cinema.text == 'Интернет-провайдеры в Санкт-Петербурге'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(1)
+        check_text_connect_the_internet = self.element_is_visible(BreadcrumbsTagsDomRu.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+
+    def check_breadcrumbs_action_dom_ru(self):
+        self.scroll_tags_dom_ru()
+        sleep(1)
+        check_text_action_mts = self.element_is_visible(ProviderDomRu.TEXT_ACTION_DOM_RU)
+        assert check_text_action_mts.text == 'Акции интернет-провайдера Дом.ру в Санкт-Петербурге'
+
+    def check_breadcrumbs_rating_dom_ru(self):
+        self.scroll_tags_dom_ru()
+        sleep(1)
+        check_text_rating_mts = self.element_is_visible(ProviderDomRu.TEXT_RATING_DOM_RU)
+        assert check_text_rating_mts.text == 'Отзывы о провайдере Дом.ру в Санкт-Петербурге'
