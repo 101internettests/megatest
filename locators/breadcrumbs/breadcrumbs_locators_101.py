@@ -7,7 +7,7 @@ class Linking:
     STREET_LINKING = (By.XPATH, "//a[contains(text(), 'Барбюса ул д. 6  ')]")
     CLOSE_THE_POPAP = (By.XPATH, "//div[@datatest='close_popup1_from_quiz_input_tel']")
     CHECK_THE_ADRESS = (
-    By.XPATH, "//h1[contains(text(), 'Интернет и ТВ по адресу ул. Барбюса 6, Челябинск (Ленинский)')]")
+        By.XPATH, "//h1[contains(text(), 'Интернет и ТВ по адресу ул. Барбюса 6, Челябинск (Ленинский)')]")
     BREADCRUMBS_STREET = (By.XPATH, "//span[contains(text(), 'Барбюса')]")
     CHECK_THE_STREET = (By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры на ул. Барбюса, Челябинск')]")
     BREADCRUMBS_DISTRICT = (By.XPATH, "//span[contains(text(), 'Интернет провайдеры в Ленинский')]")
@@ -29,9 +29,9 @@ class BreadcrumbsTags:
     TAG_500_MB = (By.XPATH, "//div[contains(text(), '500 мб/с')]")
     TAG_ONLINE_CINEMA = (By.XPATH, "//div[contains(text(), 'онлайн-кинотеатр')]")
     TEXT_TAG_INTERNET_AND_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы на интернет и мобильную связь в Челябинске')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифы на интернет и мобильную связь в Челябинске')]")
     TEXT_TAG_INTERNET_TV_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы домашнего интернета, цифрового ТВ и мобильной связи в Челябинске')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифы домашнего интернета, цифрового ТВ и мобильной связи в Челябинске')]")
     TEXT_TAG_HOME_INTERNET = (By.XPATH, "//h1[contains(text(), 'Домашний интернет в Челябинске')]")
     TEXT_TAG_INTERNET_TV = (By.XPATH, "//h1[contains(text(), 'Тарифы на интернет и телевидение в Челябинске')]")
     TEXT_TAG_CHEAP_INTERNET = (By.XPATH, "//h1[contains(text(), 'Дешевый домашний интернет в Челябинске')]")
@@ -39,7 +39,7 @@ class BreadcrumbsTags:
     TEXT_TAG_300_MB = (By.XPATH, "//h1[contains(text(), 'Домашний интернет 300 Мб/с в Челябинске')]")
     TEXT_TAG_500_MB = (By.XPATH, "//h1[contains(text(), 'Домашний интернет 500 Мб/с в Челябинске')]")
     TEXT_TAG_ONLINE_CINEMA = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы интернета с подпиской на онлайн-кинотеатр в Челябинске')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифы интернета с подпиской на онлайн-кинотеатр в Челябинске')]")
     BREADCRUMBS_RATES_FOR_INTERNET = (By.XPATH, "//span[contains(text(), 'Тарифы на интернет')]")
     TEXT_BREADCRUMBS_RATES_FOR_INTERNET = (By.XPATH, "//h1[contains(text(), 'Интернет тарифы в Челябинске')]")
     RATES = (By.XPATH, "(//a[contains(text(), 'Тарифы')])[1]")
@@ -48,13 +48,14 @@ class BreadcrumbsTags:
 
 class BreadcrumbsTagsMts:
     TEXT_TAG_INTERNET_AND_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы МТС на домашний интернет и мобильную связь в Челябинске')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифы МТС на домашний интернет и мобильную связь в Челябинске')]")
     TEXT_TAG_INTERNET_TV_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы МТС на интернет, ТВ и мобильную связь в Челябинске')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифы МТС на интернет, ТВ и мобильную связь в Челябинске')]")
     TEXT_TAG_HOME_INTERNET = (By.XPATH, "//h1[contains(text(), 'Домашний интернет от провайдера МТС в Челябинске')]")
     TEXT_TAG_CHEAP_INTERNET = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифы МТС на интернет в Челябинске')]")
     TEXT_TAG_ONLINE_CINEMA = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы домашнего интернета МТС с подпиской на онлайн-кинотеатр в Челябинске')]")
+        By.XPATH,
+        "//h1[contains(text(), 'Тарифы домашнего интернета МТС с подпиской на онлайн-кинотеатр в Челябинске')]")
     BREADCRUMBS_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы')]")
     BREADCRUMBS_RATES_TEXT = (By.XPATH, "//h1[contains(text(), 'Тарифные планы интернет-провайдера МТС в Челябинске')]")
     BREADCRUMBS_MTS = (By.XPATH, "//span[contains(text(), 'МТС')]")
@@ -70,4 +71,38 @@ class ProviderMts:
     TEXT_ABOUT_PROVIDER = (By.XPATH, "//h1[contains(text(), 'Домашний интернет от провайдера МТС в Челябинске')]")
     TEXT_ACTION_MTS = (By.XPATH, "//h1[contains(text(), 'Акции интернет-провайдера МТС в Челябинске')]")
     TEXT_RATING_MTS = (By.XPATH, "//h1[contains(text(), 'Отзывы о домашнем интернете МТС в Челябинске')]")
+
+
+class OperatorMts:
+    # ALL_OPERATORS = (By.XPATH, "//div[contains(text(), 'Все операторы')]")
+    OPERATOR_MTS = (By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/89/5b/09ddfbde.png']")
+    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Безлимитный интернет тарифы МТС в Челябинске')]")
+    TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы МТС')]")
+    TEXT_OPERATOR_MTS = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи МТС')]")
+    MOBILE_OPERATORS = (By.XPATH, "//span[contains(text(), 'Мобильные операторы')]")
+    TEXT_MOBILE_OPERATORS = (By.XPATH, "//h1[contains(text(), 'Мобильные операторы')]")
+    SCROLL_TO_MINUTES = (By.XPATH, "//div[contains(text(), 'минуты')]")
+    TAG_YOUR_NUMBER = (By.XPATH, "//div[contains(text(), 'Перейти со своим номером')]")
+    TEXT_TAG_YOUR_NUMBER = (By.XPATH, "//h1[contains(text(), 'Переход на МТС с сохранением номера в Челябинске')]")
+    TAG_FOR_THE_TABLET = (By.XPATH, "//div[contains(text(), 'Для планшета')]")
+    TEXT_FOR_THE_TABLET = (By.XPATH, "//h1[contains(text(), 'Для планшета тарифы МТС в Челябинске')]")
+    TAG_NOT_PUBLIC = (By.XPATH, "//div[contains(text(), 'Непубличные')]")
+    TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы МТС в Челябинске')]")
+    TAG_FAMILY = (By.XPATH, "//div[contains(text(), 'Семейные')]")
+    TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Семейные тарифы МТС в Челябинске')]")
+    TAG_ROAMING = (By.XPATH, "//div[contains(text(), 'Роуминг за границей')]")
+    TEXT_ROAMING = (By.XPATH, "//h1[contains(text(), 'Международные тарифы от МТС подключение в Челябинске')]")
+    TAG_FAVORABLE = (By.XPATH, "//div[contains(text(), 'Выгодные')]")
+    TEXT_FAVORABLE = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифные планы от МТС в Челябинске')]")
+    TAG_FOR_MODEM = (By.XPATH, "//div[contains(text(), 'Для модема/роутера')]")
+    TEXT_FOR_MODEM = (By.XPATH, "//h1[contains(text(), 'Тарифы МТС для интернета через модем в Челябинске')]")
+    TAG_ESIM = (By.XPATH, "//div[contains(text(), 'eSIM')]")
+    TEXT_ESIM = (By.XPATH, "//h1[contains(text(), 'Встроенная СИМ-карта eSIM от МТС в Челябинске')]")
+    TAG_CHILDREN = (By.XPATH, "//div[contains(text(), 'Детские')]")
+    TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Детские тарифы МТС в Челябинске')]")
+    TAG_UNLIMITED = (By.XPATH, "//div[contains(text(), 'Безлимитная связь')]")
+    TEXT_UNLIMITED = (By.XPATH, "//h1[contains(text(), 'Безлимитные звонки на все операторы от МТС в Челябинске')]")
+    TAG_IN_RUSSIA = (By.XPATH, "//div[contains(text(), 'Связь по России')]")
+    TEXT_IN_RUSSIA = (By.XPATH, "//h1[contains(text(), 'Тарифы МТС по России - подключить в Челябинске')]")
+
 

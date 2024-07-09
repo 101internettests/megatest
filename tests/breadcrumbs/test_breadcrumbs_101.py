@@ -67,6 +67,35 @@ class TestBreadCrumbs:
         breadcrumbs_page_test_rating_mts.check_breadcrumbs_rating_mts()
         breadcrumbs_page_test_rating_mts.check_breadcrumbs_providers_and_main()
 
+    def test_tags_operator_mts(self, driver):
+        breadcrumbs_page_test_operator_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/operatory/mts/ratesmobile/bezlimitnyj-internet")
+        breadcrumbs_page_test_operator_mts.open()
+        breadcrumbs_page_test_operator_mts.check_tags_internet_and_mobile()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_your_number()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_for_the_tablet()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_family()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_roaming()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_favorable()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_for_modem()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_esim()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_children()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_unlimited()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+        breadcrumbs_page_test_operator_mts.check_tags_in_russia()
+        breadcrumbs_page_test_operator_mts.check_breadcrumbs_operator()
+
+
+
+
 
 
 
