@@ -3,8 +3,8 @@ from pages.canonical.canonical_page import CanonicalPage
 
 
 # @allure.suite("Технические дубли со слешем и без слеша отсутствуют")
-class TestSiteMap:
-    # @allure.title("Проверка карты покрытия 101, Москва")
+class TestCononicals:
+    @allure.title("Проверка наличия канониклов на страницах провайдеров, 101, Москва")
     def test_101_moskva_providers(self, driver):
         urls = ['https://101internet.ru/moskva/providers/2',
                 'https://101internet.ru/moskva/providers/3',
@@ -17,6 +17,7 @@ class TestSiteMap:
             check.open()
             check.check_page_canonicals_prov()
 
+    @allure.title("Проверка наличия канониклов на страницах тарифов, 101, Москва")
     def test_101_moskva_rates(self, driver):
         urls = ['https://101internet.ru/moskva/rates/2',
                 'https://101internet.ru/moskva/rates/3',
@@ -28,6 +29,7 @@ class TestSiteMap:
             check.open()
             check.check_page_canonicals_rates()
 
+    @allure.title("Проверка наличия канониклов на странице адреса, 101, Москва")
     def test_101_moskva_address(self, driver):
         urls = ['https://101internet.ru/moskva/dom/ul-zelyonaya-d-35-id4614611',
                 'https://101internet.ru/moskva/dom/ul-zelyonaya-d-35-id4614611/2',
@@ -37,6 +39,7 @@ class TestSiteMap:
             check.open()
             check.check_page_canonicals_address()
 
+    @allure.title("Проверка наличия канониклов на странице второго адреса, 101, Москва")
     def test_101_moskva_address_second(self, driver):
         urls = ['https://101internet.ru/moskva/dom/ul-sharikopodshipnikovskaya-d-11-id2801124',
                 'https://101internet.ru/moskva/dom/ul-sharikopodshipnikovskaya-d-11-id2801124/2',
@@ -46,6 +49,7 @@ class TestSiteMap:
             check.open()
             check.check_page_canonicals_address_second()
 
+    @allure.title("Проверка наличия канониклов на страницах отызывов, 101, Москва")
     def test_101_moskva_review(self, driver):
         urls = ['https://101internet.ru/moskva/reviews',
                 'https://101internet.ru/moskva/reviews/2',
@@ -59,6 +63,7 @@ class TestSiteMap:
             check.open()
             check.check_page_canonicals_review()
 
+    @allure.title("Проверка наличия канониклов на страницах провайдеров, 101, Казань")
     def test_101_kazan_providers(self, driver):
         urls = ['https://101internet.ru/kazan/providers',
                 'https://101internet.ru/kazan/providers/2'
@@ -177,3 +182,217 @@ class TestSiteMap:
             check = CanonicalPage(driver, url)
             check.open()
             check.check_page_canonicals_rates_pol()
+
+    def test_pol_office(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/orders/office")
+        check.open()
+        check.check_page_canonicals_office_pol()
+
+    def test_pol_address(self, driver):
+        urls = ['https://piter-online.net/dom/nab-rekifontanki-d-1-id3650379',
+                'https://piter-online.net/dom/nab-rekifontanki-d-1-id3650379/2'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_address_pol()
+
+    def test_pol_address_second(self, driver):
+        urls = ['https://piter-online.net/dom/nab-admiralteiskogokanala-d-5-id167623',
+                'https://piter-online.net/dom/nab-admiralteiskogokanala-d-5-id167623/2'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_address_second_pol()
+
+    def test_pol_kolpino_main(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/kolpino")
+        check.open()
+        check.check_page_canonicals_main_kolpino_pol()
+
+    def test_pol_address_kolpino(self, driver):
+        urls = ['https://piter-online.net/dom/ul-mira-beloostrov-d-10-stra-id3149916?filter=bezlimitniy-intenet',
+                'https://piter-online.net/dom/ul-mira-beloostrov-d-10-stra-id3149916/2?filter=bezlimitniy-intenet'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_address_kolpino_pol()
+
+    def test_pol_kolpino_providers(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/kolpino/providers")
+        check.open()
+        check.check_page_canonicals_providers_kolpino_pol()
+
+    def test_pol_kolpino_tohome(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/kolpino/orders/tohome")
+        check.open()
+        check.check_page_canonicals_tohome_kolpino_pol()
+
+    def test_pol_kolpino_rating(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/kolpino/rating")
+        check.open()
+        check.check_page_canonicals_rating_kolpino_pol()
+
+    def test_pol_kolpino_rates(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/kolpino/rates")
+        check.open()
+        check.check_page_canonicals_rates_kolpino_pol()
+
+    def test_pol_kolpino_office(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/kolpino/orders/office")
+        check.open()
+        check.check_page_canonicals_office_kolpino_pol()
+
+    def test_pol_providers_lenoblast(self, driver):
+        urls = ['https://piter-online.net/leningradskaya-oblast/providers',
+                'https://piter-online.net/leningradskaya-oblast/providers/2',
+                'https://piter-online.net/leningradskaya-oblast/providers/3',
+                'https://piter-online.net/leningradskaya-oblast/providers/4',
+                'https://piter-online.net/leningradskaya-oblast/providers/5'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_providers_lenoblast_pol()
+
+    def test_mol_main(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/")
+        check.open()
+        check.check_page_canonicals_main_mol()
+
+    def test_mol_tohome(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/tohome")
+        check.open()
+        check.check_page_canonicals_tohome_mol()
+
+    def test_pol_providers_mol(self, driver):
+        urls = ['https://www.moskvaonline.ru/providers',
+                'https://www.moskvaonline.ru/providers/2',
+                'https://www.moskvaonline.ru/providers/3',
+                'https://www.moskvaonline.ru/providers/4',
+                'https://www.moskvaonline.ru/providers/5'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_providers_mol()
+
+    def test_mol_rating(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/rating")
+        check.open()
+        check.check_page_canonicals_rating_mol()
+
+    def test_pol_rates_mol(self, driver):
+        urls = ['https://www.moskvaonline.ru/rates',
+                'https://www.moskvaonline.ru/rates/2',
+                'https://www.moskvaonline.ru/rates/3',
+                'https://www.moskvaonline.ru/rates/4',
+                'https://www.moskvaonline.ru/rates/5'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_rates_mol()
+
+    def test_mol_office(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/office")
+        check.open()
+        check.check_page_canonicals_office_mol()
+
+    def test_mol_sat(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/sat")
+        check.open()
+        check.check_page_canonicals_sat_mol()
+
+    def test_mol_operatory(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/operatory")
+        check.open()
+        check.check_page_canonicals_operatory_mol()
+
+    def test_mol_nomera(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/nomera")
+        check.open()
+        check.check_page_canonicals_nomera_mol()
+
+    def test_pol_address_mol(self, driver):
+        urls = ['https://www.moskvaonline.ru/dom/ul-arbat-d-1-id218520',
+                'https://www.moskvaonline.ru/dom/ul-arbat-d-1-id218520/2'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_address_mol()
+
+    def test_pol_address_second_mol(self, driver):
+        urls = ['https://www.moskvaonline.ru/dom/ul-noviiarbat-d-2-id192977',
+                'https://www.moskvaonline.ru/dom/ul-noviiarbat-d-2-id192977/2'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_address_second_mol()
+
+    def test_mol_balashixa_rating(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/rating")
+        check.open()
+        check.check_page_canonicals_rating_mol()
+
+    def test_mol_balashixa_rates(self, driver):
+        urls = ['https://www.moskvaonline.ru/balashiha/rates',
+                'https://www.moskvaonline.ru/balashiha/rates/2'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_rates_mol()
+
+    def test_mol_balashixa_providers(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/providers")
+        check.open()
+        check.check_page_canonicals_providers_mol_bal()
+
+    def test_mol_balashixa_office(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/orders/office")
+        check.open()
+        check.check_page_canonicals_office_mol_bal()
+
+    def test_mol_balashixa_sat(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/orders/sat")
+        check.open()
+        check.check_page_canonicals_sat_mol_bal()
+
+    def test_mol_obl_main(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/moskovskaya-oblast")
+        check.open()
+        check.check_page_canonicals_main_mol_obl()
+
+    def test_mol_obl_providers(self, driver):
+        urls = ['https://www.moskvaonline.ru/moskovskaya-oblast/providers',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/2',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/3',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/4',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/5'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_providers_mol_obl()
+
+    def test_mol_obl_rating(self, driver):
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/moskovskaya-oblast/rating")
+        check.open()
+        check.check_page_canonicals_rating_mol_obl()
+
+    def test_mol_obl_rates(self, driver):
+        urls = ['https://www.moskvaonline.ru/moskovskaya-oblast/rates',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/2',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/3',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/4',
+                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/5'
+                ]
+        for url in urls:
+            check = CanonicalPage(driver, url)
+            check.open()
+            check.check_page_canonicals_rates_mol_obl()
