@@ -62,7 +62,6 @@ class ProviderRostel:
 
 
 class OperatorTinkoff:
-    # ALL_OPERATORS = (By.XPATH, "//div[contains(text(), 'Все операторы')]")
     OPERATOR_TINKOFF = (By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/46/b4/d9d31ed2.jpg']")
     TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы Тинькофф Мобайл с безлимитным интернетом в Москве')]")
     TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы Тинькофф Мобайл')]")

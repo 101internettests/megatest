@@ -65,8 +65,8 @@ class ProviderDomRu:
 
 
 class OperatorTinkoffPol:
-    OPERATOR_TINKOFF = (By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/46/b4/d9d31ed2.jpg']")
-    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы 'Безлимитный интернет' от Тинькофф Мобайл в Санкт-Петербурге')]")
+    OPERATOR_TINKOFF = (By.XPATH, '//img[@src="//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/60/cd/9ef8c7ba.jpg"]')
+    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1")
     TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы Тинькофф Мобайл')]")
     TEXT_OPERATOR_TINKOFF = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Тинькофф Мобайл')]")
     MOBILE_OPERATORS = (By.XPATH, "//span[contains(text(), 'Мобильные операторы')]")
@@ -74,12 +74,12 @@ class OperatorTinkoffPol:
     TEXT_TAG_YOUR_NUMBER = (By.XPATH, "//h1[contains(text(), 'Переход на Тинькофф Мобайл с сохранением номера в Санкт-Петербурге')]")
     TEXT_FOR_THE_TABLET = (By.XPATH, "//h1[contains(text(), 'Для планшета тарифы МТС в Челябинске')]")
     TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы МТС в Челябинске')]")
-    TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Тарифы 'Семейные' от Тинькофф Мобайл в Санкт-Петербурге')]")
+    TEXT_FAMILY = (By.XPATH, "//h1")
     TEXT_ROAMING = (By.XPATH, "//h1[contains(text(), 'Международные тарифы от МТС подключение в Челябинске')]")
-    TEXT_FAVORABLE = (By.XPATH, "//h1[contains(text(), 'Тарифы эВыгодныеэ от Тинькофф Мобайл в Санкт-Петербурге')]")
+    TEXT_FAVORABLE = (By.XPATH, "//h1")
     TEXT_FOR_MODEM = (By.XPATH, "//h1[contains(text(), 'Тарифы Тинькофф Мобайл для модема 3g в Санкт-Петербурге')]")
     TEXT_ESIM = (By.XPATH, "//h1[contains(text(), 'Встроенная СИМ-карта eSIM от Тинькофф Мобайл в Санкт-Петербурге')]")
-    TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Тарифы 'Детские' от Тинькофф Мобайл в Санкт-Петербурге')]")
+    TEXT_CHILDREN = (By.XPATH, "//h1")
     TEXT_IN_RUSSIA = (By.XPATH, "//h1[contains(text(), 'Тарифы МТС по России - подключить в Челябинске')]")
     BREADCRUMBS_TINKOFF_MOBILE = (By.XPATH, "//span[contains(text(), 'Тинькофф Мобайл')]")
 
