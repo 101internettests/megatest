@@ -1,7 +1,7 @@
 import allure
 import time
-from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts, ProviderMts, \
-    OperatorMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts
 from pages.base_page import BasePage
 from time import sleep
 
@@ -218,7 +218,7 @@ class CheckBreadCrumbs(BasePage):
         assert check_text_rating_mts.text == 'Отзывы о домашнем интернете МТС в Челябинске'
 
     def scroll_to_minutes(self):
-        scroll_element = self.element_is_visible(OperatorMts.SCROLL_TO_MINUTES)
+        scroll_element = self.element_is_visible(OperatorsTags.SCROLL_TO_MINUTES)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
 
     def check_breadcrumbs_operator(self):
@@ -231,7 +231,7 @@ class CheckBreadCrumbs(BasePage):
         check_the_text_mts = self.element_is_visible(OperatorMts.TEXT_OPERATOR_MTS)
         assert check_the_text_mts.text == 'Оператор мобильной связи МТС'
         sleep(2)
-        self.element_is_visible(OperatorMts.MOBILE_OPERATORS).click()
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
         check_the_text_mobile_operators = self.element_is_visible(OperatorMts.TEXT_MOBILE_OPERATORS)
         assert check_the_text_mobile_operators.text == 'Мобильные операторы'
         sleep(3)
@@ -250,77 +250,77 @@ class CheckBreadCrumbs(BasePage):
         sleep(2)
 
     def check_tags_your_number(self):
-        self.element_is_visible(OperatorMts.TAG_YOUR_NUMBER).click()
+        self.element_is_visible(OperatorsTags.TAG_YOUR_NUMBER).click()
         sleep(3)
         check_the_text_your_number = self.element_is_visible(OperatorMts.TEXT_TAG_YOUR_NUMBER)
         assert check_the_text_your_number.text == 'Переход на МТС с сохранением номера в Челябинске'
         sleep(2)
 
     def check_tags_for_the_tablet(self):
-        self.element_is_visible(OperatorMts.TAG_FOR_THE_TABLET).click()
+        self.element_is_visible(OperatorsTags.TAG_FOR_THE_TABLET).click()
         sleep(3)
         check_the_text_for_the_tablet = self.element_is_visible(OperatorMts.TEXT_FOR_THE_TABLET)
         assert check_the_text_for_the_tablet.text == 'Для планшета тарифы МТС в Челябинске'
         sleep(2)
 
     def check_tags_not_public(self):
-        self.element_is_visible(OperatorMts.TAG_NOT_PUBLIC).click()
+        self.element_is_visible(OperatorsTags.TAG_NOT_PUBLIC).click()
         sleep(3)
         check_the_text_not_public = self.element_is_visible(OperatorMts.TEXT_NOT_PUBLIC)
         assert check_the_text_not_public.text == 'Непубличные тарифы МТС в Челябинске'
         sleep(2)
 
     def check_tags_family(self):
-        self.element_is_visible(OperatorMts.TAG_FAMILY).click()
+        self.element_is_visible(OperatorsTags.TAG_FAMILY).click()
         sleep(3)
         check_the_text_family = self.element_is_visible(OperatorMts.TEXT_FAMILY)
         assert check_the_text_family.text == 'Семейные тарифы МТС в Челябинске'
         sleep(2)
 
     def check_tags_roaming(self):
-        self.element_is_visible(OperatorMts.TAG_ROAMING).click()
+        self.element_is_visible(OperatorsTags.TAG_ROAMING).click()
         sleep(3)
         check_the_text_roaming = self.element_is_visible(OperatorMts.TEXT_ROAMING)
         assert check_the_text_roaming.text == 'Международные тарифы от МТС подключение в Челябинске'
         sleep(2)
 
     def check_tags_favorable(self):
-        self.element_is_visible(OperatorMts.TAG_FAVORABLE).click()
+        self.element_is_visible(OperatorsTags.TAG_FAVORABLE).click()
         sleep(3)
         check_the_text_favorable = self.element_is_visible(OperatorMts.TEXT_FAVORABLE)
         assert check_the_text_favorable.text == 'Выгодные тарифные планы от МТС в Челябинске'
         sleep(2)
 
     def check_tags_for_modem(self):
-        self.element_is_visible(OperatorMts.TAG_FOR_MODEM).click()
+        self.element_is_visible(OperatorsTags.TAG_FOR_MODEM).click()
         sleep(3)
         check_the_text_for_modem = self.element_is_visible(OperatorMts.TEXT_FOR_MODEM)
         assert check_the_text_for_modem.text == 'Тарифы МТС для интернета через модем в Челябинске'
         sleep(2)
 
     def check_tags_esim(self):
-        self.element_is_visible(OperatorMts.TAG_ESIM).click()
+        self.element_is_visible(OperatorsTags.TAG_ESIM).click()
         sleep(3)
         check_the_text_esim = self.element_is_visible(OperatorMts.TEXT_ESIM)
         assert check_the_text_esim.text == 'Встроенная СИМ-карта eSIM от МТС в Челябинске'
         sleep(2)
 
     def check_tags_children(self):
-        self.element_is_visible(OperatorMts.TAG_CHILDREN).click()
+        self.element_is_visible(OperatorsTags.TAG_CHILDREN).click()
         sleep(3)
         check_the_text_children = self.element_is_visible(OperatorMts.TEXT_CHILDREN)
         assert check_the_text_children.text == 'Детские тарифы МТС в Челябинске'
         sleep(2)
 
     def check_tags_unlimited(self):
-        self.element_is_visible(OperatorMts.TAG_UNLIMITED).click()
+        self.element_is_visible(OperatorsTags.TAG_UNLIMITED).click()
         sleep(3)
         check_the_text_unlimited = self.element_is_visible(OperatorMts.TEXT_UNLIMITED)
         assert check_the_text_unlimited.text == 'Безлимитные звонки на все операторы от МТС в Челябинске'
         sleep(2)
 
     def check_tags_in_russia(self):
-        self.element_is_visible(OperatorMts.TAG_IN_RUSSIA).click()
+        self.element_is_visible(OperatorsTags.TAG_IN_RUSSIA).click()
         sleep(3)
         check_the_text_in_russia = self.element_is_visible(OperatorMts.TEXT_IN_RUSSIA)
         assert check_the_text_in_russia.text == 'Тарифы МТС по России - подключить в Челябинске'

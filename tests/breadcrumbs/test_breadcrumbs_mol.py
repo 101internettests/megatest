@@ -71,3 +71,23 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_test_rating_rostel.open()
         breadcrumbs_page_test_rating_rostel.check_breadcrumbs_rating_rostel()
         breadcrumbs_page_test_rating_rostel.check_breadcrumbs_providers_and_main_mol()
+
+    def test_tags_operator_tinkoff(self, driver):
+        breadcrumbs_page_operator_tinkoff = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/operatory/tinkoff/ratesmobile/bezlimitnyj-internet")
+        breadcrumbs_page_operator_tinkoff.open()
+        breadcrumbs_page_operator_tinkoff.check_tags_internet_and_mobile_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_tags_your_number_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_tags_family_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_tags_favorable_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_tags_for_modem_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_tags_esim_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_tags_children_tinkoff()
+        breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
+
+
