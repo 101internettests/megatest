@@ -96,8 +96,19 @@ class TestBreadCrumbs:
     def test_actions_tele_2(self, driver):
         breadcrumbs_page_actions_tele_2 = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/operatory/tele-2/actions")
         breadcrumbs_page_actions_tele_2.open()
-        breadcrumbs_page_actions_tele_2.check_actions_tele_2()
         breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_tele_2()
+
+    def test_numbers_tele_2(self, driver):
+        breadcrumbs_page_numbers_tele_2 = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/operatory/tele-2/nomera/zolotoj")
+        breadcrumbs_page_numbers_tele_2.open()
+        breadcrumbs_page_numbers_tele_2.check_tag_golden_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_tag_bronze_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_tag_silver_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_tag_free_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
 
 
 

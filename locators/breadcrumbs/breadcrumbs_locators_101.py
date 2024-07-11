@@ -75,7 +75,7 @@ class ProviderMts:
 
 class OperatorMts:
     # ALL_OPERATORS = (By.XPATH, "//div[contains(text(), 'Все операторы')]")
-    OPERATOR_MTS = (By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/89/5b/09ddfbde.png']")
+    OPERATOR_MTS = (By.XPATH, '//img[@src="//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/aa/8e/e6f8dfb4.png"]')
     TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Безлимитный интернет тарифы МТС в Челябинске')]")
     TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы МТС')]")
     TEXT_OPERATOR_MTS = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи МТС')]")
@@ -115,3 +115,20 @@ class OperatorsActionsTele2:
     TEXT_TELE_2 = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Теле 2')]")
 
 
+class OperatorsNumbers:
+    TAG_BRONZE_NUMBERS = (By.XPATH, "//div[contains(text(), 'Бронзовые')]")
+    TAG_SILVER_NUMBERS = (By.XPATH, "//div[contains(text(), 'Серебряные')]")
+    TAG_FREE_NUMBERS = (By.XPATH, "//div[contains(text(), 'Бесплатные')]")
+    TAG_PLATINUM_NUMBERS = (By.XPATH, "//div[contains(text(), 'Платиновые')]")
+    NUMBERS = (By.XPATH, "//a[contains(text(), 'Номера')]")
+    BREADCRUMBS_NUMBERS = (By.XPATH, "//span[contains(text(), 'Номера')]")
+
+
+class OperatorsNumbersTele2:
+    TEXT_GOLDEN_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Золотые номера Теле 2 на выбор в Челябинске')]")
+    TEXT_BRONZE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бронзовые номера Теле 2 на выбор в Челябинске')]")
+    TEXT_SILVER_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Серебряные номера Теле 2 на выбор в Челябинске')]")
+    TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера Теле 2 на выбор в Челябинске')]")
+    TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер Теле 2')]")
+    OPERATOR_TELE_2 = (
+    By.XPATH, "//img[@src = '//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/65/48/6c854e23.png']")

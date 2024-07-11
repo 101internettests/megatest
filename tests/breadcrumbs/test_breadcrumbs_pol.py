@@ -92,3 +92,17 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_actions_tinkoff.open()
         breadcrumbs_page_actions_tinkoff.check_actions_tinkoff()
         breadcrumbs_page_actions_tinkoff.check_breadcrumbs_actions_tinkoff()
+
+    def test_numbers_tinkoff(self, driver):
+        breadcrumbs_page_numbers_tinkoff = CheckBreadCrumbsPol(driver, "https://piter-online.net/operatory/tinkoff/nomera/zolotoj")
+        breadcrumbs_page_numbers_tinkoff.open()
+        breadcrumbs_page_numbers_tinkoff.check_tag_golden_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_bronze_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_silver_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_free_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_platinum_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()

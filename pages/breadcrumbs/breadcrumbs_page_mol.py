@@ -2,7 +2,9 @@ import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_mol import LinkingMol, BreadcrumbsTagsRostel, BreadcrumbsTagsMol
 from locators.breadcrumbs.breadcrumbs_locators_mol import ProviderRostel, OperatorTinkoff, OperatorsActionsMts
-from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags
+from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts
 from pages.base_page import BasePage
 from time import sleep
 
@@ -318,4 +320,60 @@ class CheckBreadCrumbsMol(BasePage):
         check_text_connect_the_internet = self.element_is_visible(LinkingMol.CHECK_THE_MAIN_PAGE)
         assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Москве'
 
+    def check_breadcrumbs_numbers_mts(self):
+        self.element_is_visible(OperatorsNumbers.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers = self.element_is_visible(OperatorsNumbersMts.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers.text == 'Выбрать номер МТС'
+        sleep(1)
+        self.element_is_visible(OperatorsActionsMts.BREADCRUMBS_MTS).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorsActionsMts.TEXT_MTS)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи МТС'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorTinkoff.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы в Москве'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(LinkingMol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Москве'
+        self.driver.back()
+        sleep(3)
+        self.element_is_visible(OperatorMts.OPERATOR_MTS).click()
+        sleep(3)
+        self.element_is_visible(OperatorsNumbers.NUMBERS).click()
 
+    def check_tag_golden_mts(self):
+        check_the_golden_tele_2 = self.element_is_visible(OperatorsNumbersMts.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_tele_2.text == 'Золотые номера МТС на выбор'
+        sleep(2)
+
+    def check_tag_bronze_mts(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_tele_2 = self.element_is_visible(OperatorsNumbersMts.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_tele_2.text == 'Бронзовые номера МТС на выбор'
+        sleep(2)
+
+    def check_tag_silver_mts(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_tele_2 = self.element_is_visible(OperatorsNumbersMts.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_tele_2.text == 'Серебряные номера МТС на выбор'
+        sleep(2)
+
+    def check_tag_free_mts(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tele_2 = self.element_is_visible(OperatorsNumbersMts.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_tele_2.text == 'Бесплатные номера МТС на выбор'
+        sleep(2)
+
+    def check_tag_platinum_mts(self):
+        self.element_is_visible(OperatorsNumbers.TAG_PLATINUM_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tele_2 = self.element_is_visible(OperatorsNumbersMts.TEXT_PLATINUM_NUMBERS)
+        assert check_the_text_free_tele_2.text == 'Платиновые номера МТС на выбор'
+        sleep(2)

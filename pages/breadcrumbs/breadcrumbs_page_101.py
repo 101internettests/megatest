@@ -1,6 +1,7 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersTele2, OperatorsNumbers
 from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts, OperatorsActionsTele2
 from pages.base_page import BasePage
 from time import sleep
@@ -345,3 +346,54 @@ class CheckBreadCrumbs(BasePage):
         sleep(3)
         check_text_connect_the_internet = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
         assert check_text_connect_the_internet.text == 'Подключить интернет в Челябинске'
+
+    def check_breadcrumbs_numbers_tele_2(self):
+        self.element_is_visible(OperatorsNumbers.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers = self.element_is_visible(OperatorsNumbersTele2.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers.text == 'Выбрать номер Теле 2'
+        sleep(1)
+        self.element_is_visible(OperatorsActionsTele2.BREADCRUMBS_TELE_2).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorsActionsTele2.TEXT_TELE_2)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи Теле 2'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorMts.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить интернет в Челябинске'
+        self.driver.back()
+        sleep(3)
+        self.element_is_visible(OperatorsNumbersTele2.OPERATOR_TELE_2).click()
+        sleep(3)
+        self.element_is_visible(OperatorsNumbers.NUMBERS).click()
+
+    def check_tag_golden_tele_2(self):
+        check_the_golden_tele_2 = self.element_is_visible(OperatorsNumbersTele2.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_tele_2.text == 'Золотые номера Теле 2 на выбор в Челябинске'
+        sleep(2)
+
+    def check_tag_bronze_tele_2(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_tele_2 = self.element_is_visible(OperatorsNumbersTele2.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_tele_2.text == 'Бронзовые номера Теле 2 на выбор в Челябинске'
+        sleep(2)
+
+    def check_tag_silver_tele_2(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_tele_2 = self.element_is_visible(OperatorsNumbersTele2.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_tele_2.text == 'Серебряные номера Теле 2 на выбор в Челябинске'
+        sleep(2)
+
+    def check_tag_free_tele_2(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tele_2 = self.element_is_visible(OperatorsNumbersTele2.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_tele_2.text == 'Бесплатные номера Теле 2 на выбор в Челябинске'
+        sleep(2)

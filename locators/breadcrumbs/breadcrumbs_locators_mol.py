@@ -85,3 +85,12 @@ class OperatorsActionsMts:
     TEXT_ACTIONS = (By.XPATH, "//h1[contains(text(), 'Акционные тарифы оператора МТС в Москве')]")
     BREADCRUMBS_MTS = (By.XPATH, "//span[contains(text(), 'МТС')]")
     TEXT_MTS = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи МТС')]")
+
+
+class OperatorsNumbersMts:
+    TEXT_GOLDEN_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Золотые номера МТС на выбор')]")
+    TEXT_BRONZE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бронзовые номера МТС на выбор')]")
+    TEXT_SILVER_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Серебряные номера МТС на выбор')]")
+    TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера МТС на выбор')]")
+    TEXT_PLATINUM_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Платиновые номера МТС на выбор')]")
+    TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер МТС')]")

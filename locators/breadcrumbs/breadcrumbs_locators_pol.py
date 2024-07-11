@@ -60,21 +60,21 @@ class BreadcrumbsTagsDomRu:
 
 class ProviderDomRu:
     TEXT_ABOUT_PROVIDER = (
-    By.XPATH, "//h1[contains(text(), 'Тарифные планы интернет-провайдера Дом.ру в Санкт-Петербурге')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифные планы интернет-провайдера Дом.ру в Санкт-Петербурге')]")
     TEXT_ACTION_DOM_RU = (By.XPATH, "//h1[contains(text(), 'Акции интернет-провайдера Дом.ру в Санкт-Петербурге')]")
     TEXT_RATING_DOM_RU = (By.XPATH, "//h1[contains(text(), 'Отзывы о провайдере Дом.ру в Санкт-Петербурге')]")
 
 
 class OperatorTinkoffPol:
     OPERATOR_TINKOFF = (
-    By.XPATH, '//img[@src="//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/60/cd/9ef8c7ba.jpg"]')
+        By.XPATH, '//img[@src="//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/60/cd/9ef8c7ba.jpg"]')
     TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1")
     TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы Тинькофф Мобайл')]")
     TEXT_OPERATOR_TINKOFF = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Тинькофф Мобайл')]")
     MOBILE_OPERATORS = (By.XPATH, "//span[contains(text(), 'Мобильные операторы')]")
     TEXT_MOBILE_OPERATORS = (By.XPATH, "//h1[contains(text(), 'Мобильные операторы')]")
     TEXT_TAG_YOUR_NUMBER = (
-    By.XPATH, "//h1[contains(text(), 'Переход на Тинькофф Мобайл с сохранением номера в Санкт-Петербурге')]")
+        By.XPATH, "//h1[contains(text(), 'Переход на Тинькофф Мобайл с сохранением номера в Санкт-Петербурге')]")
     TEXT_FOR_THE_TABLET = (By.XPATH, "//h1[contains(text(), 'Для планшета тарифы МТС в Челябинске')]")
     TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы МТС в Челябинске')]")
     TEXT_FAMILY = (By.XPATH, "//h1")
@@ -91,3 +91,12 @@ class OperatorsActionsTinkoff:
     TEXT_ACTIONS = (By.XPATH, "//h1[contains(text(), 'Акции оператора Тинькофф Мобайл в Санкт-Петербурге')]")
     BREADCRUMBS_TINKOFF = (By.XPATH, "//span[contains(text(), 'Тинькофф Мобайл')]")
     TEXT_TINKOFF = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Тинькофф Мобайл')]")
+
+
+class OperatorsNumbersTinkoff:
+    TEXT_GOLDEN_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Золотые номера Тинькофф Мобайл на выбор')]")
+    TEXT_BRONZE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бронзовые номера Тинькофф Мобайл на выбор')]")
+    TEXT_SILVER_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Серебряные номера Тинькофф Мобайл на выбор')]")
+    TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера Тинькофф Мобайл на выбор')]")
+    TEXT_PLATINUM_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Платиновый номер Тинькофф Мобайл')]")
+    TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер Тинькофф Мобайл')]")

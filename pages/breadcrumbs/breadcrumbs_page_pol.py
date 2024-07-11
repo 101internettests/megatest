@@ -1,8 +1,9 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu
+from locators.breadcrumbs.breadcrumbs_locators_pol import OperatorsNumbersTinkoff
 from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol, OperatorsActionsTinkoff
-from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags
+from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
 from pages.base_page import BasePage
 from time import sleep
 
@@ -320,3 +321,61 @@ class CheckBreadCrumbsPol(BasePage):
         sleep(3)
         check_text_connect_the_internet = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
         assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+
+    def check_breadcrumbs_numbers_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers.text == 'Выбрать номер Тинькофф Мобайл'
+        sleep(1)
+        self.element_is_visible(OperatorTinkoffPol.BREADCRUMBS_TINKOFF_MOBILE).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorTinkoffPol.TEXT_OPERATOR_TINKOFF)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи Тинькофф Мобайл'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorTinkoffPol.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+        self.driver.back()
+        sleep(3)
+        self.element_is_visible(OperatorTinkoffPol.OPERATOR_TINKOFF).click()
+        sleep(3)
+        self.element_is_visible(OperatorsNumbers.NUMBERS).click()
+
+    def check_tag_golden_tinkoff(self):
+        check_the_golden_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_tinkoff.text == 'Золотые номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_bronze_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_tinkoff.text == 'Бронзовые номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_silver_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_tinkoff.text == 'Серебряные номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_free_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_tinkoff.text == 'Бесплатные номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_platinum_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_PLATINUM_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_PLATINUM_NUMBERS)
+        assert check_the_text_free_tinkoff.text == 'Платиновый номер Тинькофф Мобайл'
+        sleep(2)

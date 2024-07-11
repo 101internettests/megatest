@@ -96,4 +96,19 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_actions_tele_2.check_actions_mts()
         breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_mts()
 
+    def test_numbers_mts(self, driver):
+        breadcrumbs_page_numbers_mts = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/operatory/mts/nomera/zolotoj")
+        breadcrumbs_page_numbers_mts.open()
+        breadcrumbs_page_numbers_mts.check_tag_golden_mts()
+        breadcrumbs_page_numbers_mts.check_breadcrumbs_numbers_mts()
+        breadcrumbs_page_numbers_mts.check_tag_bronze_mts()
+        breadcrumbs_page_numbers_mts.check_breadcrumbs_numbers_mts()
+        breadcrumbs_page_numbers_mts.check_tag_silver_mts()
+        breadcrumbs_page_numbers_mts.check_breadcrumbs_numbers_mts()
+        breadcrumbs_page_numbers_mts.check_tag_free_mts()
+        breadcrumbs_page_numbers_mts.check_breadcrumbs_numbers_mts()
+        breadcrumbs_page_numbers_mts.check_tag_platinum_mts()
+        breadcrumbs_page_numbers_mts.check_breadcrumbs_numbers_mts()
+
+
 
