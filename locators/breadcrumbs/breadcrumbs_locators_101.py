@@ -109,3 +109,9 @@ class OperatorsTags:
     TAG_IN_RUSSIA = (By.XPATH, "//div[contains(text(), 'Связь по России')]")
 
 
+class OperatorsActionsTele2:
+    TEXT_ACTIONS = (By.XPATH, "//h1[contains(text(), 'Акции оператора Теле 2 в Челябинске')]")
+    BREADCRUMBS_TELE_2 = (By.XPATH, "//span[contains(text(), 'Теле 2')]")
+    TEXT_TELE_2 = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Теле 2')]")
+
+

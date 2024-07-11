@@ -1,7 +1,7 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu
-from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol
+from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol, OperatorsActionsTinkoff
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags
 from pages.base_page import BasePage
 from time import sleep
@@ -300,3 +300,23 @@ class CheckBreadCrumbsPol(BasePage):
         check_the_text_children = self.element_is_visible(OperatorTinkoffPol.TEXT_CHILDREN)
         assert check_the_text_children.text == 'Тарифы "Детские" от Тинькофф Мобайл в Санкт-Петербурге'
         sleep(2)
+
+    def check_actions_tinkoff(self):
+        check_the_text_in_russia = self.element_is_visible(OperatorsActionsTinkoff.TEXT_ACTIONS)
+        assert check_the_text_in_russia.text == 'Акции оператора Тинькофф Мобайл в Санкт-Петербурге'
+        sleep(2)
+
+    def check_breadcrumbs_actions_tinkoff(self):
+        self.element_is_visible(OperatorsActionsTinkoff.BREADCRUMBS_TINKOFF).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorsActionsTinkoff.TEXT_TINKOFF)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи Тинькофф Мобайл'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorTinkoffPol.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'

@@ -1,7 +1,7 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
-from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts, OperatorsActionsTele2
 from pages.base_page import BasePage
 from time import sleep
 
@@ -325,3 +325,23 @@ class CheckBreadCrumbs(BasePage):
         check_the_text_in_russia = self.element_is_visible(OperatorMts.TEXT_IN_RUSSIA)
         assert check_the_text_in_russia.text == 'Тарифы МТС по России - подключить в Челябинске'
         sleep(2)
+
+    def check_actions_tele_2(self):
+        check_the_text_in_russia = self.element_is_visible(OperatorsActionsTele2.TEXT_ACTIONS)
+        assert check_the_text_in_russia.text == 'Акции оператора Теле 2 в Челябинске'
+        sleep(2)
+
+    def check_breadcrumbs_actions_tele_2(self):
+        self.element_is_visible(OperatorsActionsTele2.BREADCRUMBS_TELE_2).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorsActionsTele2.TEXT_TELE_2)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи Теле 2'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorMts.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить интернет в Челябинске'

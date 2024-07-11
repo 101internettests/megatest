@@ -93,6 +93,12 @@ class TestBreadCrumbs:
         breadcrumbs_page_operator_mts.check_tags_in_russia()
         breadcrumbs_page_operator_mts.check_breadcrumbs_operator()
 
+    def test_actions_tele_2(self, driver):
+        breadcrumbs_page_actions_tele_2 = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/operatory/tele-2/actions")
+        breadcrumbs_page_actions_tele_2.open()
+        breadcrumbs_page_actions_tele_2.check_actions_tele_2()
+        breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_tele_2()
+
 
 
 

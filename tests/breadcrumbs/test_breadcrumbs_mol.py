@@ -90,4 +90,10 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_operator_tinkoff.check_tags_children_tinkoff()
         breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
 
+    def test_actions_tele_2(self, driver):
+        breadcrumbs_page_actions_tele_2 = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/operatory/mts/actions")
+        breadcrumbs_page_actions_tele_2.open()
+        breadcrumbs_page_actions_tele_2.check_actions_mts()
+        breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_mts()
+
 

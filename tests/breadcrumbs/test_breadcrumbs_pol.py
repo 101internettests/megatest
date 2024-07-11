@@ -86,3 +86,9 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_operator_tinkoff_pol.check_breadcrumbs_operator_tinkoff_pol()
         breadcrumbs_page_operator_tinkoff_pol.check_tags_children_tinkoff_pol()
         breadcrumbs_page_operator_tinkoff_pol.check_breadcrumbs_operator_tinkoff_pol()
+
+    def test_actions_tinkoff(self, driver):
+        breadcrumbs_page_actions_tinkoff = CheckBreadCrumbsPol(driver, "https://piter-online.net/operatory/tinkoff/actions")
+        breadcrumbs_page_actions_tinkoff.open()
+        breadcrumbs_page_actions_tinkoff.check_actions_tinkoff()
+        breadcrumbs_page_actions_tinkoff.check_breadcrumbs_actions_tinkoff()

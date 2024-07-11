@@ -79,3 +79,9 @@ class OperatorTinkoff:
     TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Детские тарифы Тинькофф Мобайл')]")
     TEXT_IN_RUSSIA = (By.XPATH, "//h1[contains(text(), 'Тарифы МТС по России - подключить в Челябинске')]")
     BREADCRUMBS_TINKOFF_MOBILE = (By.XPATH, "//span[contains(text(), 'Тинькофф Мобайл')]")
+
+
+class OperatorsActionsMts:
+    TEXT_ACTIONS = (By.XPATH, "//h1[contains(text(), 'Акционные тарифы оператора МТС в Москве')]")
+    BREADCRUMBS_MTS = (By.XPATH, "//span[contains(text(), 'МТС')]")
+    TEXT_MTS = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи МТС')]")
