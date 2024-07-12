@@ -7,7 +7,7 @@ class LinkingMol:
     STREET_LINKING = (By.XPATH, "//a[contains(text(), 'Карманицкий пер д. 5  ')]")
     CLOSE_THE_POPAP = (By.XPATH, "//div[@datatest='close_popup1_from_quiz_input_tel']")
     CHECK_THE_ADRESS = (
-    By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры по адресу пер. Карманицкий 5, Москва (Арбат)')]")
+        By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры по адресу пер. Карманицкий 5, Москва (Арбат)')]")
     BREADCRUMBS_STREET = (By.XPATH, "//span[contains(text(), 'Карманицкий')]")
     CHECK_THE_STREET = (By.XPATH, "//h1[contains(text(), 'Интернет-провайдеры на пер. Карманицкий, Москва')]")
     BREADCRUMBS_DISTRICT = (By.XPATH, "//span[contains(text(), 'Интернет провайдеры в Арбат')]")
@@ -19,7 +19,7 @@ class LinkingMol:
 class BreadcrumbsTagsMol:
     TEXT_TAG_INTERNET_AND_MOBILE = (By.XPATH, "//h1[contains(text(), 'Тарифы на интернет и мобильную связь в Москве')]")
     TEXT_TAG_INTERNET_TV_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Домашний интернет, телевидение и мобильная связь в Москве')]")
+        By.XPATH, "//h1[contains(text(), 'Домашний интернет, телевидение и мобильная связь в Москве')]")
     TEXT_TAG_HOME_INTERNET = (By.XPATH, "//h1[contains(text(), 'Домашний интернет в Москве')]")
     TEXT_TAG_INTERNET_TV = (By.XPATH, "//h1[contains(text(), 'Интернет и телевидение в Москве')]")
     TEXT_TAG_CHEAP_INTERNET = (By.XPATH, "//h1[contains(text(), 'Недорогой домашний интернет в Москве')]")
@@ -27,19 +27,19 @@ class BreadcrumbsTagsMol:
     TEXT_TAG_300_MB = (By.XPATH, "//h1[contains(text(), 'Домашний интернет 300 Мб/с в Москве')]")
     TEXT_TAG_500_MB = (By.XPATH, "//h1[contains(text(), 'Домашний интернет 500 Мб/с в Москве')]")
     TEXT_TAG_ONLINE_CINEMA = (
-    By.XPATH, "//h1[contains(text(), 'Тарифы интернета с подпиской на онлайн-кинотеатр в Москве')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифы интернета с подпиской на онлайн-кинотеатр в Москве')]")
     TEXT_BREADCRUMBS_RATES_FOR_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы на интернет в Москве')]")
     TAG_INTERNET_TV = (By.XPATH, "(//div[contains(text(), 'интернет+тв')])[2]")
 
 
 class BreadcrumbsTagsRostel:
     TEXT_TAG_INTERNET_AND_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Ростелеком - домашний интернет и мобильная связь. Тарифы в Москве')]")
+        By.XPATH, "//h1[contains(text(), 'Ростелеком - домашний интернет и мобильная связь. Тарифы в Москве')]")
     TEXT_TAG_INTERNET_TV_MOBILE = (
-    By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на ТВ, интернет и мобильную связь в Москве')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на ТВ, интернет и мобильную связь в Москве')]")
     TEXT_TAG_HOME_INTERNET = (By.XPATH, "//h1[contains(text(), 'Ростелеком домашний интернет в Москве')]")
     TEXT_TAG_INTERNET_TV = (
-    By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на интернет и телевидение в Москве')]")
+        By.XPATH, "//h1[contains(text(), 'Тарифные планы Ростелеком на интернет и телевидение в Москве')]")
     TEXT_TAG_CHEAP_INTERNET = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифы Ростелеком на интернет в Москве')]")
     TEXT_TAG_ONLINE_CINEMA = (By.XPATH,
                               "//h1[contains(text(), 'Тарифные планы Ростелеком на домашний интернет с подпиской на онлайн-кинотеатр в Москве')]")
@@ -62,13 +62,16 @@ class ProviderRostel:
 
 
 class OperatorTinkoff:
-    OPERATOR_TINKOFF = (By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/46/b4/d9d31ed2.jpg']")
-    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы Тинькофф Мобайл с безлимитным интернетом в Москве')]")
+    OPERATOR_TINKOFF = (
+    By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/46/b4/d9d31ed2.jpg']")
+    TEXT_BEZLIMIT_INTERNET = (
+    By.XPATH, "//h1[contains(text(), 'Тарифы Тинькофф Мобайл с безлимитным интернетом в Москве')]")
     TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы Тинькофф Мобайл')]")
     TEXT_OPERATOR_TINKOFF = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Тинькофф Мобайл')]")
     MOBILE_OPERATORS = (By.XPATH, "//span[contains(text(), 'Мобильные операторы')]")
     TEXT_MOBILE_OPERATORS = (By.XPATH, "//h1[contains(text(), 'Мобильные операторы в Москве')]")
-    TEXT_TAG_YOUR_NUMBER = (By.XPATH, "//h1[contains(text(), 'Переход на Тинькофф Мобайл с сохранением номера в Москве')]")
+    TEXT_TAG_YOUR_NUMBER = (
+    By.XPATH, "//h1[contains(text(), 'Переход на Тинькофф Мобайл с сохранением номера в Москве')]")
     TEXT_FOR_THE_TABLET = (By.XPATH, "//h1[contains(text(), 'Для планшета тарифы МТС в Челябинске')]")
     TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы МТС в Челябинске')]")
     TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Семейные тарифы Тинькофф Мобайл')]")
@@ -94,3 +97,22 @@ class OperatorsNumbersMts:
     TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера МТС на выбор')]")
     TEXT_PLATINUM_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Платиновые номера МТС на выбор')]")
     TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер МТС')]")
+
+
+class OperatorTagsAllMol:
+    TEXT_TAG_YOUR_NUMBER = (
+    By.XPATH, "//h1[contains(text(), 'Перейти на другого оператора с сохранением номера в Москве')]")
+    TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы в Москве')]")
+    TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Семейные для телефона')]")
+    TEXT_ROAMING = (
+    By.XPATH, "//h1[contains(text(), 'Международные тарифы')]")
+    TEXT_FAVORABLE = (By.XPATH, "//h1[contains(text(), 'Самые выгодные операторы мобильной связи')]")
+    TEXT_FOR_MODEM = (By.XPATH, "//h1[contains(text(), 'Тарифы на интернет для роутера')]")
+    TEXT_ESIM = (By.XPATH, "//h1[contains(text(), 'Тарифы eSIM для вашего устройства в Москве')]")
+    TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Детские для телефона')]")
+    TEXT_UNLIMITED = (By.XPATH, "//h1[contains(text(), 'Тарифы безлимитной мобильной связи')]")
+    TEXT_IN_RUSSIA = (
+    By.XPATH, "//h1[contains(text(), 'Тарифные планы по России от российских операторов')]")
+    TEXT_WITHOUT_PAYMENT = (By.XPATH, "//h1[contains(text(), 'Без абонентской платы для телефона')]")
+    TEXT_BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//h1[contains(text(), 'Тарифы сотовой связи для телефона')]")
+

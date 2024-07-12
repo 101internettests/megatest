@@ -1,7 +1,7 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
-from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersTele2, OperatorsNumbers
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersTele2, OperatorsNumbers, OperatorTagsAll
 from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts, OperatorsActionsTele2
 from pages.base_page import BasePage
 from time import sleep
@@ -397,3 +397,112 @@ class CheckBreadCrumbs(BasePage):
         check_the_text_free_tele_2 = self.element_is_visible(OperatorsNumbersTele2.TEXT_FREE_NUMBERS)
         assert check_the_text_free_tele_2.text == 'Бесплатные номера Теле 2 на выбор в Челябинске'
         sleep(2)
+
+    def check_breadcrumbs_operator_all(self):
+        self.element_is_visible(OperatorTagsAll.BREADCRUMBS_OPERATOR_RATES).click()
+        check_the_text_operator_all = self.element_is_visible(OperatorTagsAll.TEXT_BREADCRUMBS_OPERATOR_RATES)
+        assert check_the_text_operator_all.text == 'Тарифы сотовой связи для телефона в Челябинске'
+        sleep(2)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить интернет в Челябинске'
+        self.driver.back()
+
+    def check_tags_bezlimit_internet_all(self):
+        check_text_bezlimit_internet_all = self.element_is_visible(OperatorTagsAll.TEXT_BEZLIMIT_INTERNET)
+        assert check_text_bezlimit_internet_all.text == 'Тарифы с безлимитным интернетом'
+        sleep(1)
+
+    def check_tags_your_number_all(self):
+        self.element_is_visible(OperatorsTags.TAG_YOUR_NUMBER).click()
+        sleep(3)
+        check_the_text_your_number_all = self.element_is_visible(OperatorTagsAll.TEXT_TAG_YOUR_NUMBER)
+        assert check_the_text_your_number_all.text == 'Перейти на другого оператора с сохранением номера в Челябинске'
+        sleep(2)
+
+    def check_tags_for_the_tablet_all(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_THE_TABLET).click()
+        sleep(3)
+        check_the_text_for_the_tablet_all = self.element_is_visible(OperatorTagsAll.TEXT_FOR_THE_TABLET)
+        assert check_the_text_for_the_tablet_all.text == 'Тарифные планы на интернет для планшета'
+        sleep(2)
+
+    def check_tags_not_public_all(self):
+        self.element_is_visible(OperatorsTags.TAG_NOT_PUBLIC).click()
+        sleep(3)
+        check_the_text_not_public_all = self.element_is_visible(OperatorTagsAll.TEXT_NOT_PUBLIC)
+        assert check_the_text_not_public_all.text == 'Непубличные тарифы'
+        sleep(2)
+
+    def check_tags_family_all(self):
+        self.element_is_visible(OperatorsTags.TAG_FAMILY).click()
+        sleep(3)
+        check_the_text_family_all = self.element_is_visible(OperatorTagsAll.TEXT_FAMILY)
+        assert check_the_text_family_all.text == 'Семейная мобильная связь в Челябинске'
+        sleep(2)
+
+    def check_tags_roaming_all(self):
+        self.element_is_visible(OperatorsTags.TAG_ROAMING).click()
+        sleep(3)
+        check_the_text_roaming = self.element_is_visible(OperatorTagsAll.TEXT_ROAMING)
+        assert check_the_text_roaming.text == 'Мобильные тарифы для связи за границей - подключить в Челябинске'
+        sleep(2)
+
+    def check_tags_favorable_all(self):
+        self.element_is_visible(OperatorsTags.TAG_FAVORABLE).click()
+        sleep(3)
+        check_the_text_favorable_all = self.element_is_visible(OperatorTagsAll.TEXT_FAVORABLE)
+        assert check_the_text_favorable_all.text == 'Выгодные тарифы сотовых операторов в Челябинске'
+        sleep(2)
+
+    def check_tags_for_modem_all(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_MODEM).click()
+        sleep(3)
+        check_the_text_for_modem_all = self.element_is_visible(OperatorTagsAll.TEXT_FOR_MODEM)
+        assert check_the_text_for_modem_all.text ==  'Тарифы операторов для модема в Челябинске'
+        sleep(2)
+
+    def check_tags_esim_all(self):
+        self.element_is_visible(OperatorsTags.TAG_ESIM).click()
+        sleep(3)
+        check_the_text_esim_all = self.element_is_visible(OperatorTagsAll.TEXT_ESIM)
+        assert check_the_text_esim_all.text == 'Тарифы eSIM для вашего устройства в Челябинске'
+        sleep(2)
+
+    def check_tags_children_all(self):
+        self.element_is_visible(OperatorsTags.TAG_CHILDREN).click()
+        sleep(3)
+        check_the_text_children_all = self.element_is_visible(OperatorTagsAll.TEXT_CHILDREN)
+        assert check_the_text_children_all.text == 'Сотовая связь для детей в Челябинске'
+        sleep(2)
+
+    def check_tags_unlimited_all(self):
+        self.element_is_visible(OperatorsTags.TAG_UNLIMITED).click()
+        sleep(3)
+        check_the_text_unlimited_all = self.element_is_visible(OperatorTagsAll.TEXT_UNLIMITED)
+        assert check_the_text_unlimited_all.text == 'Тарифы операторов с безлимитной связью в Челябинске'
+        sleep(2)
+
+    def check_tags_in_russia_all(self):
+        self.element_is_visible(OperatorsTags.TAG_IN_RUSSIA).click()
+        sleep(3)
+        check_the_text_in_russia_all = self.element_is_visible(OperatorTagsAll.TEXT_IN_RUSSIA)
+        assert check_the_text_in_russia_all.text == 'Тарифы телефонных операторов в Челябинске для связи по России'
+        sleep(2)
+
+    def check_tags_for_laptop_all(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_LAPTOP).click()
+        sleep(3)
+        check_the_text_for_laptop_all = self.element_is_visible(OperatorTagsAll.TEXT_FOR_LAPTOP)
+        assert check_the_text_for_laptop_all.text == 'Тарифные планы для ноутбука'
+        sleep(2)
+
+    def check_tags_without_payment_all(self):
+        self.element_is_visible(OperatorsTags.TAG_WITHOUT_PAYMENT).click()
+        sleep(3)
+        check_the_text_without_payment_all = self.element_is_visible(OperatorTagsAll.TEXT_WITHOUT_PAYMENT)
+        assert check_the_text_without_payment_all.text == 'Безлимитный интернет для телефона'
+        sleep(2)
+
+

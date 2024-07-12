@@ -107,6 +107,8 @@ class OperatorsTags:
     TAG_CHILDREN = (By.XPATH, "//div[contains(text(), 'Детские')]")
     TAG_UNLIMITED = (By.XPATH, "//div[contains(text(), 'Безлимитная связь')]")
     TAG_IN_RUSSIA = (By.XPATH, "//div[contains(text(), 'Связь по России')]")
+    TAG_FOR_LAPTOP = (By.XPATH, "//div[contains(text(), 'Для ноутбука')]")
+    TAG_WITHOUT_PAYMENT = (By.XPATH, "//div[contains(text(), 'Без абонентской платы')]")
 
 
 class OperatorsActionsTele2:
@@ -132,3 +134,27 @@ class OperatorsNumbersTele2:
     TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер Теле 2')]")
     OPERATOR_TELE_2 = (
     By.XPATH, "//img[@src = '//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/65/48/6c854e23.png']")
+
+
+class OperatorTagsAll:
+    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы с безлимитным интернетом')]")
+    TEXT_TAG_YOUR_NUMBER = (By.XPATH, "//h1[contains(text(), 'Перейти на другого оператора с сохранением номера в Челябинске')]")
+    TEXT_FOR_THE_TABLET = (By.XPATH, "//h1[contains(text(), 'Тарифные планы на интернет для планшета')]")
+    TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы ')]")
+    TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Семейная мобильная связь  в Челябинске')]")
+    TEXT_ROAMING = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы для связи за границей - подключить в Челябинске')]")
+    TEXT_FAVORABLE = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифы сотовых операторов в Челябинске')]")
+    TEXT_FOR_MODEM = (By.XPATH, "//h1[contains(text(), 'Тарифы операторов для модема в Челябинске')]")
+    TEXT_ESIM = (By.XPATH, "//h1[contains(text(), 'Тарифы eSIM для вашего устройства в Челябинске')]")
+    TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Сотовая связь для детей  в Челябинске')]")
+    TEXT_UNLIMITED = (By.XPATH, "//h1[contains(text(), 'Тарифы операторов с безлимитной связью в Челябинске')]")
+    TEXT_IN_RUSSIA = (By.XPATH, "//h1[contains(text(), 'Тарифы телефонных операторов в Челябинске для связи по России')]")
+    TEXT_FOR_LAPTOP = (By.XPATH, "//h1[contains(text(), 'Тарифные планы для ноутбука')]")
+    TEXT_WITHOUT_PAYMENT = (By.XPATH, "//h1[contains(text(), 'Безлимитный интернет для телефона')]")
+    BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы сотовой связи')]")
+    TEXT_BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//h1[contains(text(), 'Тарифы сотовой связи для телефона в Челябинске')]")
+
+
+
+
+

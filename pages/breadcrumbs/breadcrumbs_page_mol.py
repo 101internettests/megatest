@@ -2,9 +2,9 @@ import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_mol import LinkingMol, BreadcrumbsTagsRostel, BreadcrumbsTagsMol
 from locators.breadcrumbs.breadcrumbs_locators_mol import ProviderRostel, OperatorTinkoff, OperatorsActionsMts
-from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersMts
+from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersMts, OperatorTagsAllMol
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
-from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts, OperatorTagsAll
 from pages.base_page import BasePage
 from time import sleep
 
@@ -376,4 +376,111 @@ class CheckBreadCrumbsMol(BasePage):
         sleep(3)
         check_the_text_free_tele_2 = self.element_is_visible(OperatorsNumbersMts.TEXT_PLATINUM_NUMBERS)
         assert check_the_text_free_tele_2.text == 'Платиновые номера МТС на выбор'
+        sleep(2)
+
+    def check_breadcrumbs_operator_all_mol(self):
+        self.element_is_visible(OperatorTagsAll.BREADCRUMBS_OPERATOR_RATES).click()
+        check_the_text_operator_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_BREADCRUMBS_OPERATOR_RATES)
+        assert check_the_text_operator_all_mol.text == 'Тарифы сотовой связи для телефона'
+        sleep(2)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet_mol = self.element_is_visible(LinkingMol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet_mol.text == 'Подключить домашний интернет в Москве'
+        self.driver.back()
+
+    def check_tags_bezlimit_internet_all_mol(self):
+        check_text_bezlimit_internet_all_mol = self.element_is_visible(OperatorTagsAll.TEXT_BEZLIMIT_INTERNET)
+        assert check_text_bezlimit_internet_all_mol.text == 'Тарифы с безлимитным интернетом'
+        sleep(1)
+
+    def check_tags_your_number_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_YOUR_NUMBER).click()
+        sleep(3)
+        check_the_text_your_number_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_TAG_YOUR_NUMBER)
+        assert check_the_text_your_number_all_mol.text == 'Перейти на другого оператора с сохранением номера в Москве'
+        sleep(2)
+
+    def check_tags_for_the_tablet_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_THE_TABLET).click()
+        sleep(3)
+        check_the_text_for_the_tablet_all_mol = self.element_is_visible(OperatorTagsAll.TEXT_FOR_THE_TABLET)
+        assert check_the_text_for_the_tablet_all_mol.text == 'Тарифные планы на интернет для планшета'
+        sleep(2)
+
+    def check_tags_not_public_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_NOT_PUBLIC).click()
+        sleep(3)
+        check_the_text_not_public_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_NOT_PUBLIC)
+        assert check_the_text_not_public_all_mol.text == 'Непубличные тарифы в Москве'
+        sleep(2)
+
+    def check_tags_family_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_FAMILY).click()
+        sleep(3)
+        check_the_text_family_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_FAMILY)
+        assert check_the_text_family_all_mol.text == 'Семейные для телефона'
+        sleep(2)
+
+    def check_tags_roaming_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_ROAMING).click()
+        sleep(3)
+        check_the_text_roaming_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_ROAMING)
+        assert check_the_text_roaming_mol.text == 'Международные тарифы'
+        sleep(2)
+
+    def check_tags_favorable_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_FAVORABLE).click()
+        sleep(3)
+        check_the_text_favorable_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_FAVORABLE)
+        assert check_the_text_favorable_all_mol.text == 'Самые выгодные операторы мобильной связи'
+        sleep(2)
+
+    def check_tags_for_modem_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_MODEM).click()
+        sleep(3)
+        check_the_text_for_modem_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_FOR_MODEM)
+        assert check_the_text_for_modem_all_mol.text ==  'Тарифы на интернет для роутера'
+        sleep(2)
+
+    def check_tags_esim_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_ESIM).click()
+        sleep(3)
+        check_the_text_esim_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_ESIM)
+        assert check_the_text_esim_all_mol.text == 'Тарифы eSIM для вашего устройства в Москве'
+        sleep(2)
+
+    def check_tags_children_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_CHILDREN).click()
+        sleep(3)
+        check_the_text_children_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_CHILDREN)
+        assert check_the_text_children_all_mol.text == 'Детские для телефона'
+        sleep(2)
+
+    def check_tags_unlimited_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_UNLIMITED).click()
+        sleep(3)
+        check_the_text_unlimited_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_UNLIMITED)
+        assert check_the_text_unlimited_all_mol.text == 'Тарифы безлимитной мобильной связи'
+        sleep(2)
+
+    def check_tags_in_russia_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_IN_RUSSIA).click()
+        sleep(3)
+        check_the_text_in_russia_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_IN_RUSSIA)
+        assert check_the_text_in_russia_all_mol.text == 'Тарифные планы по России от российских операторов'
+        sleep(2)
+
+    def check_tags_for_laptop_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_LAPTOP).click()
+        sleep(3)
+        check_the_text_for_laptop_all_mol = self.element_is_visible(OperatorTagsAll.TEXT_FOR_LAPTOP)
+        assert check_the_text_for_laptop_all_mol.text == 'Тарифные планы для ноутбука'
+        sleep(2)
+
+    def check_tags_without_payment_all_mol(self):
+        self.element_is_visible(OperatorsTags.TAG_WITHOUT_PAYMENT).click()
+        sleep(3)
+        check_the_text_without_payment_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_WITHOUT_PAYMENT)
+        assert check_the_text_without_payment_all_mol.text == 'Без абонентской платы для телефона'
         sleep(2)

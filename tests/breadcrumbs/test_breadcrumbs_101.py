@@ -110,6 +110,38 @@ class TestBreadCrumbs:
         breadcrumbs_page_numbers_tele_2.check_tag_free_tele_2()
         breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
 
+    def test_tags_operator_all(self, driver):
+        breadcrumbs_page_operator_all = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/ratesmobile/bezlimitnyj-internet")
+        breadcrumbs_page_operator_all.open()
+        breadcrumbs_page_operator_all.check_tags_bezlimit_internet_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_your_number_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_for_the_tablet_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_not_public_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_family_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_roaming_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_favorable_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_for_modem_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_esim_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_children_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_unlimited_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_in_russia_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_for_laptop_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_without_payment_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+
 
 
 
