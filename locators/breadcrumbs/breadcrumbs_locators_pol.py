@@ -100,3 +100,20 @@ class OperatorsNumbersTinkoff:
     TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера Тинькофф Мобайл на выбор')]")
     TEXT_PLATINUM_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Платиновый номер Тинькофф Мобайл')]")
     TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер Тинькофф Мобайл')]")
+
+
+class OperatorTagsAllPol:
+    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы безлимитной мобильной связи')]")
+    TEXT_TAG_YOUR_NUMBER = (By.XPATH, "//h1[contains(text(), 'Перейти на другого оператора с сохранением номера в Санкт-Петербурге')]")
+    TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы ')]")
+    TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Семейные для телефона')]")
+    TEXT_ROAMING = (By.XPATH, "//h1[contains(text(), 'Международные тарифы')]")
+    TEXT_FAVORABLE = (By.XPATH, "//h1[contains(text(), 'Самые выгодные операторы мобильной связи')]")
+    TEXT_FOR_MODEM = (By.XPATH, "//h1[contains(text(), 'Тарифы на интернет для роутера')]")
+    TEXT_ESIM = (By.XPATH, "//h1[contains(text(), 'Тарифы eSIM для вашего устройства в Санкт-Петербурге')]")
+    TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Детские для телефона')]")
+    TEXT_UNLIMITED = (By.XPATH, "//h1[contains(text(), 'Тарифы безлимитной мобильной связи')]")
+    TEXT_IN_RUSSIA = (By.XPATH, "//h1[contains(text(), 'Тарифные планы по России от российских операторов')]")
+    TEXT_FOR_LAPTOP = (By.XPATH, "//h1[contains(text(), 'Тарифные планы для ноутбука')]")
+    BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы сотовой связи')]")
+    TEXT_BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//h1[contains(text(), 'Тарифы сотовой связи для телефона')]")

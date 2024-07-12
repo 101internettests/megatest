@@ -1,9 +1,10 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu
-from locators.breadcrumbs.breadcrumbs_locators_pol import OperatorsNumbersTinkoff
+from locators.breadcrumbs.breadcrumbs_locators_pol import OperatorsNumbersTinkoff, OperatorTagsAllPol
 from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol, OperatorsActionsTinkoff
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorTagsAll
 from pages.base_page import BasePage
 from time import sleep
 
@@ -379,3 +380,104 @@ class CheckBreadCrumbsPol(BasePage):
         check_the_text_free_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_PLATINUM_NUMBERS)
         assert check_the_text_free_tinkoff.text == 'Платиновый номер Тинькофф Мобайл'
         sleep(2)
+
+    def check_breadcrumbs_operator_all_pol(self):
+        self.element_is_visible(OperatorTagsAll.BREADCRUMBS_OPERATOR_RATES).click()
+        check_the_text_operator_all_mol = self.element_is_visible(OperatorTagsAllPol.TEXT_BREADCRUMBS_OPERATOR_RATES)
+        assert check_the_text_operator_all_mol.text == 'Тарифы сотовой связи для телефона'
+        sleep(2)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet_mol = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet_mol.text == 'Подключить домашний интернет в Санкт-Петербурге'
+        self.driver.back()
+
+    def check_tags_bezlimit_internet_all_pol(self):
+        check_text_bezlimit_internet_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_BEZLIMIT_INTERNET)
+        assert check_text_bezlimit_internet_all_pol.text == 'Тарифы безлимитной мобильной связи'
+        sleep(1)
+
+    def check_tags_your_number_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_YOUR_NUMBER).click()
+        sleep(3)
+        check_the_text_your_number_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_TAG_YOUR_NUMBER)
+        assert check_the_text_your_number_all_pol.text == 'Перейти на другого оператора с сохранением номера в Санкт-Петербурге'
+        sleep(2)
+
+    def check_tags_for_the_tablet_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_THE_TABLET).click()
+        sleep(3)
+        check_the_text_for_the_tablet_all_pol = self.element_is_visible(OperatorTagsAll.TEXT_FOR_THE_TABLET)
+        assert check_the_text_for_the_tablet_all_pol.text == 'Тарифные планы на интернет для планшета'
+        sleep(2)
+
+    def check_tags_not_public_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_NOT_PUBLIC).click()
+        sleep(3)
+        check_the_text_not_public_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_NOT_PUBLIC)
+        assert check_the_text_not_public_all_pol.text == 'Непубличные тарифы'
+        sleep(2)
+
+    def check_tags_family_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FAMILY).click()
+        sleep(3)
+        check_the_text_family_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_FAMILY)
+        assert check_the_text_family_all_pol.text == 'Семейные для телефона'
+        sleep(2)
+
+    def check_tags_roaming_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_ROAMING).click()
+        sleep(3)
+        check_the_text_roaming_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_ROAMING)
+        assert check_the_text_roaming_pol.text == 'Международные тарифы'
+        sleep(2)
+
+    def check_tags_favorable_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FAVORABLE).click()
+        sleep(3)
+        check_the_text_favorable_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_FAVORABLE)
+        assert check_the_text_favorable_all_pol.text == 'Самые выгодные операторы мобильной связи'
+        sleep(2)
+
+    def check_tags_for_modem_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_MODEM).click()
+        sleep(3)
+        check_the_text_for_modem_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_FOR_MODEM)
+        assert check_the_text_for_modem_all_pol.text ==  'Тарифы на интернет для роутера'
+        sleep(2)
+
+    def check_tags_esim_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_ESIM).click()
+        sleep(3)
+        check_the_text_esim_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_ESIM)
+        assert check_the_text_esim_all_pol.text == 'Тарифы eSIM для вашего устройства в Санкт-Петербурге'
+        sleep(2)
+
+    def check_tags_children_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_CHILDREN).click()
+        sleep(3)
+        check_the_text_children_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_CHILDREN)
+        assert check_the_text_children_all_pol.text == 'Детские для телефона'
+        sleep(2)
+
+    def check_tags_unlimited_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_UNLIMITED).click()
+        sleep(3)
+        check_the_text_unlimited_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_UNLIMITED)
+        assert check_the_text_unlimited_all_pol.text == 'Тарифы безлимитной мобильной связи'
+        sleep(2)
+
+    def check_tags_in_russia_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_IN_RUSSIA).click()
+        sleep(3)
+        check_the_text_in_russia_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_IN_RUSSIA)
+        assert check_the_text_in_russia_all_pol.text == 'Тарифные планы по России от российских операторов'
+        sleep(2)
+
+    def check_tags_for_laptop_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_LAPTOP).click()
+        sleep(3)
+        check_the_text_for_laptop_all_pol = self.element_is_visible(OperatorTagsAll.TEXT_FOR_LAPTOP)
+        assert check_the_text_for_laptop_all_pol.text == 'Тарифные планы для ноутбука'
+        sleep(2)
+
