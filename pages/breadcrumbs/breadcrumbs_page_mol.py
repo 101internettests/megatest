@@ -2,9 +2,9 @@ import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_mol import LinkingMol, BreadcrumbsTagsRostel, BreadcrumbsTagsMol
 from locators.breadcrumbs.breadcrumbs_locators_mol import ProviderRostel, OperatorTinkoff, OperatorsActionsMts
-from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersMts, OperatorTagsAllMol
+from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersMts, OperatorTagsAllMol, OperatorsNumbersAllMol
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
-from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts, OperatorTagsAll
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts, OperatorTagsAll, OperatorsNumbersAll
 from pages.base_page import BasePage
 from time import sleep
 
@@ -483,4 +483,78 @@ class CheckBreadCrumbsMol(BasePage):
         sleep(3)
         check_the_text_without_payment_all_mol = self.element_is_visible(OperatorTagsAllMol.TEXT_WITHOUT_PAYMENT)
         assert check_the_text_without_payment_all_mol.text == 'Без абонентской платы для телефона'
+        sleep(2)
+
+    def check_breadcrumbs_numbers_all_mol(self):
+        self.element_is_visible(OperatorsNumbersAll.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers_all_mol = self.element_is_visible(OperatorsNumbersAll.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers_all_mol.text == 'Выбрать номер'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet_mol = self.element_is_visible(LinkingMol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet_mol.text == 'Подключить домашний интернет в Москве'
+        self.driver.back()
+        sleep(3)
+
+    def check_tag_golden_all_mol(self):
+        check_the_golden_all_mol = self.element_is_visible(OperatorsNumbersAll.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_all_mol.text == 'Элитные номера телефонов'
+        sleep(2)
+
+    def check_tag_bronze_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_all_mol = self.element_is_visible(OperatorsNumbersAll.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_all_mol.text == 'Бронзовый номер телефона'
+        sleep(2)
+
+    def check_tag_silver_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_all_mol = self.element_is_visible(OperatorsNumbersAll.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_all_mol.text == 'Серебряный номер от российских операторов'
+        sleep(2)
+
+    def check_tag_free_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_all_mol = self.element_is_visible(OperatorsNumbersAll.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_all_mol.text == 'Бесплатные номера телефонов'
+        sleep(2)
+
+    def check_tag_platinum_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_PLATINUM_NUMBERS).click()
+        sleep(3)
+        check_the_text_platinum_all_mol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_PLATINUM_NUMBERS)
+        assert check_the_text_platinum_all_mol.text == 'Платиновый номер телефона'
+        sleep(2)
+
+    def check_tag_vip_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_VIP_NUMBERS).click()
+        sleep(3)
+        check_the_text_vip_all_mol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_VIP_NUMBERS)
+        assert check_the_text_vip_all_mol.text == 'Вип номера телефонов'
+        sleep(2)
+
+    def check_tag_2_numbers_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_2_NUMBERS).click()
+        sleep(3)
+        check_the_text_2_numbers_all_mol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_2_NUMBERS)
+        assert check_the_text_2_numbers_all_mol.text == 'Номер телефона из двух цифр'
+        sleep(2)
+
+    def check_tag_federation_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_2_FEDERATION).click()
+        sleep(3)
+        check_the_text_federation_all_mol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_FEDERATION)
+        assert check_the_text_federation_all_mol.text == 'Федеральный номер от российских операторов'
+        sleep(2)
+
+    def check_tag_numbers_8800_all_mol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_NUMBERS_8800).click()
+        sleep(3)
+        check_the_text_numbers_8800_all_mol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_NUMBERS_8800)
+        assert check_the_text_numbers_8800_all_mol.text == 'Многоканальные номера'
         sleep(2)

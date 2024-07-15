@@ -3,6 +3,7 @@ import time
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
 from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersTele2, OperatorsNumbers, OperatorTagsAll
 from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts, OperatorsActionsTele2
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersAll
 from pages.base_page import BasePage
 from time import sleep
 
@@ -460,7 +461,7 @@ class CheckBreadCrumbs(BasePage):
         self.element_is_visible(OperatorsTags.TAG_FOR_MODEM).click()
         sleep(3)
         check_the_text_for_modem_all = self.element_is_visible(OperatorTagsAll.TEXT_FOR_MODEM)
-        assert check_the_text_for_modem_all.text ==  'Тарифы операторов для модема в Челябинске'
+        assert check_the_text_for_modem_all.text == 'Тарифы операторов для модема в Челябинске'
         sleep(2)
 
     def check_tags_esim_all(self):
@@ -505,4 +506,41 @@ class CheckBreadCrumbs(BasePage):
         assert check_the_text_without_payment_all.text == 'Безлимитный интернет для телефона'
         sleep(2)
 
+    def check_breadcrumbs_numbers_all(self):
+        self.element_is_visible(OperatorsNumbersAll.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers_all = self.element_is_visible(OperatorsNumbersAll.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers_all.text == 'Выбрать номер'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(Linking.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить интернет в Челябинске'
+        self.driver.back()
+        sleep(3)
 
+    def check_tag_golden_all(self):
+        check_the_golden_all = self.element_is_visible(OperatorsNumbersAll.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_all.text == 'Элитные номера телефонов'
+        sleep(2)
+
+    def check_tag_bronze_all(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_all = self.element_is_visible(OperatorsNumbersAll.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_all.text == 'Бронзовый номер телефона'
+        sleep(2)
+
+    def check_tag_silver_all(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_all = self.element_is_visible(OperatorsNumbersAll.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_all.text == 'Серебряный номер от российских операторов'
+        sleep(2)
+
+    def check_tag_free_all(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_all = self.element_is_visible(OperatorsNumbersAll.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_all.text == 'Бесплатные номера телефонов'
+        sleep(2)

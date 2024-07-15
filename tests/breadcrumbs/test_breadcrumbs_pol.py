@@ -137,3 +137,24 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_operator_all_pol.check_tags_for_laptop_all_pol()
         breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
 
+    def test_numbers_all_pol(self, driver):
+        breadcrumbs_page_numbers_all_pol = CheckBreadCrumbsPol(driver, "https://piter-online.net/nomera/zolotoj")
+        breadcrumbs_page_numbers_all_pol.open()
+        breadcrumbs_page_numbers_all_pol.check_tag_golden_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_bronze_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_silver_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_free_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_platinum_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_vip_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_federation_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_numbers_8800_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+
+

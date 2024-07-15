@@ -142,6 +142,19 @@ class TestBreadCrumbs:
         breadcrumbs_page_operator_all.check_tags_without_payment_all()
         breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
 
+    def test_numbers_all(self, driver):
+        breadcrumbs_page_numbers_all = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/nomera/zolotoj")
+        breadcrumbs_page_numbers_all.open()
+        breadcrumbs_page_numbers_all.check_tag_golden_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+        breadcrumbs_page_numbers_all.check_tag_bronze_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+        breadcrumbs_page_numbers_all.check_tag_silver_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+        breadcrumbs_page_numbers_all.check_tag_free_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+
+
 
 
 

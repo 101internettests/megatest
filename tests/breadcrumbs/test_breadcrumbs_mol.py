@@ -142,5 +142,27 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_operator_all_mol.check_tags_without_payment_all_mol()
         breadcrumbs_page_operator_all_mol.check_breadcrumbs_operator_all_mol()
 
+    def test_numbers_all_mol(self, driver):
+        breadcrumbs_page_numbers_all_mol = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/nomera/zolotoj")
+        breadcrumbs_page_numbers_all_mol.open()
+        breadcrumbs_page_numbers_all_mol.check_tag_golden_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_bronze_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_silver_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_free_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_platinum_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_vip_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_2_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_federation_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_tag_numbers_8800_all_mol()
+        breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
+
 
 
