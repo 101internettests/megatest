@@ -3,7 +3,7 @@ import time
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
 from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersTele2, OperatorsNumbers, OperatorTagsAll
 from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts, OperatorsActionsTele2
-from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersAll
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersAll, Footer
 from pages.base_page import BasePage
 from time import sleep
 
@@ -544,3 +544,30 @@ class CheckBreadCrumbs(BasePage):
         check_the_text_free_all = self.element_is_visible(OperatorsNumbersAll.TEXT_FREE_NUMBERS)
         assert check_the_text_free_all.text == 'Бесплатные номера телефонов'
         sleep(2)
+
+    def check_footer_personal_data(self):
+        check_the_text_personal_data = self.element_is_visible(Footer.TEXT_PERSONAL_DATA)
+        assert check_the_text_personal_data.text == 'Политика обработки персональных данных'
+        sleep(2)
+
+    def check_footer_partners(self):
+        check_the_text_partners = self.element_is_visible(Footer.TEXT_PARTNERS)
+        assert check_the_text_partners.text == 'Сотрудничество'
+        sleep(2)
+
+    def check_footer_contacts(self):
+        check_the_text_contacts = self.element_is_visible(Footer.TEXT_CONTACTS)
+        assert check_the_text_contacts.text == 'Контакты'
+        sleep(2)
+
+    def check_footer_payment(self):
+        check_the_text_payment = self.element_is_visible(Footer.TEXT_PYMENT)
+        assert check_the_text_payment.text == 'Оплата и гарантии компании 101 Интернет'
+        sleep(2)
+
+    def check_footer_about_company(self):
+        check_the_text_about_company = self.element_is_visible(Footer.TEXT_ABOUT_COMPANY)
+        assert check_the_text_about_company.text == 'О нас — 101 Интернет'
+        sleep(2)
+
+

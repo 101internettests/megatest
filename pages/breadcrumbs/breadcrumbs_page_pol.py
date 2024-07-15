@@ -1,10 +1,10 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu
-from locators.breadcrumbs.breadcrumbs_locators_pol import OperatorsNumbersTinkoff, OperatorTagsAllPol
+from locators.breadcrumbs.breadcrumbs_locators_pol import OperatorsNumbersTinkoff, OperatorTagsAllPol, FooterPol
 from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol, OperatorsActionsTinkoff
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
-from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorTagsAll, OperatorsNumbersAll
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorTagsAll, OperatorsNumbersAll, Footer
 from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersAllMol
 from pages.base_page import BasePage
 from time import sleep
@@ -548,5 +548,31 @@ class CheckBreadCrumbsPol(BasePage):
         check_the_text_numbers_8800_all_pol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_NUMBERS_8800)
         assert check_the_text_numbers_8800_all_pol.text == 'Многоканальные номера'
         sleep(2)
+
+    def check_footer_personal_data_pol(self):
+        check_the_text_personal_data_pol = self.element_is_visible(Footer.TEXT_PERSONAL_DATA)
+        assert check_the_text_personal_data_pol.text == 'Политика обработки персональных данных'
+        sleep(2)
+
+    def check_footer_partners_pol(self):
+        check_the_text_partners_pol = self.element_is_visible(Footer.TEXT_PARTNERS)
+        assert check_the_text_partners_pol.text == 'Сотрудничество'
+        sleep(2)
+
+    def check_footer_contacts_pol(self):
+        check_the_text_contacts_pol = self.element_is_visible(Footer.TEXT_CONTACTS)
+        assert check_the_text_contacts_pol.text == 'Контакты'
+        sleep(2)
+
+    def check_footer_payment_pol(self):
+        check_the_text_payment_pol = self.element_is_visible(FooterPol.TEXT_PYMENT)
+        assert check_the_text_payment_pol.text == 'Оплата на сайте и гарантии'
+        sleep(2)
+
+    def check_footer_about_company_pol(self):
+        check_the_text_about_company_pol = self.element_is_visible(FooterPol.TEXT_ABOUT_COMPANY)
+        assert check_the_text_about_company_pol.text == 'О нас — Питер Онлайн'
+        sleep(2)
+
 
 

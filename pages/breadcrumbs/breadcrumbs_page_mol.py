@@ -1,10 +1,10 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_mol import LinkingMol, BreadcrumbsTagsRostel, BreadcrumbsTagsMol
-from locators.breadcrumbs.breadcrumbs_locators_mol import ProviderRostel, OperatorTinkoff, OperatorsActionsMts
+from locators.breadcrumbs.breadcrumbs_locators_mol import ProviderRostel, OperatorTinkoff, OperatorsActionsMts, FooterMol
 from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersMts, OperatorTagsAllMol, OperatorsNumbersAllMol
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
-from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts, OperatorTagsAll, OperatorsNumbersAll
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorMts, OperatorTagsAll, OperatorsNumbersAll, Footer
 from pages.base_page import BasePage
 from time import sleep
 
@@ -557,4 +557,29 @@ class CheckBreadCrumbsMol(BasePage):
         sleep(3)
         check_the_text_numbers_8800_all_mol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_NUMBERS_8800)
         assert check_the_text_numbers_8800_all_mol.text == 'Многоканальные номера'
+        sleep(2)
+
+    def check_footer_personal_data_mol(self):
+        check_the_text_personal_data_mol = self.element_is_visible(Footer.TEXT_PERSONAL_DATA)
+        assert check_the_text_personal_data_mol.text == 'Политика обработки персональных данных'
+        sleep(2)
+
+    def check_footer_partners_mol(self):
+        check_the_text_partners_mol = self.element_is_visible(Footer.TEXT_PARTNERS)
+        assert check_the_text_partners_mol.text == 'Сотрудничество'
+        sleep(2)
+
+    def check_footer_contacts_mol(self):
+        check_the_text_contacts_mol = self.element_is_visible(Footer.TEXT_CONTACTS)
+        assert check_the_text_contacts_mol.text == 'Контакты'
+        sleep(2)
+
+    def check_footer_payment_mol(self):
+        check_the_text_payment_mol = self.element_is_visible(FooterMol.TEXT_PYMENT)
+        assert check_the_text_payment_mol.text == 'Оплата и гарантии компании'
+        sleep(2)
+
+    def check_footer_about_company_mol(self):
+        check_the_text_about_company_mol = self.element_is_visible(FooterMol.TEXT_ABOUT_COMPANY)
+        assert check_the_text_about_company_mol.text == 'О нас — Москва Онлайн'
         sleep(2)

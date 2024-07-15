@@ -117,3 +117,8 @@ class OperatorTagsAllPol:
     TEXT_FOR_LAPTOP = (By.XPATH, "//h1[contains(text(), 'Тарифные планы для ноутбука')]")
     BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы сотовой связи')]")
     TEXT_BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//h1[contains(text(), 'Тарифы сотовой связи для телефона')]")
+
+
+class FooterPol:
+    TEXT_ABOUT_COMPANY = (By.XPATH, "//h1[contains(text(), 'О нас — Питер Онлайн')]")
+    TEXT_PYMENT = (By.XPATH, "//h1[contains(text(), 'Оплата на сайте и гарантии')]")

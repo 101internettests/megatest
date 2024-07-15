@@ -157,4 +157,30 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_numbers_all_pol.check_tag_numbers_8800_all_pol()
         breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
 
+    def test_footer_personal_data_pol(self, driver):
+        footer_page_check_personal_data_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/personal-data')
+        footer_page_check_personal_data_pol.open()
+        footer_page_check_personal_data_pol.check_footer_personal_data_pol()
+
+    def test_footer_partners_pol(self, driver):
+        footer_page_check_partners_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/partners')
+        footer_page_check_partners_pol.open()
+        footer_page_check_partners_pol.check_footer_partners_pol()
+
+    def test_footer_contacts_pol(self, driver):
+        footer_page_check_contacts_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/contacts')
+        footer_page_check_contacts_pol.open()
+        footer_page_check_contacts_pol.check_footer_contacts_pol()
+
+    def test_footer_payment_pol(self, driver):
+        footer_page_check_payment_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/oplata-i-garantii')
+        footer_page_check_payment_pol.open()
+        footer_page_check_payment_pol.check_footer_payment_pol()
+
+    def test_footer_about_company_pol(self, driver):
+        footer_page_check_about_company_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/company')
+        footer_page_check_about_company_pol.open()
+        footer_page_check_about_company_pol.check_footer_about_company_pol()
+
+
 
