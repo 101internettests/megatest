@@ -75,7 +75,8 @@ class ProviderMts:
 
 class OperatorMts:
     # ALL_OPERATORS = (By.XPATH, "//div[contains(text(), 'Все операторы')]")
-    OPERATOR_MTS = (By.XPATH, "//img[@src='//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/89/5b/09ddfbde.png']")
+    OPERATOR_MTS = (
+        By.XPATH, '//img[@src="//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/aa/8e/e6f8dfb4.png"]')
     TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Безлимитный интернет тарифы МТС в Челябинске')]")
     TEXT_MOBILE_RATES = (By.XPATH, "//h1[contains(text(), 'Мобильные тарифы МТС')]")
     TEXT_OPERATOR_MTS = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи МТС')]")
@@ -107,5 +108,74 @@ class OperatorsTags:
     TAG_CHILDREN = (By.XPATH, "//div[contains(text(), 'Детские')]")
     TAG_UNLIMITED = (By.XPATH, "//div[contains(text(), 'Безлимитная связь')]")
     TAG_IN_RUSSIA = (By.XPATH, "//div[contains(text(), 'Связь по России')]")
+    TAG_FOR_LAPTOP = (By.XPATH, "//div[contains(text(), 'Для ноутбука')]")
+    TAG_WITHOUT_PAYMENT = (By.XPATH, "//div[contains(text(), 'Без абонентской платы')]")
 
 
+class OperatorsActionsTele2:
+    TEXT_ACTIONS = (By.XPATH, "//h1[contains(text(), 'Акции оператора Теле 2 в Челябинске')]")
+    BREADCRUMBS_TELE_2 = (By.XPATH, "//span[contains(text(), 'Теле 2')]")
+    TEXT_TELE_2 = (By.XPATH, "//h1[contains(text(), 'Оператор мобильной связи Теле 2')]")
+
+
+class OperatorsNumbers:
+    TAG_BRONZE_NUMBERS = (By.XPATH, "//div[contains(text(), 'Бронзовые')]")
+    TAG_SILVER_NUMBERS = (By.XPATH, "//div[contains(text(), 'Серебряные')]")
+    TAG_FREE_NUMBERS = (By.XPATH, "//div[contains(text(), 'Бесплатные')]")
+    TAG_PLATINUM_NUMBERS = (By.XPATH, "//div[contains(text(), 'Платиновые')]")
+    TAG_VIP_NUMBERS = (By.XPATH, "//div[contains(text(), 'VIP')]")
+    TAG_2_NUMBERS = (By.XPATH, "//div[contains(text(), 'Из двух цифр')]")
+    TAG_2_FEDERATION = (By.XPATH, "//div[contains(text(), 'Федеральные')]")
+    TAG_NUMBERS_8800 = (By.XPATH, "//div[contains(text(), 'Номера 8800')]")
+    NUMBERS = (By.XPATH, "//a[contains(text(), 'Номера')]")
+    BREADCRUMBS_NUMBERS = (By.XPATH, "//span[contains(text(), 'Номера')]")
+
+
+class OperatorsNumbersTele2:
+    TEXT_GOLDEN_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Золотые номера Теле 2 на выбор в Челябинске')]")
+    TEXT_BRONZE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бронзовые номера Теле 2 на выбор в Челябинске')]")
+    TEXT_SILVER_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Серебряные номера Теле 2 на выбор в Челябинске')]")
+    TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера Теле 2 на выбор в Челябинске')]")
+    TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер Теле 2')]")
+    OPERATOR_TELE_2 = (
+        By.XPATH, "//img[@src = '//93380217-10c9-4819-9112-bcd74f3cf5a1.selcdn.net/images/65/48/6c854e23.png']")
+
+
+class OperatorTagsAll:
+    TEXT_BEZLIMIT_INTERNET = (By.XPATH, "//h1[contains(text(), 'Тарифы с безлимитным интернетом')]")
+    TEXT_TAG_YOUR_NUMBER = (
+        By.XPATH, "//h1[contains(text(), 'Перейти на другого оператора с сохранением номера в Челябинске')]")
+    TEXT_FOR_THE_TABLET = (By.XPATH, "//h1[contains(text(), 'Тарифные планы на интернет для планшета')]")
+    TEXT_NOT_PUBLIC = (By.XPATH, "//h1[contains(text(), 'Непубличные тарифы ')]")
+    TEXT_FAMILY = (By.XPATH, "//h1[contains(text(), 'Семейная мобильная связь  в Челябинске')]")
+    TEXT_ROAMING = (
+        By.XPATH, "//h1[contains(text(), 'Мобильные тарифы для связи за границей - подключить в Челябинске')]")
+    TEXT_FAVORABLE = (By.XPATH, "//h1[contains(text(), 'Выгодные тарифы сотовых операторов в Челябинске')]")
+    TEXT_FOR_MODEM = (By.XPATH, "//h1[contains(text(), 'Тарифы операторов для модема в Челябинске')]")
+    TEXT_ESIM = (By.XPATH, "//h1[contains(text(), 'Тарифы eSIM для вашего устройства в Челябинске')]")
+    TEXT_CHILDREN = (By.XPATH, "//h1[contains(text(), 'Сотовая связь для детей  в Челябинске')]")
+    TEXT_UNLIMITED = (By.XPATH, "//h1[contains(text(), 'Тарифы операторов с безлимитной связью в Челябинске')]")
+    TEXT_IN_RUSSIA = (
+        By.XPATH, "//h1[contains(text(), 'Тарифы телефонных операторов в Челябинске для связи по России')]")
+    TEXT_FOR_LAPTOP = (By.XPATH, "//h1[contains(text(), 'Тарифные планы для ноутбука')]")
+    TEXT_WITHOUT_PAYMENT = (By.XPATH, "//h1[contains(text(), 'Безлимитный интернет для телефона')]")
+    BREADCRUMBS_OPERATOR_RATES = (By.XPATH, "//span[contains(text(), 'Тарифы сотовой связи')]")
+    TEXT_BREADCRUMBS_OPERATOR_RATES = (
+        By.XPATH, "//h1[contains(text(), 'Тарифы сотовой связи для телефона в Челябинске')]")
+
+
+class OperatorsNumbersAll:
+    TEXT_BREADCRUMBS_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Выбрать номер')]")
+    BREADCRUMBS_NUMBERS = (By.XPATH, "//span[contains(text(), 'Номера')]")
+    TEXT_GOLDEN_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Элитные номера телефонов')]")
+    TEXT_BRONZE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бронзовый номер телефона')]")
+    TEXT_SILVER_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Серебряный номер от российских операторов')]")
+    TEXT_FREE_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Бесплатные номера телефонов')]")
+
+
+class Footer:
+    TEXT_PERSONAL_DATA = (By.XPATH, "//h1[contains(text(), 'Политика обработки персональных данных')]")
+    TEXT_PARTNERS = (By.XPATH, "//h1[contains(text(), 'Сотрудничество')]")
+    TEXT_CONTACTS = (By.XPATH, "//h1[contains(text(), 'Контакты')]")
+    TEXT_PYMENT = (By.XPATH, "//h1[contains(text(), 'Оплата и гарантии компании 101 Интернет')]")
+    TEXT_ABOUT_COMPANY = (By.XPATH, "//h1[contains(text(), 'О нас — 101 Интернет')]")

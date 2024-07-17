@@ -1,8 +1,11 @@
 import allure
 import time
 from locators.breadcrumbs.breadcrumbs_locators_pol import LinkingPol, BreadcrumbsTagsPol, BreadcrumbsTagsDomRu
-from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol
-from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags
+from locators.breadcrumbs.breadcrumbs_locators_pol import OperatorsNumbersTinkoff, OperatorTagsAllPol, FooterPol
+from locators.breadcrumbs.breadcrumbs_locators_pol import ProviderDomRu, OperatorTinkoffPol, OperatorsActionsTinkoff
+from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, OperatorsTags, OperatorsNumbers
+from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorTagsAll, OperatorsNumbersAll, Footer
+from locators.breadcrumbs.breadcrumbs_locators_mol import OperatorsNumbersAllMol
 from pages.base_page import BasePage
 from time import sleep
 
@@ -300,3 +303,276 @@ class CheckBreadCrumbsPol(BasePage):
         check_the_text_children = self.element_is_visible(OperatorTinkoffPol.TEXT_CHILDREN)
         assert check_the_text_children.text == 'Тарифы "Детские" от Тинькофф Мобайл в Санкт-Петербурге'
         sleep(2)
+
+    def check_actions_tinkoff(self):
+        check_the_text_in_russia = self.element_is_visible(OperatorsActionsTinkoff.TEXT_ACTIONS)
+        assert check_the_text_in_russia.text == 'Акции оператора Тинькофф Мобайл в Санкт-Петербурге'
+        sleep(2)
+
+    def check_breadcrumbs_actions_tinkoff(self):
+        self.element_is_visible(OperatorsActionsTinkoff.BREADCRUMBS_TINKOFF).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorsActionsTinkoff.TEXT_TINKOFF)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи Тинькофф Мобайл'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorTinkoffPol.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+
+    def check_breadcrumbs_numbers_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers.text == 'Выбрать номер Тинькофф Мобайл'
+        sleep(1)
+        self.element_is_visible(OperatorTinkoffPol.BREADCRUMBS_TINKOFF_MOBILE).click()
+        sleep(3)
+        check_the_text_mobile_rates = self.element_is_visible(OperatorTinkoffPol.TEXT_OPERATOR_TINKOFF)
+        assert check_the_text_mobile_rates.text == 'Оператор мобильной связи Тинькофф Мобайл'
+        sleep(1)
+        self.element_is_visible(OperatorsTags.MOBILE_OPERATORS).click()
+        check_the_text_mobile_operators = self.element_is_visible(OperatorTinkoffPol.TEXT_MOBILE_OPERATORS)
+        assert check_the_text_mobile_operators.text == 'Мобильные операторы'
+        sleep(3)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet.text == 'Подключить домашний интернет в Санкт-Петербурге'
+        self.driver.back()
+        sleep(3)
+        self.element_is_visible(OperatorTinkoffPol.OPERATOR_TINKOFF).click()
+        sleep(3)
+        self.element_is_visible(OperatorsNumbers.NUMBERS).click()
+
+    def check_tag_golden_tinkoff(self):
+        check_the_golden_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_tinkoff.text == 'Золотые номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_bronze_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_tinkoff.text == 'Бронзовые номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_silver_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_tinkoff.text == 'Серебряные номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_free_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_tinkoff.text == 'Бесплатные номера Тинькофф Мобайл на выбор'
+        sleep(2)
+
+    def check_tag_platinum_tinkoff(self):
+        self.element_is_visible(OperatorsNumbers.TAG_PLATINUM_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_tinkoff = self.element_is_visible(OperatorsNumbersTinkoff.TEXT_PLATINUM_NUMBERS)
+        assert check_the_text_free_tinkoff.text == 'Платиновый номер Тинькофф Мобайл'
+        sleep(2)
+
+    def check_breadcrumbs_operator_all_pol(self):
+        self.element_is_visible(OperatorTagsAll.BREADCRUMBS_OPERATOR_RATES).click()
+        check_the_text_operator_all_mol = self.element_is_visible(OperatorTagsAllPol.TEXT_BREADCRUMBS_OPERATOR_RATES)
+        assert check_the_text_operator_all_mol.text == 'Тарифы сотовой связи для телефона'
+        sleep(2)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet_mol = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet_mol.text == 'Подключить домашний интернет в Санкт-Петербурге'
+        self.driver.back()
+
+    def check_tags_bezlimit_internet_all_pol(self):
+        check_text_bezlimit_internet_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_BEZLIMIT_INTERNET)
+        assert check_text_bezlimit_internet_all_pol.text == 'Тарифы безлимитной мобильной связи'
+        sleep(1)
+
+    def check_tags_your_number_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_YOUR_NUMBER).click()
+        sleep(3)
+        check_the_text_your_number_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_TAG_YOUR_NUMBER)
+        assert check_the_text_your_number_all_pol.text == 'Перейти на другого оператора с сохранением номера в Санкт-Петербурге'
+        sleep(2)
+
+    def check_tags_for_the_tablet_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_THE_TABLET).click()
+        sleep(3)
+        check_the_text_for_the_tablet_all_pol = self.element_is_visible(OperatorTagsAll.TEXT_FOR_THE_TABLET)
+        assert check_the_text_for_the_tablet_all_pol.text == 'Тарифные планы на интернет для планшета'
+        sleep(2)
+
+    def check_tags_not_public_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_NOT_PUBLIC).click()
+        sleep(3)
+        check_the_text_not_public_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_NOT_PUBLIC)
+        assert check_the_text_not_public_all_pol.text == 'Непубличные тарифы'
+        sleep(2)
+
+    def check_tags_family_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FAMILY).click()
+        sleep(3)
+        check_the_text_family_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_FAMILY)
+        assert check_the_text_family_all_pol.text == 'Семейные для телефона'
+        sleep(2)
+
+    def check_tags_roaming_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_ROAMING).click()
+        sleep(3)
+        check_the_text_roaming_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_ROAMING)
+        assert check_the_text_roaming_pol.text == 'Международные тарифы'
+        sleep(2)
+
+    def check_tags_favorable_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FAVORABLE).click()
+        sleep(3)
+        check_the_text_favorable_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_FAVORABLE)
+        assert check_the_text_favorable_all_pol.text == 'Самые выгодные операторы мобильной связи'
+        sleep(2)
+
+    def check_tags_for_modem_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_MODEM).click()
+        sleep(3)
+        check_the_text_for_modem_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_FOR_MODEM)
+        assert check_the_text_for_modem_all_pol.text ==  'Тарифы на интернет для роутера'
+        sleep(2)
+
+    def check_tags_esim_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_ESIM).click()
+        sleep(3)
+        check_the_text_esim_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_ESIM)
+        assert check_the_text_esim_all_pol.text == 'Тарифы eSIM для вашего устройства в Санкт-Петербурге'
+        sleep(2)
+
+    def check_tags_children_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_CHILDREN).click()
+        sleep(3)
+        check_the_text_children_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_CHILDREN)
+        assert check_the_text_children_all_pol.text == 'Детские для телефона'
+        sleep(2)
+
+    def check_tags_unlimited_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_UNLIMITED).click()
+        sleep(3)
+        check_the_text_unlimited_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_UNLIMITED)
+        assert check_the_text_unlimited_all_pol.text == 'Тарифы безлимитной мобильной связи'
+        sleep(2)
+
+    def check_tags_in_russia_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_IN_RUSSIA).click()
+        sleep(3)
+        check_the_text_in_russia_all_pol = self.element_is_visible(OperatorTagsAllPol.TEXT_IN_RUSSIA)
+        assert check_the_text_in_russia_all_pol.text == 'Тарифные планы по России от российских операторов'
+        sleep(2)
+
+    def check_tags_for_laptop_all_pol(self):
+        self.element_is_visible(OperatorsTags.TAG_FOR_LAPTOP).click()
+        sleep(3)
+        check_the_text_for_laptop_all_pol = self.element_is_visible(OperatorTagsAll.TEXT_FOR_LAPTOP)
+        assert check_the_text_for_laptop_all_pol.text == 'Тарифные планы для ноутбука'
+        sleep(2)
+
+    def check_breadcrumbs_numbers_all_pol(self):
+        self.element_is_visible(OperatorsNumbersAll.BREADCRUMBS_NUMBERS).click()
+        sleep(3)
+        check_the_text_numbers_all_pol = self.element_is_visible(OperatorsNumbersAll.TEXT_BREADCRUMBS_NUMBERS)
+        assert check_the_text_numbers_all_pol.text == 'Выбрать номер'
+        sleep(1)
+        self.element_is_visible(Linking.BREADCRUMBS_CONNECT_THE_INTERNET).click()
+        sleep(3)
+        check_text_connect_the_internet_pol = self.element_is_visible(LinkingPol.CHECK_THE_MAIN_PAGE)
+        assert check_text_connect_the_internet_pol.text == 'Подключить домашний интернет в Санкт-Петербурге'
+        self.driver.back()
+        sleep(3)
+
+    def check_tag_golden_all_pol(self):
+        check_the_golden_all_pol = self.element_is_visible(OperatorsNumbersAll.TEXT_GOLDEN_NUMBERS)
+        assert check_the_golden_all_pol.text == 'Элитные номера телефонов'
+        sleep(2)
+
+    def check_tag_bronze_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_BRONZE_NUMBERS).click()
+        sleep(3)
+        check_the_text_bronze_all_pol = self.element_is_visible(OperatorsNumbersAll.TEXT_BRONZE_NUMBERS)
+        assert check_the_text_bronze_all_pol.text == 'Бронзовый номер телефона'
+        sleep(2)
+
+    def check_tag_silver_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_SILVER_NUMBERS).click()
+        sleep(3)
+        check_the_silver_all_pol = self.element_is_visible(OperatorsNumbersAll.TEXT_SILVER_NUMBERS)
+        assert check_the_silver_all_pol.text == 'Серебряный номер от российских операторов'
+        sleep(2)
+
+    def check_tag_free_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_FREE_NUMBERS).click()
+        sleep(3)
+        check_the_text_free_all_pol = self.element_is_visible(OperatorsNumbersAll.TEXT_FREE_NUMBERS)
+        assert check_the_text_free_all_pol.text == 'Бесплатные номера телефонов'
+        sleep(2)
+
+    def check_tag_platinum_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_PLATINUM_NUMBERS).click()
+        sleep(3)
+        check_the_text_platinum_all_pol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_PLATINUM_NUMBERS)
+        assert check_the_text_platinum_all_pol.text == 'Платиновый номер телефона'
+        sleep(2)
+
+    def check_tag_vip_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_VIP_NUMBERS).click()
+        sleep(3)
+        check_the_text_vip_all_pol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_VIP_NUMBERS)
+        assert check_the_text_vip_all_pol.text == 'Вип номера телефонов'
+        sleep(2)
+
+    def check_tag_federation_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_2_FEDERATION).click()
+        sleep(3)
+        check_the_text_federation_all_pol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_FEDERATION)
+        assert check_the_text_federation_all_pol.text == 'Федеральный номер от российских операторов'
+        sleep(2)
+
+    def check_tag_numbers_8800_all_pol(self):
+        self.element_is_visible(OperatorsNumbers.TAG_NUMBERS_8800).click()
+        sleep(3)
+        check_the_text_numbers_8800_all_pol = self.element_is_visible(OperatorsNumbersAllMol.TEXT_NUMBERS_8800)
+        assert check_the_text_numbers_8800_all_pol.text == 'Многоканальные номера'
+        sleep(2)
+
+    def check_footer_personal_data_pol(self):
+        check_the_text_personal_data_pol = self.element_is_visible(Footer.TEXT_PERSONAL_DATA)
+        assert check_the_text_personal_data_pol.text == 'Политика обработки персональных данных'
+        sleep(2)
+
+    def check_footer_partners_pol(self):
+        check_the_text_partners_pol = self.element_is_visible(Footer.TEXT_PARTNERS)
+        assert check_the_text_partners_pol.text == 'Сотрудничество'
+        sleep(2)
+
+    def check_footer_contacts_pol(self):
+        check_the_text_contacts_pol = self.element_is_visible(Footer.TEXT_CONTACTS)
+        assert check_the_text_contacts_pol.text == 'Контакты'
+        sleep(2)
+
+    def check_footer_payment_pol(self):
+        check_the_text_payment_pol = self.element_is_visible(FooterPol.TEXT_PYMENT)
+        assert check_the_text_payment_pol.text == 'Оплата на сайте и гарантии'
+        sleep(2)
+
+    def check_footer_about_company_pol(self):
+        check_the_text_about_company_pol = self.element_is_visible(FooterPol.TEXT_ABOUT_COMPANY)
+        assert check_the_text_about_company_pol.text == 'О нас — Питер Онлайн'
+        sleep(2)
+
+
+

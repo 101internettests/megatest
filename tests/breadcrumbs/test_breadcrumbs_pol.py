@@ -86,3 +86,101 @@ class TestBreadCrumbsPol:
         breadcrumbs_page_operator_tinkoff_pol.check_breadcrumbs_operator_tinkoff_pol()
         breadcrumbs_page_operator_tinkoff_pol.check_tags_children_tinkoff_pol()
         breadcrumbs_page_operator_tinkoff_pol.check_breadcrumbs_operator_tinkoff_pol()
+
+    def test_actions_tinkoff(self, driver):
+        breadcrumbs_page_actions_tinkoff = CheckBreadCrumbsPol(driver, "https://piter-online.net/operatory/tinkoff/actions")
+        breadcrumbs_page_actions_tinkoff.open()
+        breadcrumbs_page_actions_tinkoff.check_actions_tinkoff()
+        breadcrumbs_page_actions_tinkoff.check_breadcrumbs_actions_tinkoff()
+
+    def test_numbers_tinkoff(self, driver):
+        breadcrumbs_page_numbers_tinkoff = CheckBreadCrumbsPol(driver, "https://piter-online.net/operatory/tinkoff/nomera/zolotoj")
+        breadcrumbs_page_numbers_tinkoff.open()
+        breadcrumbs_page_numbers_tinkoff.check_tag_golden_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_bronze_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_silver_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_free_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_tag_platinum_tinkoff()
+        breadcrumbs_page_numbers_tinkoff.check_breadcrumbs_numbers_tinkoff()
+
+    def test_tags_operator_all_pol(self, driver):
+        breadcrumbs_page_operator_all_pol = CheckBreadCrumbsPol(driver, "https://piter-online.net/ratesmobile/bezlimitnaja-svjaz")
+        breadcrumbs_page_operator_all_pol.open()
+        breadcrumbs_page_operator_all_pol.check_tags_bezlimit_internet_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_your_number_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_for_the_tablet_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_not_public_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_family_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_roaming_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_favorable_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_for_modem_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_esim_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_children_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_unlimited_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_in_russia_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+        breadcrumbs_page_operator_all_pol.check_tags_for_laptop_all_pol()
+        breadcrumbs_page_operator_all_pol.check_breadcrumbs_operator_all_pol()
+
+    def test_numbers_all_pol(self, driver):
+        breadcrumbs_page_numbers_all_pol = CheckBreadCrumbsPol(driver, "https://piter-online.net/nomera/zolotoj")
+        breadcrumbs_page_numbers_all_pol.open()
+        breadcrumbs_page_numbers_all_pol.check_tag_golden_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_bronze_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_silver_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_free_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_platinum_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_vip_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_federation_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_tag_numbers_8800_all_pol()
+        breadcrumbs_page_numbers_all_pol.check_breadcrumbs_numbers_all_pol()
+
+    def test_footer_personal_data_pol(self, driver):
+        footer_page_check_personal_data_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/personal-data')
+        footer_page_check_personal_data_pol.open()
+        footer_page_check_personal_data_pol.check_footer_personal_data_pol()
+
+    def test_footer_partners_pol(self, driver):
+        footer_page_check_partners_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/partners')
+        footer_page_check_partners_pol.open()
+        footer_page_check_partners_pol.check_footer_partners_pol()
+
+    def test_footer_contacts_pol(self, driver):
+        footer_page_check_contacts_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/contacts')
+        footer_page_check_contacts_pol.open()
+        footer_page_check_contacts_pol.check_footer_contacts_pol()
+
+    def test_footer_payment_pol(self, driver):
+        footer_page_check_payment_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/oplata-i-garantii')
+        footer_page_check_payment_pol.open()
+        footer_page_check_payment_pol.check_footer_payment_pol()
+
+    def test_footer_about_company_pol(self, driver):
+        footer_page_check_about_company_pol = CheckBreadCrumbsPol(driver, 'https://piter-online.net/about/company')
+        footer_page_check_about_company_pol.open()
+        footer_page_check_about_company_pol.check_footer_about_company_pol()
+
+
+

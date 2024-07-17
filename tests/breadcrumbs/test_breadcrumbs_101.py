@@ -1,15 +1,18 @@
 import allure
 from pages.breadcrumbs.breadcrumbs_page_101 import CheckBreadCrumbs
 import time
-#from qaseio.pytest import qase
+
+
+# from qaseio.pytest import qase
 
 
 @allure.suite("Тесты перелинковки на 101")
 class TestBreadCrumbs:
     @allure.title("Проверка прелинковки и хлебных крошек в ней")
-    #@qase.title("Проверка прелинковки и хлебных крошек в ней")
+    # @qase.title("Проверка прелинковки и хлебных крошек в ней")
     def test_linking(self, driver):
-        breadcrumbs_page = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/dom/ul-batumskaya-d-9a-id286668")
+        breadcrumbs_page = CheckBreadCrumbs(driver,
+                                            "https://101internet.ru/chelyabinsk/dom/ul-batumskaya-d-9a-id286668")
         breadcrumbs_page.open()
         breadcrumbs_page.check_linking()
         breadcrumbs_page.check_breadcrumbs_linking()
@@ -51,12 +54,14 @@ class TestBreadCrumbs:
         breadcrumbs_page_tags_mts.check_breadcrumbs_mts()
 
     def test_about_provider_mts(self, driver):
-        breadcrumbs_page_about_provider_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/mts")
+        breadcrumbs_page_about_provider_mts = CheckBreadCrumbs(driver,
+                                                               "https://101internet.ru/chelyabinsk/providers/mts")
         breadcrumbs_page_about_provider_mts.open()
         breadcrumbs_page_about_provider_mts.check_breadcrumbs_providers_and_main()
 
     def test_actions_mts(self, driver):
-        breadcrumbs_page_test_actions_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/actions/mts")
+        breadcrumbs_page_test_actions_mts = CheckBreadCrumbs(driver,
+                                                             "https://101internet.ru/chelyabinsk/providers/actions/mts")
         breadcrumbs_page_test_actions_mts.open()
         breadcrumbs_page_test_actions_mts.check_breadcrumbs_action_mts()
         breadcrumbs_page_test_actions_mts.check_breadcrumbs_providers_and_main()
@@ -68,7 +73,8 @@ class TestBreadCrumbs:
         breadcrumbs_page_rating_mts.check_breadcrumbs_providers_and_main()
 
     def test_tags_operator_mts(self, driver):
-        breadcrumbs_page_operator_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/operatory/mts/ratesmobile/bezlimitnyj-internet")
+        breadcrumbs_page_operator_mts = CheckBreadCrumbs(driver,
+                                                         "https://101internet.ru/chelyabinsk/operatory/mts/ratesmobile/bezlimitnyj-internet")
         breadcrumbs_page_operator_mts.open()
         breadcrumbs_page_operator_mts.check_tags_internet_and_mobile()
         breadcrumbs_page_operator_mts.check_breadcrumbs_operator()
@@ -93,14 +99,91 @@ class TestBreadCrumbs:
         breadcrumbs_page_operator_mts.check_tags_in_russia()
         breadcrumbs_page_operator_mts.check_breadcrumbs_operator()
 
+    def test_actions_tele_2(self, driver):
+        breadcrumbs_page_actions_tele_2 = CheckBreadCrumbs(driver,
+                                                           "https://101internet.ru/chelyabinsk/operatory/tele-2/actions")
+        breadcrumbs_page_actions_tele_2.open()
+        breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_tele_2()
 
+    def test_numbers_tele_2(self, driver):
+        breadcrumbs_page_numbers_tele_2 = CheckBreadCrumbs(driver,
+                                                           "https://101internet.ru/chelyabinsk/operatory/tele-2/nomera/zolotoj")
+        breadcrumbs_page_numbers_tele_2.open()
+        breadcrumbs_page_numbers_tele_2.check_tag_golden_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_tag_bronze_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_tag_silver_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_tag_free_tele_2()
+        breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
 
+    def test_tags_operator_all(self, driver):
+        breadcrumbs_page_operator_all = CheckBreadCrumbs(driver,
+                                                         "https://101internet.ru/chelyabinsk/ratesmobile/bezlimitnyj-internet")
+        breadcrumbs_page_operator_all.open()
+        breadcrumbs_page_operator_all.check_tags_bezlimit_internet_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_your_number_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_for_the_tablet_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_not_public_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_family_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_roaming_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_favorable_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_for_modem_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_esim_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_children_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_unlimited_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_in_russia_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_for_laptop_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
+        breadcrumbs_page_operator_all.check_tags_without_payment_all()
+        breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
 
+    def test_numbers_all(self, driver):
+        breadcrumbs_page_numbers_all = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/nomera/zolotoj")
+        breadcrumbs_page_numbers_all.open()
+        breadcrumbs_page_numbers_all.check_tag_golden_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+        breadcrumbs_page_numbers_all.check_tag_bronze_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+        breadcrumbs_page_numbers_all.check_tag_silver_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
+        breadcrumbs_page_numbers_all.check_tag_free_all()
+        breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
 
+    def test_footer_personal_data(self, driver):
+        footer_page_check_personal_data = CheckBreadCrumbs(driver, 'https://101internet.ru/about/personal-data')
+        footer_page_check_personal_data.open()
+        footer_page_check_personal_data.check_footer_personal_data()
 
+    def test_footer_partners(self, driver):
+        footer_page_check_partners = CheckBreadCrumbs(driver, 'https://101internet.ru/about/partners')
+        footer_page_check_partners.open()
+        footer_page_check_partners.check_footer_partners()
 
+    def test_footer_contacts(self, driver):
+        footer_page_check_contacts = CheckBreadCrumbs(driver, 'https://101internet.ru/about/contacts')
+        footer_page_check_contacts.open()
+        footer_page_check_contacts.check_footer_contacts()
 
+    def test_footer_payment(self, driver):
+        footer_page_check_payment = CheckBreadCrumbs(driver, 'https://101internet.ru/about/oplata-i-garantii')
+        footer_page_check_payment.open()
+        footer_page_check_payment.check_footer_payment()
 
-
-
-
+    def test_footer_about_company(self, driver):
+        footer_page_check_about_company = CheckBreadCrumbs(driver, 'https://101internet.ru/about/company')
+        footer_page_check_about_company.open()
+        footer_page_check_about_company.check_footer_about_company()
