@@ -1,7 +1,7 @@
-allure-pytest==2.13.5
-allure-python-commons==2.13.5
+allure-pytest==2.13.2
+allure-python-commons==2.13.2
 telebot~=0.0.5
-pytest~=8.2.0
+pytest~=8.0.0
 pip~=24.0
 attrs~=23.2.0
 wheel~=0.43.0
