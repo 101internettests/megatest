@@ -2,7 +2,7 @@ import allure
 from pages.canonical.canonical_page import CanonicalPage
 
 
-# @allure.suite("Технические дубли со слешем и без слеша отсутствуют")
+@allure.suite("Тесты на проверку наличия канониклов")
 class TestCononicals:
     @allure.title("Проверка наличия канониклов на страницах провайдеров, 101, Москва")
     def test_101_moskva_providers(self, driver):
