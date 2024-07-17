@@ -1,5 +1,4 @@
 import allure
-import time
 from locators.breadcrumbs.breadcrumbs_locators_101 import Linking, BreadcrumbsTags, BreadcrumbsTagsMts
 from locators.breadcrumbs.breadcrumbs_locators_101 import OperatorsNumbersTele2, OperatorsNumbers, OperatorTagsAll
 from locators.breadcrumbs.breadcrumbs_locators_101 import ProviderMts, OperatorsTags, OperatorMts, OperatorsActionsTele2
