@@ -9,7 +9,6 @@ import time
 @allure.suite("Тесты перелинковки на 101")
 class TestBreadCrumbs:
     @allure.title("Проверка прелинковки и хлебных крошек в ней")
-    # @qase.title("Проверка прелинковки и хлебных крошек в ней")
     def test_linking(self, driver):
         breadcrumbs_page = CheckBreadCrumbs(driver,
                                             "https://101internet.ru/chelyabinsk/dom/ul-batumskaya-d-9a-id286668")
