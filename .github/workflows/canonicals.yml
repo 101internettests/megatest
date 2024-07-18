@@ -45,7 +45,10 @@ jobs:
           distribution: 'microsoft'
           java-version: '17'
       - name: install Allure
-        run: wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz && sudo tar -zxvf allure-2.27.0.tgz -C /opt/ && sudo ln -s /opt/allure-2.27.0/bin/allure /usr/bin/allure
+        run: |
+          Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz" -OutFile "allure-2.27.0.tgz"
+          tar -xzf allure-2.27.0.tgz -C $RUNNER_TOOL_CACHE
+          echo "C:\allure-2.27.0\bin" >> $GITHUB_PATH
       - name: Generate report
         run: allure generate -c allure-results -o _site
       - name: Save report as artifact
