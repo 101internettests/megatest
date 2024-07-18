@@ -16,10 +16,10 @@ def driver():
         "credentials_enable_service": False,
         "profile.password_manager_enabled": False
     }
-    # chrome_options.add_experimental_option("prefs", prefs)
+    chrome_options.add_experimental_option("prefs", prefs)
     if os.getenv("HEADLESS") == "False":
         chrome_options.add_argument("--headless")
-    # driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     driver.set_window_size(1920, 1080)
     # driver.maximize_window()
     yield driver
