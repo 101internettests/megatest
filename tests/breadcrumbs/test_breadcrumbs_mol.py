@@ -16,6 +16,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_mol.check_linking()
         breadcrumbs_page_mol.check_breadcrumbs_linking_mol()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе тарифы(все провайдеры мол)")
     def test_tags_mol(self, driver):
         breadcrumbs_page_tags_mol = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/rates")
         breadcrumbs_page_tags_mol.open()
@@ -38,6 +39,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_tags_mol.check_breadcrumbs_tags_mol_online_cinema()
         breadcrumbs_page_tags_mol.check_breadcrumbs_mol()
 
+    @allure.step("Проверка хлебных крошек и заголовков у тегов, провайдер ростелеком (мол)")
     def test_tags_mts(self, driver):
         breadcrumbs_page_tags_rostel = CheckBreadCrumbsMol(driver,
                                                            "https://www.moskvaonline.ru/providers/rostelecom/rates")
@@ -55,12 +57,14 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_tags_rostel.check_breadcrumbs_tags_online_cinema_rostel()
         breadcrumbs_page_tags_rostel.check_breadcrumbs_rostel()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе об операторе (ростелеком)")
     def test_about_provider_rostel(self, driver):
         breadcrumbs_page_about_provider_rostel = CheckBreadCrumbsMol(driver,
                                                                      "https://www.moskvaonline.ru/providers/rostelecom")
         breadcrumbs_page_about_provider_rostel.open()
         breadcrumbs_page_about_provider_rostel.check_breadcrumbs_providers_and_main_mol()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе акции (ростелеком)")
     def test_actions_rostel(self, driver):
         breadcrumbs_page_test_actions_rostel = CheckBreadCrumbsMol(driver,
                                                                    "https://www.moskvaonline.ru/providers/actions/rostelecom")
@@ -68,6 +72,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_test_actions_rostel.check_breadcrumbs_action_rostel()
         breadcrumbs_page_test_actions_rostel.check_breadcrumbs_providers_and_main_mol()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе отзывы (ростелеком)")
     def test_rating_rostel(self, driver):
         breadcrumbs_page_test_rating_rostel = CheckBreadCrumbsMol(driver,
                                                                   "https://www.moskvaonline.ru/rating/rostelecom")
@@ -75,6 +80,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_test_rating_rostel.check_breadcrumbs_rating_rostel()
         breadcrumbs_page_test_rating_rostel.check_breadcrumbs_providers_and_main_mol()
 
+    @allure.step("Проверка хлебных крошек и заголовков у оператора тинькофф")
     def test_tags_operator_tinkoff(self, driver):
         breadcrumbs_page_operator_tinkoff = CheckBreadCrumbsMol(driver,
                                                                 "https://www.moskvaonline.ru/operatory/tinkoff/ratesmobile/bezlimitnyj-internet")
@@ -94,6 +100,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_operator_tinkoff.check_tags_children_tinkoff()
         breadcrumbs_page_operator_tinkoff.check_breadcrumbs_operator_tinkoff()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе акции у оператора тинькофф")
     def test_actions_tele_2(self, driver):
         breadcrumbs_page_actions_tele_2 = CheckBreadCrumbsMol(driver,
                                                               "https://www.moskvaonline.ru/operatory/mts/actions")
@@ -101,6 +108,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_actions_tele_2.check_actions_mts()
         breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_mts()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе номера у оператора тинькофф")
     def test_numbers_mts(self, driver):
         breadcrumbs_page_numbers_mts = CheckBreadCrumbsMol(driver,
                                                            "https://www.moskvaonline.ru/operatory/mts/nomera/zolotoj")
@@ -116,6 +124,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_numbers_mts.check_tag_platinum_mts()
         breadcrumbs_page_numbers_mts.check_breadcrumbs_numbers_mts()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе тарифы, все операторы")
     def test_tags_operator_all_mol(self, driver):
         breadcrumbs_page_operator_all_mol = CheckBreadCrumbsMol(driver,
                                                                 "https://www.moskvaonline.ru/ratesmobile/bezlimitnyj-internet")
@@ -149,6 +158,7 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_operator_all_mol.check_tags_without_payment_all_mol()
         breadcrumbs_page_operator_all_mol.check_breadcrumbs_operator_all_mol()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе номера, все операторы")
     def test_numbers_all_mol(self, driver):
         breadcrumbs_page_numbers_all_mol = CheckBreadCrumbsMol(driver, "https://www.moskvaonline.ru/nomera/zolotoj")
         breadcrumbs_page_numbers_all_mol.open()
@@ -171,26 +181,31 @@ class TestBreadCrumbsMol:
         breadcrumbs_page_numbers_all_mol.check_tag_numbers_8800_all_mol()
         breadcrumbs_page_numbers_all_mol.check_breadcrumbs_numbers_all_mol()
 
+    @allure.step("Проверка заголовков в футере (Политика обработки персональных данных)")
     def test_footer_personal_data_mol(self, driver):
         footer_page_check_personal_data_mol = CheckBreadCrumbsMol(driver, 'https://www.moskvaonline.ru/about/personal-data')
         footer_page_check_personal_data_mol.open()
         footer_page_check_personal_data_mol.check_footer_personal_data_mol()
 
+    @allure.step("Проверка заголовков в футере (Сотрудничество)")
     def test_footer_partners_mol(self, driver):
         footer_page_check_partners_mol = CheckBreadCrumbsMol(driver, 'https://www.moskvaonline.ru/about/partners')
         footer_page_check_partners_mol.open()
         footer_page_check_partners_mol.check_footer_partners_mol()
 
+    @allure.step("Проверка заголовков в футере (Контакты)")
     def test_footer_contacts_mol(self, driver):
         footer_page_check_contacts_mol = CheckBreadCrumbsMol(driver, 'https://www.moskvaonline.ru/about/contacts')
         footer_page_check_contacts_mol.open()
         footer_page_check_contacts_mol.check_footer_contacts_mol()
 
+    @allure.step("Проверка заголовков в футере (Оплата и гарантии)")
     def test_footer_payment_mol(self, driver):
         footer_page_check_payment_mol = CheckBreadCrumbsMol(driver, 'https://www.moskvaonline.ru/about/oplata-i-garantii')
         footer_page_check_payment_mol.open()
         footer_page_check_payment_mol.check_footer_payment_mol()
 
+    @allure.step("Проверка заголовков в футере (О компании)")
     def test_footer_about_company_mol(self, driver):
         footer_page_check_about_company_mol = CheckBreadCrumbsMol(driver, 'https://www.moskvaonline.ru/about/company')
         footer_page_check_about_company_mol.open()

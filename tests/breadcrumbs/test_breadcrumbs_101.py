@@ -16,6 +16,7 @@ class TestBreadCrumbs:
         breadcrumbs_page.check_linking()
         breadcrumbs_page.check_breadcrumbs_linking()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе тарифы(все провайдеры)")
     def test_tags_101(self, driver):
         breadcrumbs_page_tags = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/rates")
         breadcrumbs_page_tags.open()
@@ -38,6 +39,7 @@ class TestBreadCrumbs:
         breadcrumbs_page_tags.check_breadcrumbs_tags_online_cinema()
         breadcrumbs_page_tags.check_breadcrumbs()
 
+    @allure.step("Проверка хлебных крошек и заголовков у тегов, провайдер мтс")
     def test_tags_mts(self, driver):
         breadcrumbs_page_tags_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/providers/mts/rates")
         breadcrumbs_page_tags_mts.open()
@@ -52,12 +54,14 @@ class TestBreadCrumbs:
         breadcrumbs_page_tags_mts.check_breadcrumbs_tags_online_cinema_mts()
         breadcrumbs_page_tags_mts.check_breadcrumbs_mts()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе об операторе (мтс)")
     def test_about_provider_mts(self, driver):
         breadcrumbs_page_about_provider_mts = CheckBreadCrumbs(driver,
                                                                "https://101internet.ru/chelyabinsk/providers/mts")
         breadcrumbs_page_about_provider_mts.open()
         breadcrumbs_page_about_provider_mts.check_breadcrumbs_providers_and_main()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе акции (мтс)")
     def test_actions_mts(self, driver):
         breadcrumbs_page_test_actions_mts = CheckBreadCrumbs(driver,
                                                              "https://101internet.ru/chelyabinsk/providers/actions/mts")
@@ -65,12 +69,14 @@ class TestBreadCrumbs:
         breadcrumbs_page_test_actions_mts.check_breadcrumbs_action_mts()
         breadcrumbs_page_test_actions_mts.check_breadcrumbs_providers_and_main()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе отзывы (мтс)")
     def test_rating_mts(self, driver):
         breadcrumbs_page_rating_mts = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/rating/mts")
         breadcrumbs_page_rating_mts.open()
         breadcrumbs_page_rating_mts.check_breadcrumbs_rating_mts()
         breadcrumbs_page_rating_mts.check_breadcrumbs_providers_and_main()
 
+    @allure.step("Проверка хлебных крошек и заголовков у оператора мтс")
     def test_tags_operator_mts(self, driver):
         breadcrumbs_page_operator_mts = CheckBreadCrumbs(driver,
                                                          "https://101internet.ru/chelyabinsk/operatory/mts/ratesmobile/bezlimitnyj-internet")
@@ -98,12 +104,14 @@ class TestBreadCrumbs:
         breadcrumbs_page_operator_mts.check_tags_in_russia()
         breadcrumbs_page_operator_mts.check_breadcrumbs_operator()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе акции у оператора теле 2")
     def test_actions_tele_2(self, driver):
         breadcrumbs_page_actions_tele_2 = CheckBreadCrumbs(driver,
                                                            "https://101internet.ru/chelyabinsk/operatory/tele-2/actions")
         breadcrumbs_page_actions_tele_2.open()
         breadcrumbs_page_actions_tele_2.check_breadcrumbs_actions_tele_2()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе номера у оператора теле 2")
     def test_numbers_tele_2(self, driver):
         breadcrumbs_page_numbers_tele_2 = CheckBreadCrumbs(driver,
                                                            "https://101internet.ru/chelyabinsk/operatory/tele-2/nomera/zolotoj")
@@ -117,6 +125,7 @@ class TestBreadCrumbs:
         breadcrumbs_page_numbers_tele_2.check_tag_free_tele_2()
         breadcrumbs_page_numbers_tele_2.check_breadcrumbs_numbers_tele_2()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе тарифы, все операторы")
     def test_tags_operator_all(self, driver):
         breadcrumbs_page_operator_all = CheckBreadCrumbs(driver,
                                                          "https://101internet.ru/chelyabinsk/ratesmobile/bezlimitnyj-internet")
@@ -150,6 +159,7 @@ class TestBreadCrumbs:
         breadcrumbs_page_operator_all.check_tags_without_payment_all()
         breadcrumbs_page_operator_all.check_breadcrumbs_operator_all()
 
+    @allure.step("Проверка хлебных крошек и заголовков в разделе номера, все операторы")
     def test_numbers_all(self, driver):
         breadcrumbs_page_numbers_all = CheckBreadCrumbs(driver, "https://101internet.ru/chelyabinsk/nomera/zolotoj")
         breadcrumbs_page_numbers_all.open()
@@ -162,26 +172,31 @@ class TestBreadCrumbs:
         breadcrumbs_page_numbers_all.check_tag_free_all()
         breadcrumbs_page_numbers_all.check_breadcrumbs_numbers_all()
 
+    @allure.step("Проверка заголовков в футере (Политика обработки персональных данных)")
     def test_footer_personal_data(self, driver):
         footer_page_check_personal_data = CheckBreadCrumbs(driver, 'https://101internet.ru/about/personal-data')
         footer_page_check_personal_data.open()
         footer_page_check_personal_data.check_footer_personal_data()
 
+    @allure.step("Проверка заголовков в футере (Сотрудничество)")
     def test_footer_partners(self, driver):
         footer_page_check_partners = CheckBreadCrumbs(driver, 'https://101internet.ru/about/partners')
         footer_page_check_partners.open()
         footer_page_check_partners.check_footer_partners()
 
+    @allure.step("Проверка заголовков в футере (Контакты)")
     def test_footer_contacts(self, driver):
         footer_page_check_contacts = CheckBreadCrumbs(driver, 'https://101internet.ru/about/contacts')
         footer_page_check_contacts.open()
         footer_page_check_contacts.check_footer_contacts()
 
+    @allure.step("Проверка заголовков в футере (Оплата и гарантии)")
     def test_footer_payment(self, driver):
         footer_page_check_payment = CheckBreadCrumbs(driver, 'https://101internet.ru/about/oplata-i-garantii')
         footer_page_check_payment.open()
         footer_page_check_payment.check_footer_payment()
 
+    @allure.step("Проверка заголовков в футере (О компании)")
     def test_footer_about_company(self, driver):
         footer_page_check_about_company = CheckBreadCrumbs(driver, 'https://101internet.ru/about/company')
         footer_page_check_about_company.open()
