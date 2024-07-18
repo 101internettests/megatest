@@ -315,7 +315,7 @@ class TestCononicals:
         check.check_page_canonicals_rating_mol()
 
     @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
-    def test_pol_rates_mol(self, driver):
+    def test_rates_mol(self, driver):
         urls = ['https://www.moskvaonline.ru/rates',
                 'https://www.moskvaonline.ru/rates/2',
                 'https://www.moskvaonline.ru/rates/3',

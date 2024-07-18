@@ -300,6 +300,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_rates_mol(self):
+        time.sleep(3)
         href_element = self.element_is_present(CanonicalMOLCheck.RATES_MOL)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
