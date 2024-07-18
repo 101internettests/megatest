@@ -19,6 +19,7 @@ def driver():
     chrome_options.add_experimental_option("prefs", prefs)
     if os.getenv("HEADLESS") == "False":
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
     driver.set_window_size(1920, 1080)
     # driver.maximize_window()
