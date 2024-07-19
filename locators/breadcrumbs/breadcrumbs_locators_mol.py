@@ -122,6 +122,7 @@ class OperatorsNumbersAllMol:
     TEXT_VIP_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Вип номера телефонов')]")
     TEXT_FEDERATION = (By.XPATH, "//h1[contains(text(), 'Федеральный номер от российских операторов')]")
     TEXT_NUMBERS_8800 = (By.XPATH, "//h1[contains(text(), 'Многоканальные номера')]")
+    TEXT_2_NUMBERS = (By.XPATH, "//h1[contains(text(), 'Номер телефона из двух цифр')]")
 
 
 class FooterMol:
