@@ -2,7 +2,7 @@ name: canonicals
 
 on:
   schedule:
-    - cron: "25 3 * * *"
+    - cron: "15 4 * * *"
   workflow_dispatch:
 
 env:
