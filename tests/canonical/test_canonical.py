@@ -375,7 +375,7 @@ class TestCononicals:
     def test_mol_balashixa_rating(self, driver):
         check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/rating")
         check.open()
-        check.check_page_canonicals_rating_mol()
+        check.check_page_canonicals_rating_mol_bal()
 
     @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Балашиха")
     def test_mol_balashixa_rates(self, driver):
@@ -385,7 +385,7 @@ class TestCononicals:
         for url in urls:
             check = CanonicalPage(driver, url)
             check.open()
-            check.check_page_canonicals_rates_mol()
+            check.check_page_canonicals_rates_mol_bal()
 
     @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Балашиха")
     def test_mol_balashixa_providers(self, driver):

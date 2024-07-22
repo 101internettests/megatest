@@ -295,7 +295,7 @@ class CanonicalPage(BasePage):
         href_element = self.element_is_present(CanonicalMOLCheck.RATING_MOL)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
-                             "Элемент с href='https://www.moskvaonline.ru/providers' не найден")
+                             "Элемент с href='https://www.moskvaonline.ru/rating' не найден")
         self.assertIsNotNone(canonical_element, "Элемент с rel='canonical' не найден")
 
     @allure.step("Проверить наличие канониклов")
@@ -356,7 +356,7 @@ class CanonicalPage(BasePage):
         self.assertIsNotNone(canonical_element, "Элемент с rel='canonical' не найден")
 
     @allure.step("Проверить наличие канониклов")
-    def check_page_canonicals_rating_mol(self):
+    def check_page_canonicals_rating_mol_bal(self):
         href_element = self.element_is_present(CanonicalMOLCheck.RATING_BALASHIXA)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
@@ -364,7 +364,7 @@ class CanonicalPage(BasePage):
         self.assertIsNotNone(canonical_element, "Элемент с rel='canonical' не найден")
 
     @allure.step("Проверить наличие канониклов")
-    def check_page_canonicals_rates_mol(self):
+    def check_page_canonicals_rates_mol_bal(self):
         href_element = self.element_is_present(CanonicalMOLCheck.RATES_BALASHIXA)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
