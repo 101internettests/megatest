@@ -1,0 +1,23 @@
+name: Playwright Tests
+on:
+  schedule:
+   - cron: "15 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  tests_e2e:
+    name: Run end-to-end tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Install dependencies
+        run: pip install pytest
+      - name: Install req
+        run: pip install -r requirements.txt
+      - name: Others
+        run: pip install pytest-playwright
+      - name: Finally
+        run: playwright install
+      - name: Run tests
+        run: pytest --browser firefox --browser chromium
