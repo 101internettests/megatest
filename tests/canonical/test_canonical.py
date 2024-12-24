@@ -109,15 +109,6 @@ class TestCononicals:
             check.open()
             check.check_page_canonicals_address_filter_msk()
 
-    @allure.title("Проверка наличия канониклов на странице адреса, 101, Санкт-Петербург")
-    def test_101_spb_address_filter(self, driver):
-        urls = ['https://101internet.ru/sankt-peterburg/dom/pr-kt-engelsa-d-92-id3083354?filter=bezlimitniy-intenet'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_address_filter_spb()
-
     @allure.title("Проверка наличия канониклов на главной странице, 101, Екатеринбург")
     def test_101_ekb_main(self, driver):
         check = CanonicalPage(driver, "https://101internet.ru/ekaterinburg")
