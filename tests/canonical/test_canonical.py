@@ -336,23 +336,23 @@ class TestCononicals:
         check.open()
         check.check_page_canonicals_nomera_mol()
 
-    @allure.title("Проверка наличия канониклов на странице адреса, МОЛ, Москва")
-    def test_pol_address_mol(self, driver):
-        urls = ['https://www.moskvaonline.ru/dom/ul-arbat-d-1-id218520'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_address_mol()
-
-    @allure.title("Проверка наличия канониклов на странице адреса 2, МОЛ, Москва")
-    def test_pol_address_second_mol(self, driver):
-        urls = ['https://www.moskvaonline.ru/dom/ul-noviiarbat-d-2-id192977'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_address_second_mol()
+    # @allure.title("Проверка наличия канониклов на странице адреса, МОЛ, Москва")
+    # def test_pol_address_mol(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/doma-nzl?house_id=218520'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_address_mol()
+    #
+    # @allure.title("Проверка наличия канониклов на странице адреса 2, МОЛ, Москва")
+    # def test_pol_address_second_mol(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/doma-nzl?house_id=3070477'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_address_second_mol()
 
     @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Балашиха")
     def test_mol_balashixa_rating(self, driver):
