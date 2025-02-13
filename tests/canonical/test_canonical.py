@@ -135,16 +135,16 @@ class TestCononicals:
         check.open()
         check.check_page_canonicals_rating_msk()
 
-    @allure.title("Проверка наличия канониклов на странице интернета в офис, 101, Москва")
+    @allure.title("Проверка наличия канониклов на странице интернета в офис, 101")
     def test_101_msk_office(self, driver):
-        check = CanonicalPage(driver, "https://101internet.ru/moskva/orders/office")
+        check = CanonicalPage(driver, "https://101internet.ru/select-region?backUrl=/orders/office")
         check.open()
         time.sleep(3)
         check.check_page_canonicals_office_msk()
 
-    @allure.title("Проверка наличия канониклов на странице интернета в загородный дом, 101, Екатеринбург")
+    @allure.title("Проверка наличия канониклов на странице интернета в загородный дом, 101")
     def test_101_msk_sat(self, driver):
-        check = CanonicalPage(driver, "https://101internet.ru/ekaterinburg/orders/sat")
+        check = CanonicalPage(driver, "https://101internet.ru/select-region?backUrl=/orders/sat")
         check.open()
         time.sleep(3)
         check.check_page_canonicals_sat_msk()

@@ -21,7 +21,7 @@ class Canonical101Check:
     MAIN_MSK = (By.XPATH, "//link[@href='https://101internet.ru/moskva']")
     ORDERS_TOHOME = (By.XPATH, "//link[@href='https://101internet.ru/moskva/orders/tohome']")
     RATING_MOSKVA = (By.XPATH, "//link[@href='https://101internet.ru/moskva/rating']")
-    OFFICE_MOSKVA = (By.XPATH, "//link[@href='https://101internet.ru/moskva/orders/office']")
+    OFFICE_MOSKVA = (By.XPATH, "//link[@href='https://101internet.ru/select-region']")
     SAT_MOSKVA = (By.XPATH, "//link[@href='https://101internet.ru/ekaterinburg/orders/sat']")
 
 

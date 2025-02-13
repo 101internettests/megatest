@@ -140,7 +140,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_sat_msk(self):
-        href_element = self.element_is_present(Canonical101Check.SAT_MOSKVA)
+        href_element = self.element_is_present(Canonical101Check.OFFICE_MOSKVA)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://101internet.ru/ekaterinburg/orders/sat' не найден")
