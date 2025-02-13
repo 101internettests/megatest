@@ -1,3 +1,5 @@
+import time
+
 import allure
 from pages.canonical.canonical_page import CanonicalPage
 
@@ -31,7 +33,7 @@ class TestCononicals:
 
     @allure.title("Проверка наличия канониклов на странице адреса, 101, Москва")
     def test_101_moskva_address(self, driver):
-        urls = ['https://101internet.ru/moskva/dom/ul-zelyonaya-d-35-id4614611']
+        urls = ['https://101internet.ru/moskva/doma-nzl?house_id=4614611']
         for url in urls:
             check = CanonicalPage(driver, url)
             check.open()
@@ -39,7 +41,7 @@ class TestCononicals:
 
     @allure.title("Проверка наличия канониклов на странице второго адреса, 101, Москва")
     def test_101_moskva_address_second(self, driver):
-        urls = ['https://101internet.ru/moskva/dom/ul-sharikopodshipnikovskaya-d-11-id2801124'
+        urls = ['https://101internet.ru/moskva/doma-nzl?house_id=2801124'
                 ]
         for url in urls:
             check = CanonicalPage(driver, url)
@@ -72,7 +74,7 @@ class TestCononicals:
 
     @allure.title("Проверка наличия канониклов на страницах провайдеров, 101, Екатеринбург")
     def test_101_ekb_address(self, driver):
-        urls = ['https://101internet.ru/ekaterinburg/dom/ul-vainera-d-1-id236224'
+        urls = ['https://101internet.ru/ekaterinburg/doma-nzl?house_id=236224'
                 ]
         for url in urls:
             check = CanonicalPage(driver, url)
@@ -137,12 +139,14 @@ class TestCononicals:
     def test_101_msk_office(self, driver):
         check = CanonicalPage(driver, "https://101internet.ru/moskva/orders/office")
         check.open()
+        time.sleep(3)
         check.check_page_canonicals_office_msk()
 
     @allure.title("Проверка наличия канониклов на странице интернета в загородный дом, 101, Екатеринбург")
     def test_101_msk_sat(self, driver):
         check = CanonicalPage(driver, "https://101internet.ru/ekaterinburg/orders/sat")
         check.open()
+        time.sleep(3)
         check.check_page_canonicals_sat_msk()
 
     # @allure.title("Проверка наличия канониклов на главной странице, ПОЛ, Санкт-Петербург")
@@ -272,6 +276,7 @@ class TestCononicals:
     def test_mol_main(self, driver):
         check = CanonicalPage(driver, "https://www.moskvaonline.ru/")
         check.open()
+        time.sleep(3)
         check.check_page_canonicals_main_mol()
 
     @allure.title("Проверка наличия канониклов на странице поиска по адресу, МОЛ, Москва")

@@ -28,7 +28,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_address_second(self):
-        href_element = self.element_is_present(Canonical101Check.ADDRESS_SECOND_MSK)
+        href_element = self.element_is_present(Canonical101Check.ADDRESS_MSK)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://101internet.ru/moskva/dom/ul-sharikopodshipnikovskaya-d-11-id2801124' не найден")
