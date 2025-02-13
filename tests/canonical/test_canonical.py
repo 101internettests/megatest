@@ -104,7 +104,7 @@ class TestCononicals:
 
     @allure.title("Проверка наличия канониклов на странице адреса, 101, Москва")
     def test_101_msk_address_filter(self, driver):
-        urls = ['https://101internet.ru/moskva/dom/sh-altufevskoe-d-1-id2979647?filter=internetAndTV'
+        urls = ['https://101internet.ru/moskva/doma-nzl?house_id=2979647'
                 ]
         for url in urls:
             check = CanonicalPage(driver, url)
@@ -319,15 +319,13 @@ class TestCononicals:
 
     @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
     def test_mol_office(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/office")
-        driver.implicitly_wait(30)
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/select-region?backUrl=/orders/office")
         check.open()
         check.check_page_canonicals_office_mol()
 
     @allure.title("Проверка наличия канониклов на странице интернета загород, МОЛ, Москва")
     def test_mol_sat(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/sat")
-        driver.implicitly_wait(30)
+        check = CanonicalPage(driver, "https://www.moskvaonline.ru/select-region?backUrl=/orders/sat")
         check.open()
         check.check_page_canonicals_sat_mol()
 

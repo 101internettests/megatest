@@ -49,7 +49,7 @@ class CanonicalMOLCheck:
     PROVIDERS_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/providers']")
     RATING_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/rating']")
     RATES_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/rates']")
-    OFFICE_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/orders/office']")
+    OFFICE_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/select-region']")
     SAT_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/orders/sat']")
     OPERATORY_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/operatory']")
     NOMERA_MOL = (By.XPATH, "//link[@href='https://www.moskvaonline.ru/nomera']")

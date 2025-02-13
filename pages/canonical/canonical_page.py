@@ -76,7 +76,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_address_filter_msk(self):
-        href_element = self.element_is_present(Canonical101Check.ADDRESS_MSK_FILTER)
+        href_element = self.element_is_present(Canonical101Check.ADDRESS_MSK)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://101internet.ru/moskva/dom/sh-altufevskoe-d-1-id2979647' не найден")
@@ -317,7 +317,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_sat_mol(self):
-        href_element = self.element_is_present(CanonicalMOLCheck.SAT_MOL)
+        href_element = self.element_is_present(CanonicalMOLCheck.OFFICE_MOL)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://www.moskvaonline.ru/orders/sat' не найден")
