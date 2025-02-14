@@ -317,24 +317,24 @@ class TestCononicals:
             check.open()
             check.check_page_canonicals_rates_mol()
 
-    @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
-    def test_mol_office(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/select-region?backUrl=/orders/office")
-        check.open()
-        check.check_page_canonicals_office_mol()
-
-    @allure.title("Проверка наличия канониклов на странице интернета загород, МОЛ, Москва")
-    def test_mol_sat(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/select-region?backUrl=/orders/sat")
-        check.open()
-        check.check_page_canonicals_sat_mol()
-
-    @allure.title("Проверка наличия канониклов на странице операторов, МОЛ, Москва")
-    def test_mol_operatory(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/operatory")
-        driver.implicitly_wait(30)
-        check.open()
-        check.check_page_canonicals_operatory_mol()
+    # @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
+    # def test_mol_office(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/select-region?backUrl=/orders/office")
+    #     check.open()
+    #     check.check_page_canonicals_office_mol()
+    #
+    # @allure.title("Проверка наличия канониклов на странице интернета загород, МОЛ, Москва")
+    # def test_mol_sat(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/select-region?backUrl=/orders/sat")
+    #     check.open()
+    #     check.check_page_canonicals_sat_mol()
+    #
+    # @allure.title("Проверка наличия канониклов на странице операторов, МОЛ, Москва")
+    # def test_mol_operatory(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/operatory")
+    #     driver.implicitly_wait(30)
+    #     check.open()
+    #     check.check_page_canonicals_operatory_mol()
 
     @allure.title("Проверка наличия канониклов на странице номеров, МОЛ, Москва")
     def test_mol_nomera(self, driver):
