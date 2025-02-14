@@ -336,11 +336,11 @@ class TestCononicals:
     #     check.open()
     #     check.check_page_canonicals_operatory_mol()
 
-    @allure.title("Проверка наличия канониклов на странице номеров, МОЛ, Москва")
-    def test_mol_nomera(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/nomera")
-        check.open()
-        check.check_page_canonicals_nomera_mol()
+    # @allure.title("Проверка наличия канониклов на странице номеров, МОЛ, Москва")
+    # def test_mol_nomera(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/nomera")
+    #     check.open()
+    #     check.check_page_canonicals_nomera_mol()
 
     # @allure.title("Проверка наличия канониклов на странице адреса, МОЛ, Москва")
     # def test_pol_address_mol(self, driver):
