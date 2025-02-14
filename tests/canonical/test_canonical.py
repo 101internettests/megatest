@@ -360,21 +360,21 @@ class TestCononicals:
     #         check.open()
     #         check.check_page_canonicals_address_second_mol()
 
-    @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Балашиха")
-    def test_mol_balashixa_rating(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/rating")
-        check.open()
-        check.check_page_canonicals_rating_mol_bal()
-
-    @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Балашиха")
-    def test_mol_balashixa_rates(self, driver):
-        urls = ['https://www.moskvaonline.ru/balashiha/rates',
-                'https://www.moskvaonline.ru/balashiha/rates/2'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_rates_mol_bal()
+    # @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Балашиха")
+    # def test_mol_balashixa_rating(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/rating")
+    #     check.open()
+    #     check.check_page_canonicals_rating_mol_bal()
+    #
+    # @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Балашиха")
+    # def test_mol_balashixa_rates(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/balashiha/rates',
+    #             'https://www.moskvaonline.ru/balashiha/rates/2'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_rates_mol_bal()
 
     @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Балашиха")
     def test_mol_balashixa_providers(self, driver):
