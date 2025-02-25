@@ -373,7 +373,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_providers_mol_bal(self):
-        href_element = self.element_is_present(CanonicalMOLCheck.PROVIDERS_BALASHIXA)
+        # href_element = self.element_is_present(CanonicalMOLCheck.PROVIDERS_BALASHIXA)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://www.moskvaonline.ru/balashiha/providers' не найден")
@@ -381,7 +381,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_office_mol_bal(self):
-        href_element = self.element_is_present(CanonicalMOLCheck.OFFICE_BALASHIXA)
+        # href_element = self.element_is_present(CanonicalMOLCheck.OFFICE_BALASHIXA)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://www.moskvaonline.ru/balashiha/orders/office' не найден")
@@ -389,7 +389,7 @@ class CanonicalPage(BasePage):
 
     @allure.step("Проверить наличие канониклов")
     def check_page_canonicals_sat_mol_bal(self):
-        href_element = self.element_is_present(CanonicalMOLCheck.SAT_BALASHIXA)
+        # href_element = self.element_is_present(CanonicalMOLCheck.SAT_BALASHIXA)
         canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://www.moskvaonline.ru/balashiha/orders/sat' не найден")
