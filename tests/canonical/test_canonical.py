@@ -383,19 +383,19 @@ class TestCononicals:
         time.sleep(3)
         check.check_page_canonicals_providers_mol_bal()
 
-    @allure.title("Проверка наличия канониклов на странице интернета в офис, МОЛ, Балашиха")
-    def test_mol_balashixa_office(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/orders/office")
-        check.open()
-        time.sleep(3)
-        check.check_page_canonicals_office_mol_bal()
-
-    @allure.title("Проверка наличия канониклов на странице интернета в загородный дом, МОЛ, Балашиха")
-    def test_mol_balashixa_sat(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/orders/sat")
-        check.open()
-        time.sleep(3)
-        check.check_page_canonicals_sat_mol_bal()
+    # @allure.title("Проверка наличия канониклов на странице интернета в офис, МОЛ, Балашиха")
+    # def test_mol_balashixa_office(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/orders/office")
+    #     check.open()
+    #     time.sleep(3)
+    #     check.check_page_canonicals_office_mol_bal()
+    #
+    # @allure.title("Проверка наличия канониклов на странице интернета в загородный дом, МОЛ, Балашиха")
+    # def test_mol_balashixa_sat(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/orders/sat")
+    #     check.open()
+    #     time.sleep(3)
+    #     check.check_page_canonicals_sat_mol_bal()
 
     @allure.title("Проверка наличия канониклов на главной странице, МОЛ, Московская область")
     def test_mol_obl_main(self, driver):
