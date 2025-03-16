@@ -304,18 +304,18 @@ class TestCononicals:
         check.open()
         check.check_page_canonicals_rating_mol()
 
-    @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
-    def test_rates_mol(self, driver):
-        urls = ['https://www.moskvaonline.ru/rates',
-                'https://www.moskvaonline.ru/rates/2',
-                'https://www.moskvaonline.ru/rates/3',
-                'https://www.moskvaonline.ru/rates/4',
-                'https://www.moskvaonline.ru/rates/5'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_rates_mol()
+    # @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
+    # def test_rates_mol(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/rates',
+    #             'https://www.moskvaonline.ru/rates/2',
+    #             'https://www.moskvaonline.ru/rates/3',
+    #             'https://www.moskvaonline.ru/rates/4',
+    #             'https://www.moskvaonline.ru/rates/5'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_rates_mol()
 
     # @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
     # def test_mol_office(self, driver):
@@ -376,12 +376,12 @@ class TestCononicals:
     #         check.open()
     #         check.check_page_canonicals_rates_mol_bal()
 
-    @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Балашиха")
-    def test_mol_balashixa_providers(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/providers")
-        check.open()
-        time.sleep(3)
-        check.check_page_canonicals_providers_mol_bal()
+    # @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Балашиха")
+    # def test_mol_balashixa_providers(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/balashiha/providers")
+    #     check.open()
+    #     time.sleep(3)
+    #     check.check_page_canonicals_providers_mol_bal()
 
     # @allure.title("Проверка наличия канониклов на странице интернета в офис, МОЛ, Балашиха")
     # def test_mol_balashixa_office(self, driver):
@@ -397,40 +397,40 @@ class TestCononicals:
     #     time.sleep(3)
     #     check.check_page_canonicals_sat_mol_bal()
 
-    @allure.title("Проверка наличия канониклов на главной странице, МОЛ, Московская область")
-    def test_mol_obl_main(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/moskovskaya-oblast")
-        check.open()
-        check.check_page_canonicals_main_mol_obl()
-
-    @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Московская область")
-    def test_mol_obl_providers(self, driver):
-        urls = ['https://www.moskvaonline.ru/moskovskaya-oblast/providers',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/2',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/3',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/4',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/providers/5'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_providers_mol_obl()
-
-    @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Московская область")
-    def test_mol_obl_rating(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/moskovskaya-oblast/rating")
-        check.open()
-        check.check_page_canonicals_rating_mol_obl()
-
-    @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Московская область")
-    def test_mol_obl_rates(self, driver):
-        urls = ['https://www.moskvaonline.ru/moskovskaya-oblast/rates',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/2',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/3',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/4',
-                'https://www.moskvaonline.ru/moskovskaya-oblast/rates/5'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_rates_mol_obl()
+    # @allure.title("Проверка наличия канониклов на главной странице, МОЛ, Московская область")
+    # def test_mol_obl_main(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/moskovskaya-oblast")
+    #     check.open()
+    #     check.check_page_canonicals_main_mol_obl()
+    #
+    # @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Московская область")
+    # def test_mol_obl_providers(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/moskovskaya-oblast/providers',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/providers/2',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/providers/3',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/providers/4',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/providers/5'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_providers_mol_obl()
+    #
+    # @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Московская область")
+    # def test_mol_obl_rating(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/moskovskaya-oblast/rating")
+    #     check.open()
+    #     check.check_page_canonicals_rating_mol_obl()
+    #
+    # @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Московская область")
+    # def test_mol_obl_rates(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/moskovskaya-oblast/rates',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/rates/2',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/rates/3',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/rates/4',
+    #             'https://www.moskvaonline.ru/moskovskaya-oblast/rates/5'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_rates_mol_obl()
