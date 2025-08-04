@@ -426,3 +426,11 @@ class CanonicalPage(BasePage):
         self.assertIsNotNone(href_element,
                              "Элемент с href='https://www.moskvaonline.ru/moskovskaya-oblast/rating' не найден")
         self.assertIsNotNone(canonical_element, "Элемент с rel='canonical' не найден")
+
+    @allure.step("Проверить наличие канониклов для ПОЛ")
+    def check_page_canonicals_pol(self):
+        href_element = self.element_is_present(CanonicalMOLCheck.RATES_MOL_OBL)
+        canonical_element = self.element_is_present(CanonicalCheck.MAIN_CANONICAL)
+        self.assertIsNotNone(href_element,
+                             "Элемент с href='https://www.moskvaonline.ru/moskovskaya-oblast/rating' не найден")
+        self.assertIsNotNone(canonical_element, "Элемент с rel='canonical' не найден")

@@ -304,6 +304,12 @@ class TestCononicals:
         check.open()
         check.check_page_canonicals_rating_mol()
 
+    @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Москва")
+    def test_pol(self, driver):
+        check = CanonicalPage(driver, "https://piter-online.net/")
+        check.open()
+        check.check_page_canonicals_main_pol()
+
     # @allure.title("Проверка наличия канониклов на странице тарифов, МОЛ, Москва")
     # def test_rates_mol(self, driver):
     #     urls = ['https://www.moskvaonline.ru/rates',
