@@ -304,7 +304,7 @@ class TestCononicals:
         check.open()
         check.check_page_canonicals_rating_mol()
 
-    @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Москва")
+    @allure.title("Проверка наличия канониклов на странице рейтинга  ПОЛ ТЕСТ")
     def test_pol(self, driver):
         check = CanonicalPage(driver, "https://piter-online.net/")
         check.open()
