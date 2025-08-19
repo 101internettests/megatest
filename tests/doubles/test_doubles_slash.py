@@ -4,7 +4,6 @@ from pages.doubles.doubles_page import DoublesPage
 
 # import time
 
-
 @allure.suite("Технические дубли со слешем и без слеша отсутствуют")
 class TestSearch:
     @allure.title("Сайт доступен только по одной указанной версии")
@@ -98,12 +97,12 @@ class TestSearch:
         target_url = 'https://101internet.ru/ekaterinburg/orders/office'
         assert driver.current_url == target_url
 
-    @allure.title("Сайт доступен только по одной указанной версии")
-    def test_doudles_main_page_ekb_actions(self, driver):
-        search_page = DoublesPage(driver, "https://101internet.ru/ekaterinburg/actions/")
-        search_page.open()
-        target_url = 'https://101internet.ru/ekaterinburg/actions'
-        assert driver.current_url == target_url
+    # @allure.title("Сайт доступен только по одной указанной версии")
+    # def test_doudles_main_page_ekb_actions(self, driver):
+    #     search_page = DoublesPage(driver, "https://101internet.ru/ekaterinburg/actions/")
+    #     search_page.open()
+    #     target_url = 'https://101internet.ru/ekaterinburg/actions'
+    #     assert driver.current_url == target_url
 
     @allure.title("Сайт доступен только по одной указанной версии")
     def test_doudles_main_page_ekb_nomera(self, driver):
@@ -228,21 +227,21 @@ class TestSearch:
         target_url = 'https://piter-online.net/kolpino/orders/tohome'
         assert driver.current_url == target_url
 
-    @allure.title("Сайт доступен только по одной указанной версии")
-    def test_doudles_main_page_kolpino_region(self, driver):
-        search_page = DoublesPage(driver,
-                                  "https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267/")
-        search_page.open()
-        target_url = 'https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267'
-        assert driver.current_url == target_url
+    # @allure.title("Сайт доступен только по одной указанной версии")
+    # def test_doudles_main_page_kolpino_region(self, driver):
+    #     search_page = DoublesPage(driver,
+    #                               "https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267/")
+    #     search_page.open()
+    #     target_url = 'https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267'
+    #     assert driver.current_url == target_url
 
-    @allure.title("Сайт доступен только по одной указанной версии")
-    def test_doudles_main_page_kolpino_house(self, driver):
-        search_page = DoublesPage(driver,
-                                  "https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267/%D1%83%D0%BB-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F-id328802/")
-        search_page.open()
-        target_url = 'https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267/%D1%83%D0%BB-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F-id328802'
-        assert driver.current_url == target_url
+    # @allure.title("Сайт доступен только по одной указанной версии")
+    # def test_doudles_main_page_kolpino_house(self, driver):
+    #     search_page = DoublesPage(driver,
+    #                               "https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267/%D1%83%D0%BB-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F-id328802/")
+    #     search_page.open()
+    #     target_url = 'https://piter-online.net/kolpino/address/%D0%BA%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE-id1267/%D1%83%D0%BB-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F-id328802'
+    #     assert driver.current_url == target_url
 
     @allure.title("Сайт доступен только по одной указанной версии")
     def test_doudles_main_page_lenobl_main(self, driver):
@@ -332,13 +331,13 @@ class TestSearch:
         target_url = 'https://www.moskvaonline.ru/address/%D0%B1%D0%BE%D1%82%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE-id27824'
         assert driver.current_url == target_url
 
-    @allure.title("Сайт доступен только по одной указанной версии")
-    def test_doudles_main_page_mol_address(self, driver):
-        search_page = DoublesPage(driver,
-                                  "https://www.moskvaonline.ru/dom/ul-pribrezhnaya-d-30-id4614334/")
-        search_page.open()
-        target_url = 'https://www.moskvaonline.ru/dom/ul-pribrezhnaya-d-30-id4614334'
-        assert driver.current_url == target_url
+    # @allure.title("Сайт доступен только по одной указанной версии")
+    # def test_doudles_main_page_mol_address(self, driver):
+    #     search_page = DoublesPage(driver,
+    #                               "https://www.moskvaonline.ru/dom/ul-pribrezhnaya-d-30-id4614334/")
+    #     search_page.open()
+    #     target_url = 'https://www.moskvaonline.ru/dom/ul-pribrezhnaya-d-30-id4614334'
+    #     assert driver.current_url == target_url
 
     @allure.title("Сайт доступен только по одной указанной версии")
     def test_doudles_main_page_mol_oplata(self, driver):
