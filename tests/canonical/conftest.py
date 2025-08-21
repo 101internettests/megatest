@@ -1,7 +1,5 @@
 import pytest
-from config import bot, chat_id
+from utils.test_reporter import reporter
 
-
-@pytest.hookimpl(trylast=True)
-def pytest_sessionfinish(session, exitstatus):
-    bot.send_message(chat_id, "Тест по канониклам и техническим дублям прошел, а результат в дженкинсе")
+# Локальный conftest.py - только для импорта reporter
+# Отправка отчетов происходит в корневом conftest.py
