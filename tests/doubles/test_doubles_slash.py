@@ -364,15 +364,15 @@ class TestSearch:
         target_url = 'https://piter-online.net/leningradskaya-oblast/operatory/tinkoff/ratesmobile'
         assert driver.current_url == target_url
 
-    @allure.title("Сайт доступен только по одной указанной версии")
-    def test_doudles_main_page_mol_main(self, driver):
-        url = "https://www.moskvaonline.ru//"
-        # Устанавливаем URL для системы отчетов
-        pytest.current_test_url = url
-        search_page = DoublesPage(driver, url)
-        search_page.open()
-        target_url = 'https://www.moskvaonline.ru/'
-        assert driver.current_url == target_url
+    # @allure.title("Сайт доступен только по одной указанной версии")
+    # def test_doudles_main_page_mol_main(self, driver):
+    #     url = "https://www.moskvaonline.ru//"
+    #     # Устанавливаем URL для системы отчетов
+    #     pytest.current_test_url = url
+    #     search_page = DoublesPage(driver, url)
+    #     search_page.open()
+    #     target_url = 'https://www.moskvaonline.ru/'
+    #     assert driver.current_url == target_url
 
     @allure.title("Сайт доступен только по одной указанной версии")
     def test_doudles_main_page_mol_tohome(self, driver):

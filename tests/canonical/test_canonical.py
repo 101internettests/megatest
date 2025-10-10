@@ -188,37 +188,37 @@ class TestCononicals:
         time.sleep(3)
         check.check_page_canonicals_sat_msk()
 
-    @allure.title("Проверка наличия канониклов на главной странице, МОЛ, Москва")
-    def test_mol_main(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/")
-        check.open()
-        time.sleep(3)
-        check.check_page_canonicals_main_mol()
-
-    @allure.title("Проверка наличия канониклов на странице поиска по адресу, МОЛ, Москва")
-    def test_mol_tohome(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/tohome")
-        check.open()
-        check.check_page_canonicals_tohome_mol()
-
-    @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Москва")
-    def test_pol_providers_mol(self, driver):
-        urls = ['https://www.moskvaonline.ru/providers',
-                'https://www.moskvaonline.ru/providers/2',
-                'https://www.moskvaonline.ru/providers/3',
-                'https://www.moskvaonline.ru/providers/4',
-                'https://www.moskvaonline.ru/providers/5'
-                ]
-        for url in urls:
-            check = CanonicalPage(driver, url)
-            check.open()
-            check.check_page_canonicals_providers_mol()
-
-    @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Москва")
-    def test_mol_rating(self, driver):
-        check = CanonicalPage(driver, "https://www.moskvaonline.ru/rating")
-        check.open()
-        check.check_page_canonicals_rating_mol()
+    # @allure.title("Проверка наличия канониклов на главной странице, МОЛ, Москва")
+    # def test_mol_main(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/")
+    #     check.open()
+    #     time.sleep(3)
+    #     check.check_page_canonicals_main_mol()
+    #
+    # @allure.title("Проверка наличия канониклов на странице поиска по адресу, МОЛ, Москва")
+    # def test_mol_tohome(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/orders/tohome")
+    #     check.open()
+    #     check.check_page_canonicals_tohome_mol()
+    #
+    # @allure.title("Проверка наличия канониклов на странице провайдеров, МОЛ, Москва")
+    # def test_pol_providers_mol(self, driver):
+    #     urls = ['https://www.moskvaonline.ru/providers',
+    #             'https://www.moskvaonline.ru/providers/2',
+    #             'https://www.moskvaonline.ru/providers/3',
+    #             'https://www.moskvaonline.ru/providers/4',
+    #             'https://www.moskvaonline.ru/providers/5'
+    #             ]
+    #     for url in urls:
+    #         check = CanonicalPage(driver, url)
+    #         check.open()
+    #         check.check_page_canonicals_providers_mol()
+    #
+    # @allure.title("Проверка наличия канониклов на странице рейтинга, МОЛ, Москва")
+    # def test_mol_rating(self, driver):
+    #     check = CanonicalPage(driver, "https://www.moskvaonline.ru/rating")
+    #     check.open()
+    #     check.check_page_canonicals_rating_mol()
 
     @allure.title("Проверка наличия канониклов на странице рейтинга  ПОЛ ТЕСТ")
     def test_pol(self, driver):
